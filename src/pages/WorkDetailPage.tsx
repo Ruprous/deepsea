@@ -4,6 +4,7 @@ import Header     from '../components/layout/Header'
 import Footer     from '../components/layout/Footer'
 import HeroSphere from '../components/Hero/HeroSphere'
 import worksData  from '../data/works.json'
+import { useMobile } from '../hooks/useMobile'
 
 // ── 型定義 ────────────────────────────────────────────────
 interface Section {
@@ -57,6 +58,7 @@ const allWorks = worksData as Work[]
 export default function WorkDetailPage() {
   const { id } = useParams<{ id: string }>()
   const [visible, setVisible] = useState(false)
+  const isMobile = useMobile()
 
   useEffect(() => {
     window.scrollTo({ top: 0 })
@@ -84,7 +86,7 @@ export default function WorkDetailPage() {
 
       <Header />
 
-      <main style={{ flex: 1, position: 'relative', zIndex: 1, padding: '120px 160px 80px' }}>
+      <main style={{ flex: 1, position: 'relative', zIndex: 1, padding: isMobile ? '100px 24px 60px' : '120px 160px 80px' }}>
 
         {/* ── 戻るリンク ── */}
         <Link
@@ -144,8 +146,8 @@ export default function WorkDetailPage() {
             {/* ── 2カラムレイアウト ── */}
             <div style={{
               display: 'grid',
-              gridTemplateColumns: '1fr 320px',
-              gap: '64px',
+              gridTemplateColumns: isMobile ? '1fr' : '1fr 320px',
+              gap: isMobile ? '40px' : '64px',
               alignItems: 'start',
             }}>
 

@@ -3,6 +3,7 @@ import Header      from '../components/layout/Header'
 import Footer      from '../components/layout/Footer'
 import HeroSphere  from '../components/Hero/HeroSphere'
 import HeroRight   from '../components/Hero/HeroRight'
+import { useMobile } from '../hooks/useMobile'
 
 const contacts = [
   {
@@ -29,6 +30,7 @@ const contacts = [
 
 export default function ContactPage() {
   const [visible, setVisible] = useState(false)
+  const isMobile = useMobile()
 
   useEffect(() => {
     const t = setTimeout(() => setVisible(true), 300)
@@ -58,12 +60,12 @@ export default function ContactPage() {
           zIndex: 1,
           minHeight: '100svh',
           display: 'grid',
-          gridTemplateColumns: '1fr auto',
-          padding: '0 48px',
+          gridTemplateColumns: isMobile ? '1fr' : '1fr auto',
+          padding: isMobile ? '0 24px' : '0 48px',
         }}
       >
         {/* 左カラム：コンテンツ */}
-        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '120px 40px 80px 32px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: isMobile ? '100px 0 60px' : '120px 40px 80px 32px' }}>
 
         {/* ラベル */}
         <p
@@ -102,7 +104,7 @@ export default function ContactPage() {
             letterSpacing: '0.1em',
             color: '#fff',
             maxWidth: '640px',
-            wordBreak: 'keep-all',
+            wordBreak: 'break-word',
             marginBottom: '64px',
             borderLeft: '1px solid rgba(0,119,255,0.3)',
             paddingLeft: '16px',
@@ -120,8 +122,9 @@ export default function ContactPage() {
               key={i}
               style={{
                 display: 'flex',
-                alignItems: 'center',
-                gap: '48px',
+                flexDirection: isMobile ? 'column' : 'row',
+                alignItems: isMobile ? 'flex-start' : 'center',
+                gap: isMobile ? '4px' : '48px',
                 padding: '24px 0',
                 borderTop: i === 0 ? '1px solid rgba(0,119,255,0.2)' : 'none',
                 borderBottom: '1px solid rgba(0,119,255,0.2)',
@@ -134,7 +137,7 @@ export default function ContactPage() {
                   fontSize: '10px',
                   letterSpacing: '0.25em',
                   color: 'rgba(255,255,255,0.35)',
-                  minWidth: '100px',
+                  minWidth: isMobile ? 'unset' : '100px',
                 }}
               >
                 {c.label}
@@ -148,11 +151,12 @@ export default function ContactPage() {
                   rel="noreferrer"
                   style={{
                     fontFamily: 'var(--font-smart)',
-                    fontSize: '13px',
-                    letterSpacing: '0.15em',
+                    fontSize: isMobile ? '12px' : '13px',
+                    letterSpacing: '0.1em',
                     color: '#fff',
                     textDecoration: 'none',
                     transition: 'color 0.2s',
+                    wordBreak: 'break-all',
                   }}
                   onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-accent)')}
                   onMouseLeave={e => (e.currentTarget.style.color = '#fff')}
@@ -163,9 +167,10 @@ export default function ContactPage() {
                 <span
                   style={{
                     fontFamily: 'var(--font-smart)',
-                    fontSize: '13px',
-                    letterSpacing: '0.15em',
+                    fontSize: isMobile ? '12px' : '13px',
+                    letterSpacing: '0.1em',
                     color: '#fff',
+                    wordBreak: 'break-all',
                   }}
                 >
                   {c.value}
@@ -176,8 +181,8 @@ export default function ContactPage() {
         </div>
         </div>
 
-        {/* 右カラム：HeroRight */}
-        <HeroRight />
+        {/* 右カラム：HeroRight（PCのみ） */}
+        {!isMobile && <HeroRight />}
       </main>
 
       {/* フッター：背景の上にかぶせて固定表示 */}

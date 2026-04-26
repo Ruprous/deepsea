@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Header     from '../components/layout/Header'
 import Footer     from '../components/layout/Footer'
 import HeroSphere from '../components/Hero/HeroSphere'
+import { useMobile } from '../hooks/useMobile'
 
 const sns = [
   { label: 'X / Twitter', href: 'https://x.com/Ruprous' },
@@ -29,6 +30,7 @@ const software = [
 
 export default function AboutPage() {
   const [visible, setVisible] = useState(false)
+  const isMobile = useMobile()
 
   useEffect(() => {
     const t = setTimeout(() => setVisible(true), 300)
@@ -60,7 +62,7 @@ export default function AboutPage() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          padding: '120px 80px 80px',
+          padding: isMobile ? '100px 24px 60px' : '120px 80px 80px',
         }}
       >
         {/* ラベル */}
@@ -94,11 +96,11 @@ export default function AboutPage() {
           />
         </div>
 
-        {/* メインコンテンツ：2カラム */}
+        {/* メインコンテンツ：2カラム→モバイルは縦積み */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'auto 1fr',
-          gap: '64px',
+          gridTemplateColumns: isMobile ? '1fr' : 'auto 1fr',
+          gap: isMobile ? '32px' : '64px',
           alignItems: 'start',
         }}>
 
@@ -151,7 +153,7 @@ export default function AboutPage() {
                 lineHeight: 2.2,
                 letterSpacing: '0.08em',
                 color: '#fff',
-                wordBreak: 'keep-all',
+                wordBreak: 'break-word',
                 marginBottom: '20px',
               }}>
                 グラフィックデザイナー・デジタルクリエイター。2018年10月より独学でグラフィックデザインを開始。<br />
@@ -164,7 +166,7 @@ export default function AboutPage() {
                 lineHeight: 2.2,
                 letterSpacing: '0.08em',
                 color: 'rgba(255,255,255,0.7)',
-                wordBreak: 'keep-all',
+                wordBreak: 'break-word',
                 marginBottom: '20px',
               }}>
                 ラプラス [ləplάːs] です。読めない？いや、読むんですよ。
@@ -175,7 +177,7 @@ export default function AboutPage() {
                 lineHeight: 2.2,
                 letterSpacing: '0.08em',
                 color: '#fff',
-                wordBreak: 'keep-all',
+                wordBreak: 'break-word',
               }}>
                 お客様の「こうしたい！」というお気持ちを丁寧にヒアリングし、目的に合った形で表現することを大切にしています。
                 デザインと映像を通じて、"伝わる・惹きつける"クリエイティブをお届けします。<br />
@@ -194,7 +196,7 @@ export default function AboutPage() {
               }}>
                 // SNS
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: '0' }}>
                 {sns.map((s, i) => (
                   <a
                     key={i}
@@ -238,7 +240,7 @@ export default function AboutPage() {
               }}>
                 // DISTRIBUTION
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: '0' }}>
                 {distribution.map((s, i) => (
                   <a
                     key={i}
@@ -282,7 +284,7 @@ export default function AboutPage() {
               }}>
                 // TOOLS
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: '0' }}>
                 {software.map((s, i) => (
                   <div key={i} style={{
                     display: 'flex',

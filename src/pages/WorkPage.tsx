@@ -4,6 +4,7 @@ import Header     from '../components/layout/Header'
 import Footer     from '../components/layout/Footer'
 import HeroSphere from '../components/Hero/HeroSphere'
 import worksData  from '../data/works.json'
+import { useMobile } from '../hooks/useMobile'
 
 // ── 型定義 ────────────────────────────────────────────────
 interface Work {
@@ -56,6 +57,7 @@ const allTypes = [
 export default function WorkPage() {
   const [visible,      setVisible]      = useState(false)
   const [selectedType, setSelectedType] = useState('ALL')
+  const isMobile = useMobile()
 
   useEffect(() => {
     const t = setTimeout(() => setVisible(true), 300)
@@ -84,7 +86,7 @@ export default function WorkPage() {
 
       <Header />
 
-      <main style={{ flex: 1, position: 'relative', zIndex: 1, padding: '120px 160px 80px' }}>
+      <main style={{ flex: 1, position: 'relative', zIndex: 1, padding: isMobile ? '100px 24px 60px' : '120px 160px 80px' }}>
 
         {/* ── ヘッダーエリア ── */}
         <div style={{ marginBottom: '40px' }}>
@@ -113,30 +115,60 @@ export default function WorkPage() {
           <div style={{ width: '100%', height: '1px', background: 'rgba(0,119,255,0.2)', marginBottom: '24px' }} />
 
           {/* フィルター */}
-          <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
-            {allTypes.map(type => {
-              const active = selectedType === type
-              return (
-                <button
-                  key={type}
-                  onClick={() => setSelectedType(type)}
-                  style={{
-                    fontFamily: 'var(--font-noto-sans)',
-                    fontSize: '10px',
-                    letterSpacing: '0.2em',
-                    padding: '7px 18px',
-                    background: active ? 'var(--color-accent)' : 'transparent',
-                    color: active ? '#fff' : '#fff',
-                    border: `1px solid ${active ? 'var(--color-accent)' : 'rgba(255,255,255,0.5)'}`,
-                    cursor: 'pointer',
-                    transition: 'all 0.2s',
-                  }}
-                >
+          {isMobile ? (
+            <select
+              value={selectedType}
+              onChange={e => setSelectedType(e.target.value)}
+              style={{
+                fontFamily: 'var(--font-noto-sans)',
+                fontSize: '11px',
+                letterSpacing: '0.15em',
+                padding: '9px 14px',
+                background: 'rgba(5,5,12,0.8)',
+                color: '#fff',
+                border: '1px solid var(--color-accent)',
+                cursor: 'pointer',
+                width: '100%',
+                appearance: 'none',
+                WebkitAppearance: 'none',
+                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%230077ff' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'right 14px center',
+                paddingRight: '36px',
+              }}
+            >
+              {allTypes.map(type => (
+                <option key={type} value={type} style={{ background: '#050508', color: '#fff' }}>
                   {type === 'ALL' ? 'ALL' : (TYPE_LABELS[type] ?? type)}
-                </button>
-              )
-            })}
-          </div>
+                </option>
+              ))}
+            </select>
+          ) : (
+            <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
+              {allTypes.map(type => {
+                const active = selectedType === type
+                return (
+                  <button
+                    key={type}
+                    onClick={() => setSelectedType(type)}
+                    style={{
+                      fontFamily: 'var(--font-noto-sans)',
+                      fontSize: '10px',
+                      letterSpacing: '0.2em',
+                      padding: '7px 18px',
+                      background: active ? 'var(--color-accent)' : 'transparent',
+                      color: '#fff',
+                      border: `1px solid ${active ? 'var(--color-accent)' : 'rgba(255,255,255,0.5)'}`,
+                      cursor: 'pointer',
+                      transition: 'all 0.2s',
+                    }}
+                  >
+                    {type === 'ALL' ? 'ALL' : (TYPE_LABELS[type] ?? type)}
+                  </button>
+                )
+              })}
+            </div>
+          )}
 
           {/* 区切り線 */}
           <div style={{ width: '100%', height: '1px', background: 'rgba(0,119,255,0.2)', marginTop: '24px' }} />
@@ -145,7 +177,7 @@ export default function WorkPage() {
         {/* ── グリッド ── */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
+          gridTemplateColumns: isMobile ? 'repeat(1, 1fr)' : 'repeat(3, 1fr)',
           gap: '24px',
         }}>
           {filtered.map(work => (
