@@ -3,7 +3,7 @@ import AppRoutes from './AppRoutes'
 
 function App() {
   return (
-    <BrowserRouter basename="/summer-clouds">
+    <BrowserRouter>
       <AppRoutes />
     </BrowserRouter>
   )
