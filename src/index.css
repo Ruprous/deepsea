@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* ─── フォント ─────────────────────────────── */
+@font-face {
+  font-family: '03smartfont';
+  src: url('/fonts/03SmartFontUI.woff') format('woff'),
+       url('/fonts/03SmartFontUI.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('/fonts/avenir-next-bold.woff') format('woff'),
+       url('/fonts/avenir-next-bold.ttf')  format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* ─── カラートークン ───────────────────────── */
+:root {
+  --color-bg:      #050508;
+  --color-accent:  #0077FF;
+  --color-text:    #FFFFFF;
+  --color-ui:      #0a2040;
+  --color-ui-dim:  rgba(10, 32, 64, 0.6);
+  --color-dim:     rgba(255, 255, 255, 0.4);
+}
+
+/* ─── ベーススタイル ────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Avenir Next', '03smartfont', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ─── Tailwind v4 カスタムトークン ────────── */
+@theme {
+  --color-bg:      #050508;
+  --color-accent:  #0077FF;
+  --color-ui:      #0a2040;
+
+  --font-smart:   '03smartfont', monospace;
+  --font-avenir:  'AvenirNext', sans-serif;
+  --font-zen:     'Zen Kaku Gothic New', sans-serif;
+  --font-noto-serif: 'Noto Serif JP', serif;
+  --font-noto-sans:  'Noto Sans JP', sans-serif;
+}
+
+/* ─── ページフェードイン ────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ─── DesignTicker アニメーション ──────────── */
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 35s linear infinite;
+  will-change: transform;
+}
+

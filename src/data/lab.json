@@ -1,0 +1,165 @@
+[
+    {
+        "id":  "pokemonchampions-obs-overlay",
+        "title":  "PokemonChampions-obs-overlay",
+        "thumbnail":  "/images/lab/PokemonChampions-obs-overlay.png",
+        "date":  "2026-04-22",
+        "links":  [
+                      {
+                          "label":  "GitHub",
+                          "url":  "https://github.com/Ruprous/PokemonChampions-obs-overlay"
+                      }
+                  ],
+        "types":  [
+                      "StreamTool"
+                  ],
+        "sections":  [
+                         {
+                             "body":  "「ポケモンチャンピオンズ」のライブ配信向けOBSオーバーレイツールを開発しました。\n\n選出画面でホットキーを押すだけで、対戦相手のプレイヤー名とポケモン6匹をOBS画面に自動反映します。\n\n画像内のプレイヤー名はプライバシー保護のため加工・非表示にしています。スクリーンショットの著作権は株式会社ポケモン・任天堂株式会社・株式会社クリーチャーズ・株式会社ゲームフリークに帰属します。",
+                             "heading":  "概要"
+                         }
+                     ]
+    },
+    {
+        "id":  "rp-ytts2mk",
+        "title":  "RP-YTTS2MK",
+        "thumbnail":  "/images/lab/RP-YTTS2MK.png",
+        "contain":  true,
+        "date":  "2026-04-03",
+        "links":  [
+                      {
+                          "label":  "BOOTH",
+                          "url":  "https://ruprous.booth.pm/items/8158811"
+                      }
+                  ],
+        "types":  [
+                      "AdobePlugin"
+                  ],
+        "sections":  [
+                         {
+                             "body":  "YouTubeで一般的なタイムスタンプ付きテキストを読み取り、After Effectsのマーカーを自動作成するScriptUIパネルを開発・配布しました。",
+                             "heading":  "概要"
+                         }
+                     ]
+    },
+    {
+        "id":  "summer-clouds-portfolio",
+        "title":  "Portfolio Site \"Summer Clouds\"",
+        "date":  "2025-06-03",
+        "thumbnail":  "/images/works/noimage.jpg",
+        "credit":  [
+                       "Design \u0026 Development：Ruprous"
+                   ],
+        "links":  [
+                      {
+                          "label":  "Webサイト(本サイト)",
+                          "url":  "https://ruprous.github.io/summer-clouds/"
+                      }
+                  ],
+        "types":  [
+                      "WebSite"
+                  ],
+        "sections":  [
+                         {
+                             "body":  "ReactとViteを用いて構築した、夏の雲をテーマにしたポートフォリオサイトです。作品一覧・詳細ページやサムネイル画像の最適表示、ページネーション、URLクエリによる状態管理など、UI/UXや運用性にこだわって設計・実装しています。今後の拡張や作品追加も容易に行える構造です。",
+                             "heading":  "概要"
+                         }
+                     ]
+    },
+    {
+        "id":  "rp-stonecobbler",
+        "title":  "RP-StoneCobbler",
+        "thumbnail":  "",
+        "date":  "2025-05-02",
+        "links":  [
+                      {
+                          "label":  "GitHub",
+                          "url":  "https://github.com/Ruprous/RP-StoneCobbler"
+                      },
+                      {
+                          "label":  "modrinth",
+                          "url":  "https://modrinth.com/mod/rp-stonecobbler"
+                      }
+                  ],
+        "types":  [
+                      "MinecraftMOD"
+                  ],
+        "sections":  [
+                         {
+                             "body":  "石をストーンカッターで砕いて『石礫（Pebble）』にし、4つの石礫をクラフトすれば『丸石（Cobblestone）』に戻せる、サバイバル補助向けのシンプルなFabric MODです。建築や資材管理の幅が広がります。GitHub/modrinthで公開中。",
+                             "heading":  "概要"
+                         }
+                     ]
+    },
+    {
+        "id":  "rp-folderwatcher",
+        "title":  "RP-FolderWatcher / PPro Extension",
+        "thumbnail":  "",
+        "date":  "2025-04-06",
+        "links":  [
+                      {
+                          "label":  "GitHub",
+                          "url":  "https://github.com/Ruprous/RP-FolderWatcher"
+                      }
+                  ],
+        "credit":  [
+                       "Development：Ruprous",
+                       "Tester：とりっぴ・アキラ, 宮城玲"
+                   ],
+        "types":  [
+                      "AdobePlugin"
+                  ],
+        "sections":  [
+                         {
+                             "body":  "Premiere Pro用の軽量なAdobe CEPエクステンション。指定したフォルダを監視し、ファイルを自動的にプロジェクトにインポートします。手動でのインポート作業を省略でき、作業効率が大幅に向上します。",
+                             "heading":  "概要"
+                         }
+                     ]
+    },
+    {
+        "id":  "duplicate-randomize",
+        "title":  "Duplicate-Randomize",
+        "thumbnail":  "",
+        "date":  "2024-06",
+        "links":  [
+                      {
+                          "label":  "GitHub",
+                          "url":  "https://github.com/Ruprous/Duplicate-Randomize"
+                      }
+                  ],
+        "types":  [
+                      "BlenderAddon"
+                  ],
+        "sections":  [
+                         {
+                             "body":  "選択したオブジェクトを指定した数と範囲内にランダムに複製・配置できるBlenderアドオンです。モデリングやシーン作成時のランダム配置作業を効率化します。",
+                             "heading":  "概要"
+                         }
+                     ]
+    },
+    {
+        "id":  "circular-arrange",
+        "title":  "Circular-Arrange",
+        "thumbnail":  "",
+        "date":  "2024-05",
+        "links":  [
+                      {
+                          "label":  "GitHub",
+                          "url":  "https://github.com/Ruprous/Circular-Arrange"
+                      },
+                      {
+                          "label":  "BOOTH",
+                          "url":  "https://ruprous.booth.pm/items/6618143"
+                      }
+                  ],
+        "types":  [
+                      "BlenderAddon"
+                  ],
+        "sections":  [
+                         {
+                             "body":  "選択したオブジェクトを指定した数と半径の円の中に自動で配置するBlenderアドオンです。複雑な配置作業を簡単にし、効率的なモデリングをサポートします。",
+                             "heading":  "概要"
+                         }
+                     ]
+    }
+]

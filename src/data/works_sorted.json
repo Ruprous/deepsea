@@ -1,0 +1,619 @@
+[
+  {
+    "id": "sakuya-hanaha-kireini",
+    "title": "昨夜、花は綺麗に咲き誇る カバー制作",
+    "type": "Cover",
+    "date": "2021-05-26",
+    "descriptionShort": "小説『昨夜、花は綺麗に咲き誇る』のタイトルカバーを制作しました。",
+    "description": "小説『昨夜、花は綺麗に咲き誇る』のタイトルカバーを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/sakuya-hanaha-kireini.jpg",
+    "credit": [
+      "Author：五月雨望海"
+    ],
+    "links": [
+      {
+        "label": "小説を読む（エブリスタ）",
+        "url": "https://estar.jp/novels/25828067"
+      }
+    ]
+  },
+  {
+    "id": "logo-natukishiro",
+    "title": "夏月しろ ロゴ制作",
+    "type": "Logo",
+    "date": "2021-10",
+    "descriptionShort": "Vtuber:夏月しろさんのロゴを制作しました。",
+    "description": "Vtuber:夏月しろさんのロゴを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/logo-natukishiro.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "deltacamp",
+    "title": "DELTA CAMP",
+    "type": "Font",
+    "date": "2022-02",
+    "descriptionShort": "オリジナルフォント「DELTA CAMP」を制作しました。",
+    "description": "オリジナルフォント「DELTA CAMP」を制作しました。",
+    "thumbnail": "/summer-clouds/images/works/deltacamp.jpg",
+    "credit": [],
+    "links": [
+      {
+        "label": "配布ページ(BOOTH)",
+        "url": "https://ruprous.booth.pm/items/5399361"
+      }
+    ]
+  },
+  {
+    "id": "naturalclipcup",
+    "title": "NCC キービジュアル制作",
+    "type": "Graphic",
+    "date": "2022-05",
+    "descriptionShort": "NCC(NaturalClipCup)のキービジュアルを制作しました。",
+    "description": "NCC(NaturalClipCup)のキービジュアルを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/NaturalClipCup.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "kazama-stream",
+    "title": "鉄拳かざま ライブ配信 サムネイル制作",
+    "type": "Graphic",
+    "date": "2022-05",
+    "descriptionShort": "鉄拳かざまさんのライブ配信用サムネイルを制作しました。",
+    "description": "鉄拳かざまさんのライブ配信用サムネイルを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/kazama-stream.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "seikan-saredo-kodoku-zetsubou",
+    "title": "生還されど孤独と絶望 カバー制作",
+    "type": "Cover",
+    "date": "2022-05-08",
+    "descriptionShort": "小説『生還されど孤独と絶望』のタイトルカバーを制作しました。",
+    "description": "小説『生還されど孤独と絶望』のタイトルカバーを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/seikan-saredo.jpg",
+    "credit": [
+      "Author：五月雨望海"
+    ],
+    "links": [
+      {
+        "label": "小説を読む（エブリスタ）",
+        "url": "https://estar.jp/novels/25970727"
+      }
+    ]
+  },
+  {
+    "id": "u-mv",
+    "title": "U (COVER) / MV",
+    "type": "MusicVideo",
+    "description": "Zu2によるカバー楽曲『U』のミュージックビデオ・サムネイル画像を制作。",
+    "date": "2022-07",
+    "youtubeId": "skjmtZZy3rQ",
+    "thumbnail": "",
+    "credit": [
+      "Vocal：Zu2",
+      "Mix：shino116",
+      "Illustration：plin",
+      "Movie：Ruprous"
+    ],
+    "links": []
+  },
+  {
+    "id": "logo-aotakeshizuna",
+    "title": "青竹静那 ロゴ制作",
+    "type": "Logo",
+    "date": "2022-10",
+    "descriptionShort": "Vtuber:青竹雫那さんのロゴを制作しました。",
+    "description": "Vtuber:青竹雫那さんのロゴを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/logo-aotakeshizuna.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "pnz-valo-primus-kv",
+    "title": "PNZ Valorant Custom PRIMUS\n キービジュアル制作",
+    "type": "Graphic",
+    "date": "2022-12-03",
+    "descriptionShort": "PNZが主催・運営するPNZ Valorant Custom PRIMUSのキービジュアルを制作しました。",
+    "description": "PNZが主催・運営するPNZ Valorant Custom PRIMUSのキービジュアルを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/pnz-valo-primus-kv.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "wasurena-mv",
+    "title": "勿忘 (COVER) / MV",
+    "type": "MusicVideo",
+    "description": "Zu2と宮城玲によるカバー楽曲『勿忘』のミュージックビデオを制作。",
+    "date": "2023-01-01",
+    "youtubeId": "C-MiqbZsumI",
+    "thumbnail": "",
+    "credit": [
+      "Vocal：Zu2, 宮城玲",
+      "Mixing：siru",
+      "Movie：Ruprous"
+    ],
+    "links": []
+  },
+  {
+    "id": "pnz-custom-v6",
+    "title": "PNZ CUSTOM V6. CAME BACK",
+    "thumbnail": "https://imgx.foriio.com/images/store/29934e0ac6c5f327e9a1febacdafe5e9.png?auto=compress&w=2184",
+    "type": "Graphic",
+    "date": "2023-04",
+    "descriptionShort": "PNZ主催イベントのメインビジュアル・メンバーリスト画像を制作。",
+    "description": "PNZ主催・GauG協賛の「PNZ CUSTOM V6. CAME BACK 」のメインビジュアル画像およびメンバーリスト画像を制作しました。イベントの世界観を表現するために色彩やレイアウトにこだわりました。",
+    "links": [
+      {
+        "label": "foriio",
+        "url": "https://www.foriio.com/works/556908"
+      }
+    ]
+  },
+  {
+    "id": "yagurahai",
+    "title": "櫓杯 キービジュアル制作",
+    "type": "Graphic",
+    "date": "2023-08",
+    "descriptionShort": "宮城玲が主催するSplatoon3の「櫓杯」のキービジュアルを制作しました。",
+    "description": "櫓杯のキービジュアルを制作しました。大会の雰囲気やテーマに合わせてデザインし、印象的なビジュアルに仕上げました。",
+    "thumbnail": "/summer-clouds/images/works/yagurahai.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "pnz-mc-nakama",
+    "title": "PNZ 仲間鯖 ロゴ制作",
+    "type": "Logo",
+    "date": "2023-09",
+    "descriptionShort": "PNZのマインクラフトサーバー企画のロゴを制作しました。",
+    "description": "PNZ内部企画のマインクラフトサーバー：PNZ仲間鯖のロゴを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/pnz-mc-nakama.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "logo-miyagirei",
+    "title": "宮城玲 ロゴ制作",
+    "type": "Logo",
+    "date": "2023-10",
+    "descriptionShort": "Vtuber:宮城玲さんのロゴを新調しました。",
+    "description": "Vtuber:宮城玲さんのロゴを新調しました。",
+    "thumbnail": "/summer-clouds/images/works/logo-miyagirei.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "logo-valokitunekan",
+    "title": "ゔぁろ狐館 ロゴ制作",
+    "type": "Logo",
+    "date": "2023-10",
+    "descriptionShort": "菰狐きさらぎさん運営のValorantDiscord鯖「ゔぁろ狐館」のロゴを制作しました。",
+    "description": "菰狐きさらぎさん運営のValorantDiscord鯖「ゔぁろ狐館」のロゴを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/logo-valokitunekan.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "logo-bunta",
+    "title": "ぶんた ロゴ制作",
+    "type": "Logo",
+    "date": "2023-10",
+    "descriptionShort": "ぶんたさんのロゴを制作しました。",
+    "description": "ぶんたさんのロゴを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/logo-bunta.jpg",
+    "credit": [
+      "Draft:虚喰りうる"
+    ],
+    "links": []
+  },
+  {
+    "id": "logo-yozakuraeru",
+    "title": "夜桜愛瑠 ロゴ制作",
+    "type": "Logo",
+    "date": "2023-10",
+    "descriptionShort": "Vtuber:夜桜愛瑠さんのロゴを制作しました。",
+    "description": "Vtuber:夜桜愛瑠さんのロゴを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/logo-yozakuraeru.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "pnz-apex-sankagata",
+    "title": "PNZ 参加型カスタム サムネイル制作",
+    "type": "Graphic",
+    "date": "2023-10",
+    "descriptionShort": "PNZが主催・運営したPNZ 参加型カスタムのサムネイルを制作しました。",
+    "description": "PNZが主催・運営したPNZ 参加型カスタムのサムネイルを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/pnz-apex-sankagata.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "miyagi-shinishou",
+    "title": "宮城玲 新衣装お披露目会 サムネイル制作",
+    "type": "Graphic",
+    "date": "2023-10",
+    "descriptionShort": "宮城玲さんの新衣装お披露目配信のサムネイルを制作しました。",
+    "description": "宮城玲さんの新衣装お披露目配信のサムネイルを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/miyagi-shinishou.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "hitomaniac-miyagirei-short",
+    "title": "人マニア (COVER) ShortVideo",
+    "type": "MusicVideo",
+    "date": "2023-11-02",
+    "descriptionShort": "宮城玲によるYouTubeShort用の人マニア(cover)の映像を制作しました。",
+    "description": "宮城玲によるYouTubeShort用の人マニア(cover)の映像を制作しました。",
+    "youtubeId": "oxg_dZ-XwB0",
+    "thumbnail": "",
+    "credit": [
+      "Vocal：宮城玲",
+      "Mix：ぶんた",
+      "Video：Ruprous"
+    ],
+    "links": [
+      {
+        "label": "X（投稿元）",
+        "url": "https://x.com/miyatanu2020/status/1720026736493199592"
+      }
+    ]
+  },
+  {
+    "id": "pnz-valo-gou-kv",
+    "title": "PNZ Valorant Custom -豪- \nキービジュアル制作",
+    "type": "Graphic",
+    "date": "2023-12-16",
+    "youtubeId": "k78G7mL1bsU",
+    "descriptionShort": "PNZが主催・運営するPNZ Valorant Custom -豪- のキービジュアルを制作しました。",
+    "description": "2023/12/16に開催された、PNZ Valorant Custom -豪-のメインビジュアル・インゲームオーバーレイ・オープニング映像・配信内スライド等を制作しました。当日はOBSを操作してNDI Bridgeで送られてきた映像を切り替えるスイッチャーも行っていました。配信で使われたクリエイティブは、シーンスティンガー(NANAMY制作)以外すべて制作しました。",
+    "thumbnail": "",
+    "credit": [],
+    "links": [
+      {
+        "label": "配信技術構成（GitHub）",
+        "url": "https://github.com/TEAMPNZ/PNZ-VALORANT-CUSTOM-GO"
+      }
+    ]
+  },
+  {
+    "id": "works-miyagi-revius-01",
+    "title": "宮城玲 × RE:vius コラボTシャツ・ロンT告知画像",
+    "type": "Advertisement",
+    "date": "2024-02-16",
+    "descriptionShort": "2024/02/16 〜 03/01の期間限定で発売した、\"宮城玲 × RE:vius コラボTシャツ・ロンT\"の告知画像を制作しました。",
+    "description": "2024/02/16 〜 03/01の期間限定で発売した、\"宮城玲 × RE:vius コラボTシャツ・ロンT\"の告知画像を制作しました。",
+    "thumbnail": "/summer-clouds/images/works/works-miyagi-revius-01.jpg",
+    "credit": [],
+    "links": [
+      {
+        "label": "商品ページ",
+        "url": "https://stores.jp/search?q=%E5%AE%AE%E5%9F%8E%E7%8E%B2&store=revius"
+      }
+    ]
+  },
+  {
+    "id": "inkya-aimerz",
+    "title": "inkya aimerz+ / 加入画像 (FANART)",
+    "type": "Graphic",
+    "date": "2024-03",
+    "descriptionShort": "inkyaさんの『aimerz+』の加入記念ファンアート画像を制作。",
+    "description": "inkyaさんの『aimerz+』の加入記念ファンアート画像を制作しました。メンバーの雰囲気やチームカラーを意識してデザインしています。",
+    "thumbnail": "/summer-clouds/images/works/inkya-aimerz.jpg",
+    "credit": [],
+    "links": [
+      {
+        "label": "aimerz+（X）",
+        "url": "https://x.com/aimerzhq"
+      },
+      {
+        "label": "inkya（X）",
+        "url": "https://x.com/FA_inkya"
+      }
+    ]
+  },
+  {
+    "id": "oudon-offline",
+    "title": "おうどん 配信オフライン画像",
+    "type": "Graphic",
+    "description": "Valorantを配信されているおうどんさんの配信用オフライン画像を制作。",
+    "date": "2024-04",
+    "thumbnail": "/summer-clouds/images/works/oudon-offline.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "circular-arrange",
+    "title": "Circular-Arrange",
+    "thumbnail": "",
+    "type": "BlenderAddon",
+    "date": "2024-05",
+    "descriptionShort": "選択オブジェクトを円形に自動配置するBlenderアドオン。",
+    "description": "選択したオブジェクトを指定した数と半径の円の中に自動で配置するBlenderアドオンです。複雑な配置作業を簡単にし、効率的なモデリングをサポートします。",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/Ruprous/Circular-Arrange"
+      }
+    ]
+  },
+  {
+    "id": "riskydice-algs-cc",
+    "title": "RISKYDICE ALGS CC 出場画像制作",
+    "type": "Graphic",
+    "date": "2024-06",
+    "descriptionShort": "ALGS CHALLENGER CIRCUITに出場したRISKYDICEの参加画像を制作しました。",
+    "description": "ALGS CHALLENGER CIRCUITに出場したRISKYDICEの参加画像を制作しました。",
+    "thumbnail": "/summer-clouds/images/works/riskydice-algs-cc.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "duplicate-randomize",
+    "title": "Duplicate-Randomize",
+    "thumbnail": "",
+    "type": "BlenderAddon",
+    "date": "2024-06",
+    "descriptionShort": "オブジェクトを選択し数と範囲を指定して範囲内にランダムに配置できるアドオン。",
+    "description": "選択したオブジェクトを指定した数と範囲内にランダムに複製・配置できるBlenderアドオンです。モデリングやシーン作成時のランダム配置作業を効率化します。",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/Ruprous/Duplicate-Randomize"
+      }
+    ]
+  },
+  {
+    "id": "logo-kazama",
+    "title": "鉄拳かざま ロゴ制作",
+    "type": "Logo",
+    "date": "2024-07",
+    "descriptionShort": "鉄拳かざまさんのロゴを制作しました。",
+    "description": "鉄拳かざまさんのロゴを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/logo-kazama.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "nshiro-thumb-01",
+    "title": "夏月しろ EFT サムネイル制作 01",
+    "type": "Graphic",
+    "date": "2024-08",
+    "descriptionShort": "夏月しろさんのESCAPE FROM TARKOV配信サムネイルを制作しました。",
+    "description": "夏月しろさんのESCAPE FROM TARKOV配信サムネイルを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/nshiro-thumb-01.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "nshiro-thumb-02",
+    "title": "夏月しろ EFT サムネイル制作 02",
+    "type": "Graphic",
+    "date": "2024-08",
+    "descriptionShort": "夏月しろさんのESCAPE FROM TARKOV配信サムネイルを制作しました。",
+    "description": "夏月しろさんのESCAPE FROM TARKOV配信サムネイルを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/nshiro-thumb-02.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "rrcup",
+    "title": "RR CUP キービジュアル制作",
+    "type": "Graphic",
+    "date": "2024-08-24",
+    "descriptionShort": "宮城玲 × 凛々鈴 / RR CUP キービジュアルを制作しました。",
+    "description": "宮城玲 × 凛々鈴 / RR CUP キービジュアルを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/RRcup.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "soraroku-flier-no-brandboys",
+    "title": "宙を走る六等星 No Brand Boys\nフライヤー制作",
+    "type": "Advertisement",
+    "date": "2024-09-07",
+    "descriptionShort": "宙を走る六等星の主催ライブ\"No Brand Boys\"フライヤーを制作しました。",
+    "description": "宙を走る六等星の主催ライブ\"No Brand Boys\"フライヤーを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/soraroku-flier-no-brandboys.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "chanai-300subs",
+    "title": "ちゃんあい フォロワー300人記念配信\nサムネイル",
+    "type": "Graphic",
+    "date": "2024-10",
+    "descriptionShort": "ちゃんあいさんのTwitchフォロワー300人記念耐久配信のサムネイルを制作しました。",
+    "description": "ちゃんあいさんのTwitchフォロワー300人記念耐久配信のサムネイルを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/chanai-300subs.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "logo-gamejirou",
+    "title": "ガメ次郎 ロゴ制作",
+    "type": "Logo",
+    "date": "2024-12",
+    "descriptionShort": "Vtuber:ガメ次郎さんのロゴを制作しました。",
+    "description": "Vtuber:ガメ次郎さんのロゴを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/logo-gamejirou.png",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "soraroku-flier-tanoshiku",
+    "title": "宙を走る六等星 熱くなったり楽しくなったり\n VOL4 フライヤー制作",
+    "type": "Advertisement",
+    "date": "2024-12-21",
+    "descriptionShort": "宙を走る六等星のライブ\"熱くなったり楽しくなったり VOL4\"のフライヤーを制作しました。",
+    "description": "宙を走る六等星のライブ\"熱くなったり楽しくなったり VOL4\"のフライヤーを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/soraroku-flier-tanoshiku.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "charichan-first-stream",
+    "title": "ちゃりちゃん 初配信 サムネイル",
+    "type": "Graphic",
+    "date": "2025-01",
+    "descriptionShort": "新たにVtuberとしてデビューされたちゃりちゃんさんの初配信サムネイルを制作しました。",
+    "description": "新たにVtuberとしてデビューされたちゃりちゃんさんの初配信サムネイルを制作しました。周りの装飾にはヘアピンやリボンを用い、世界観を重視したサムネイルになりました。配信開始までVtuber部分は黒塗りの画像が差し替えられており、それまではサムネイルの小物からどんな姿かを想像しようとファンの方々が議論していました。",
+    "thumbnail": "/summer-clouds/images/works/charichan-first-stream.jpg",
+    "credit": [],
+    "links": []
+  },
+  {
+    "id": "popin2-mv",
+    "title": "POP IN 2 (COVER) / MV",
+    "type": "MusicVideo",
+    "description": "ねぎりん・ちゃんあい・minの3名によるカバー楽曲『POP IN 2』の\nミュージックビデオ・サムネイル画像を制作。",
+    "date": "2025-02-14",
+    "youtubeId": "IHWtiTSIPPI",
+    "thumbnail": "",
+    "credit": [
+      "Vocal：ねぎりん, ちゃんあい, min",
+      "inst：Karafac",
+      "Illustration：ぱぴこ",
+      "Movie：Ruprous",
+      "Mix：NAOKI"
+    ],
+    "links": []
+  },
+  {
+    "id": "bo6-montage1",
+    "title": "CoD:BO6 - Montage #1 | Ruprous",
+    "type": "GameplayEdit",
+    "description": "Call of Duty: BO6 のプレイ映像を使用したモンタージュ動画を制作しました。",
+    "date": "2025-02-23",
+    "youtubeId": "cQwNocG3ijI",
+    "thumbnail": "",
+    "credit": [
+      "Editing & Direction & Player：Ruprous",
+      "Music：ゆきむらBeats"
+    ],
+    "links": [
+      {
+        "label": "Irony (Asterisk DnB Remix)",
+        "url": "https://soundcloud.com/asteriskbtlg/ironyasterisk-dnb-remixfrom-asterisk-works-3"
+      }
+    ]
+  },
+  {
+    "id": "ruprous-ending-video",
+    "title": "Ruprous / 動画エンディング制作",
+    "thumbnail": "",
+    "type": "Video",
+    "date": "2025-03-30",
+    "descriptionShort": "YouTubeの最後に流すエンディング映像を制作しました。",
+    "description": "YouTubeの最後に流すエンディング映像を制作しました。",
+    "youtubeId": "Zwmfn0J7agc"
+  },
+  {
+    "id": "rp-folderwatcher",
+    "title": "RP-FolderWatcher / PPro Extension",
+    "thumbnail": "",
+    "type": "AdobePlugin",
+    "date": "2025-04-06",
+    "descriptionShort": "Premiere Pro用のCEPエクステンション。指定フォルダを監視しファイルを自動インポートします。",
+    "description": "Premiere Pro用の軽量なAdobe CEPエクステンション。指定したフォルダを監視し、ファイルを自動的にプロジェクトにインポートします。手動でのインポート作業を省略でき、作業効率が大幅に向上します。",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/Ruprous/RP-FolderWatcher"
+      }
+    ],
+    "credit": [
+      "Development：Ruprous",
+      "Tester：とりっぴ・アキラ, 宮城玲"
+    ]
+  },
+  {
+    "id": "rp-stonecobbler",
+    "title": "RP-StoneCobbler",
+    "thumbnail": "",
+    "type": "MinecraftMOD",
+    "date": "2025-05-02",
+    "descriptionShort": "石をストーンカッターで砕いて『石礫（Pebble）』にし、4つの石礫をクラフトすれば『丸石（Cobblestone）』に戻せるMOD。",
+    "description": "石をストーンカッターで砕いて『石礫（Pebble）』にし、4つの石礫をクラフトすれば『丸石（Cobblestone）』に戻せる、サバイバル補助向けのシンプルなFabric MODです。建築や資材管理の幅が広がります。GitHub/modrinthで公開中。",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/Ruprous/RP-StoneCobbler"
+      },
+      {
+        "label": "modrinth",
+        "url": "https://modrinth.com/mod/rp-stonecobbler"
+      }
+    ]
+  },
+  {
+    "id": "nemo-no-seijaku",
+    "title": "ネモの静寂 カバー制作",
+    "type": "Cover",
+    "date": "2025-05-25",
+    "descriptionShort": "短編小説『ネモの静寂』のタイトルカバーを制作しました。",
+    "description": "短編小説『ネモの静寂』のタイトルカバーを制作しました。",
+    "thumbnail": "/summer-clouds/images/works/nemo-no-seijaku.jpg",
+    "credit": [
+      "Author：五月雨望海"
+    ],
+    "links": [
+      {
+        "label": "小説を読む（エブリスタ）",
+        "url": "https://estar.jp/novels/26430493"
+      }
+    ]
+  },
+  {
+    "id": "chai-premiere-memory",
+    "title": "ちゃんあい 初Premiere思い出",
+    "type": "GameplayEdit",
+    "date": "2025-05-26",
+    "youtubeId": "ru1iWyT7Vi0",
+    "thumbnail": "/summer-clouds/images/works/chai-premiere-memory.png",
+    "description": "ちゃんあいさんのValorantPremiere思い出動画を制作しました。",
+    "credit": [
+      "Player：ちゃんあい, えびちゃ, ざいむ, ポテチウェイ, カイエン",
+      "Assistant：MIN, 結月りく",
+      "Editting & Direction：Ruprous"
+    ],
+    "links": []
+  },
+  {
+    "id": "summer-clouds-portfolio",
+    "title": "Portfolio Site \"Summer Clouds\"",
+    "type": "WebSite",
+    "date": "2025-06-03",
+    "descriptionShort": "夏の雲をテーマにしたWebポートフォリオをReact/Viteで構成・制作しました。",
+    "description": "ReactとViteを用いて構築した、夏の雲をテーマにしたポートフォリオサイトです。作品一覧・詳細ページやサムネイル画像の最適表示、ページネーション、URLクエリによる状態管理など、UI/UXや運用性にこだわって設計・実装しています。今後の拡張や作品追加も容易に行える構造です。",
+    "thumbnail": "/summer-clouds/images/works/noimage.jpg",
+    "credit": [
+      "Design & Development：Ruprous"
+    ],
+    "links": [
+      {
+        "label": "Webサイト(本サイト)",
+        "url": "https://ruprous.github.io/summer-clouds/"
+      }
+    ]
+  },
+  {
+    "id": "onta-hiitemita-bymyside",
+    "title": "By My Side (COVER) MV",
+    "type": "MusicVideo",
+    "date": "2025-06-19",
+    "descriptionShort": "おんたさんがベースカバーをした夜の本気ダンス「By My Side」のMVを制作。",
+    "description": "おんたさんがベースカバーをした夜の本気ダンスの「By My Side」のMVを制作しました。",
+    "youtubeId": "biKAGwriQy0",
+    "thumbnail": "",
+    "credit": [
+      "Bass(COVER)：おんた",
+      "Movie：Ruprous"
+    ],
+    "links": []
+  }
+]
