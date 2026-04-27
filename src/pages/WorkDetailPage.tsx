@@ -53,20 +53,6 @@ function getThumb(work: Work): string {
   return NOIMAGE
 }
 
-function handleThumbLoad(e: React.SyntheticEvent<HTMLImageElement>) {
-  const img = e.currentTarget
-  if (img.src.includes('maxresdefault') && img.naturalWidth === 120 && img.naturalHeight === 90) {
-    img.src = img.src.replace('maxresdefault', 'mqdefault')
-  }
-}
-
-function handleThumbError(e: React.SyntheticEvent<HTMLImageElement>) {
-  const img = e.currentTarget
-  if (img.src.includes('maxresdefault')) {
-    img.src = img.src.replace('maxresdefault', 'mqdefault')
-  }
-}
-
 const allWorks = worksData as Work[]
 
 // ─────────────────────────────────────────────────────────
