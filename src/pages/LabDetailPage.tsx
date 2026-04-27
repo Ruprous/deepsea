@@ -6,6 +6,7 @@ import HeroSphere from '../components/Hero/HeroSphere'
 import Lightbox   from '../components/Lightbox'
 import labData    from '../data/lab.json'
 import { useMobile } from '../hooks/useMobile'
+import { formatDate } from '../utils/formatDate'
 
 // ── 型定義 ────────────────────────────────────────────────
 interface Section {
@@ -253,10 +254,30 @@ export default function LabDetailPage() {
                           cursor: 'zoom-in',
                         }}
                       >
+                        {/* ブラー背景 */}
+                        <img
+                          src={src}
+                          alt=""
+                          aria-hidden="true"
+                          style={{
+                            position: 'absolute', inset: 0,
+                            width: '100%', height: '100%',
+                            objectFit: 'cover',
+                            filter: 'blur(16px) brightness(0.35)',
+                            transform: 'scale(1.12)',
+                            pointerEvents: 'none',
+                          }}
+                        />
+                        {/* メイン画像：contain で収める */}
                         <img
                           src={src}
                           alt={`${item.title} - ${i + 1}`}
-                          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                          style={{
+                            position: 'absolute', inset: 0,
+                            width: '100%', height: '100%',
+                            objectFit: 'contain',
+                            display: 'block',
+                          }}
                         />
                         <div style={{
                           position: 'absolute', bottom: 0, left: 0, right: 0,
@@ -393,7 +414,7 @@ export default function LabDetailPage() {
                     <div>
                       <p style={{ fontFamily: 'var(--font-smart)', fontSize: '9px', letterSpacing: '0.2em', color: 'rgba(255,255,255,0.3)', marginBottom: '3px' }}>DATE</p>
                       <p style={{ fontFamily: 'var(--font-noto-sans)', fontSize: '12px', color: 'rgba(255,255,255,0.7)' }}>
-                        {item.date}
+                        {formatDate(item.date)}
                       </p>
                     </div>
                   </div>

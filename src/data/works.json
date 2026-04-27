@@ -99,8 +99,8 @@
         "id":  "sakuya-hanaha-kireini",
         "title":  "昨夜、花は綺麗に咲き誇る カバー",
         "date":  "2021-05-26",
-        "thumbnail":  "/images/works/sakuya-hanaha-kireini.jpg",
-        "contain":  true,
+        "thumbnail":  "/images/works/sakuya-hanaha-kireini-mock.jpg",
+        "images":  ["/images/works/sakuya-hanaha-kireini.jpg"],
         "credit":  [
                        "Author：五月雨望海"
                    ],
@@ -215,8 +215,8 @@
         "id":  "seikan-saredo-kodoku-zetsubou",
         "title":  "生還されど孤独と絶望 カバー",
         "date":  "2022-05-08",
-        "thumbnail":  "/images/works/seikan-saredo-kodoku-zetsubou.jpg",
-        "contain":  true,
+        "thumbnail":  "/images/works/seikan-saredo-kodoku-zetsubou-mock.jpg",
+        "images":  ["/images/works/seikan-saredo-kodoku-zetsubou.jpg"],
         "credit":  [
                        "Author：五月雨望海"
                    ],
@@ -612,6 +612,7 @@
         "title":  "宮城玲 × RE:vius コラボTシャツ・ロンT告知画像",
         "date":  "2024-02-16",
         "thumbnail":  "/images/works/works-miyagi-revius-01.jpg",
+        "contain": true,
         "credit":  [
 
                    ],
@@ -796,6 +797,7 @@
         "title":  "宙を走る六等星 No Brand Boys\nフライヤー",
         "date":  "2024-09-07",
         "thumbnail":  "/images/works/soraroku-flier-no-brandboys.jpg",
+        "contain": true,
         "credit":  [
 
                    ],
@@ -862,6 +864,7 @@
         "title":  "宙を走る六等星 熱くなったり楽しくなったり\n VOL4 フライヤー",
         "date":  "2024-12-21",
         "thumbnail":  "/images/works/soraroku-flier-tanoshiku.jpg",
+        "contain": true,
         "credit":  [
 
                    ],
@@ -957,8 +960,8 @@
         "id":  "nemo-no-seijaku",
         "title":  "ネモの静寂 カバー",
         "date":  "2025-05-25",
-        "thumbnail":  "/images/works/nemo-no-seijaku.jpg",
-        "contain":  true,
+        "thumbnail":  "/images/works/nemo-no-seijaku-mock.jpg",
+        "images":  ["/images/works/nemo-no-seijaku.jpg"],
         "credit":  [
                        "Author：五月雨望海"
                    ],
@@ -1109,6 +1112,238 @@
                          {
                              "body":  "BlueOceanGaming主催BOGCUPのキービジュアルを制作しました。",
                              "heading":  "概要"
+                         }
+                     ]
+    },
+    {
+        "id":  "reimei-saikai",
+        "title":  "黎明・再開 ～あの閃光を再び～ フライヤー",
+        "client":  [],
+        "date":  "2025-09-08",
+        "thumbnail":  "/images/works/reimei-saikai.jpg",
+        "contain":  true,
+        "credit":  [],
+        "links":  [],
+        "types":  [
+                      "Advertisement"
+                  ],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "横浜RUSH!!で開催された黎明・再開 ～あの閃光を再び～のフライヤーを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "soraroku-ohmygod",
+        "title":  "宙を走る六等星 Oh! My God!! ジャケット",
+        "client":  ["宙を走る六等星"],
+        "date":  "2023-09-24",
+        "thumbnail":  "/images/works/soraroku-ohmygod-mock.jpg",
+        "images":  ["/images/works/soraroku-ohmygod.jpg"],
+        "credit":  [],
+        "links":  [
+                      {
+                          "label":  "YouTube Music",
+                          "url":  "https://music.youtube.com/playlist?list=OLAK5uy_m4qgv9fh2Wp9RSS4Q6i6w8XS7tMzZ5ZAk"
+                      }
+                  ],
+        "types":  ["Cover"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "宙を走る六等星様のシングル『Oh!My God!!』のジャケットを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "soraroku-daybreak",
+        "title":  "宙を走る六等星 Daybreak ジャケット",
+        "client":  ["宙を走る六等星"],
+        "date":  "2024-02-17",
+        "thumbnail":  "/images/works/soraroku-daybreak-mock.jpg",
+        "images":  ["/images/works/soraroku-daybreak.jpg"],
+        "credit":  [],
+        "links":  [
+                      {
+                          "label":  "linkco.re",
+                          "url":  "https://linkco.re/B55bm27H?lang=ja"
+                      }
+                  ],
+        "types":  ["Cover"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "宙を走る六等星様のシングル『Daybreak』のジャケットを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "soraroku-hitoribocchi",
+        "title":  "宙を走る六等星 ひとりぼっち ジャケット",
+        "client":  ["宙を走る六等星"],
+        "date":  "2025-08-22",
+        "thumbnail":  "/images/works/soraroku-hitoribocchi-mock.jpg",
+        "images":  ["/images/works/soraroku-hitoribocchi.jpg"],
+        "credit":  [],
+        "links":  [
+                      {
+                          "label":  "linkco.re",
+                          "url":  "https://linkco.re/ePAassv7?lang=ja"
+                      }
+                  ],
+        "types":  ["Cover"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "宙を走る六等星様のシングル『ひとりぼっち』のジャケットを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "soraroku-hothothot",
+        "title":  "宙を走る六等星 Hot!Hot!Hot! ジャケット",
+        "client":  ["宙を走る六等星"],
+        "date":  "2025-12-08",
+        "thumbnail":  "/images/works/soraroku-hothothot-mock.jpg",
+        "images":  ["/images/works/soraroku-hothothot.jpg"],
+        "credit":  [],
+        "links":  [
+                      {
+                          "label":  "linkco.re",
+                          "url":  "https://linkco.re/Sp88aEQT?lang=ja"
+                      }
+                  ],
+        "types":  ["Cover"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "宙を走る六等星様のシングル『Hot!Hot!Hot!』のジャケットを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "soraroku-startdash",
+        "title":  "宙を走る六等星 スタートダッシュ ジャケット",
+        "client":  ["宙を走る六等星"],
+        "date":  "2024-10-27",
+        "thumbnail":  "/images/works/soraroku-startdash-mock.jpg",
+        "images":  ["/images/works/soraroku-startdash.jpg"],
+        "credit":  [],
+        "links":  [
+                      {
+                          "label":  "linkco.re",
+                          "url":  "https://linkco.re/UZdR9tN1?lang=ja"
+                      }
+                  ],
+        "types":  ["Cover"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "宙を走る六等星様のシングル『スタートダッシュ』のジャケットを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "soraroku-touhikou",
+        "title":  "宙を走る六等星 逃避行 ジャケット",
+        "client":  ["宙を走る六等星"],
+        "date":  "2025-05-24",
+        "thumbnail":  "/images/works/soraroku-touhikou-mock.jpg",
+        "images":  ["/images/works/soraroku-touhikou.jpg"],
+        "credit":  [],
+        "links":  [
+                      {
+                          "label":  "linkco.re",
+                          "url":  "https://linkco.re/Q7AX2rU3?lang=ja"
+                      }
+                  ],
+        "types":  ["Cover"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "宙を走る六等星様のシングル『逃避行』のジャケットを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "wasavi-iss",
+        "title":  "wasavi インターステラーサマー ジャケット",
+        "client":  ["wasavi"],
+        "date":  "2023-11-18",
+        "thumbnail":  "/images/works/wasavi-ISS-mock.jpg",
+        "images":  ["/images/works/wasavi-ISS.jpg"],
+        "credit":  [
+                       "Photo：wasavi",
+                       "Design：Ruprous"
+                   ],
+        "links":  [
+                      {
+                          "label":  "YouTube Music",
+                          "url":  "https://music.youtube.com/playlist?list=OLAK5uy_nrMmmsxELAyLnxswfu62HGSB5xbTuXhBM"
+                      },
+                      {
+                          "label":  "Apple Music",
+                          "url":  "https://music.apple.com/jp/album/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%82%B9%E3%83%86%E3%83%A9%E3%83%BC%E3%82%B5%E3%83%9E%E3%83%BC-single/1715230054"
+                      },
+                      {
+                          "label":  "Spotify",
+                          "url":  "https://open.spotify.com/intl-ja/album/4OEIuXIyFbGI8ZoDbCWbGM"
+                      }
+                  ],
+        "types":  ["Cover"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "wasavi様のシングル『インターステラ―サマー』のジャケットを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "fluegel-2ndrc-result",
+        "title":  "Fluegel 2nd RC RESULT",
+        "client":  ["Fluegel"],
+        "date":  "2020-10-18",
+        "thumbnail":  "/images/works/Fluegel-2ndRC-result.jpg",
+        "credit":  [],
+        "links":  [],
+        "types":  ["Graphic"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "Fluegelが主催したFluegel 2nd RCのリザルト画像を制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "pnz-newmember-wanted",
+        "title":  "PNZ NEW MEMBER WANTED",
+        "client":  ["PNZ"],
+        "date":  "2023-06-14",
+        "thumbnail":  "/images/works/pnz-newmember-wanted.jpg",
+        "credit":  [],
+        "links":  [],
+        "types":  ["Graphic"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "PNZの新メンバー募集画像を制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "pnz-desktopwallpaper",
+        "title":  "PNZ DESKTOP WALLPAPER",
+        "client":  ["PNZ"],
+        "date":  "2023-10-27",
+        "thumbnail":  "/images/works/pnz-desktopwallpaper.jpg",
+        "credit":  [],
+        "links":  [],
+        "types":  ["Graphic"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "PNZから配布されたデスクトップ用壁紙を制作しました。"
                          }
                      ]
     }
