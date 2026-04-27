@@ -6,6 +6,7 @@ import LabPage        from './pages/LabPage'
 import LabDetailPage  from './pages/LabDetailPage'
 import AboutPage      from './pages/AboutPage'
 import ContactPage    from './pages/ContactPage'
+import NotFoundPage   from './pages/NotFoundPage'
 
 export default function AppRoutes() {
   return (
@@ -17,6 +18,7 @@ export default function AppRoutes() {
       <Route path="/lab/:id"   element={<LabDetailPage />} />
       <Route path="/about"     element={<AboutPage />} />
       <Route path="/contact"   element={<ContactPage />} />
+      <Route path="*"          element={<NotFoundPage />} />
     </Routes>
   )
 }
