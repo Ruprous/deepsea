@@ -43,17 +43,53 @@
                      ]
     },
     {
+        "id":  "deepsea-portfolio",
+        "title":  "Portfolio Site \"DeepSea\"",
+        "date":  "2026-04-27",
+        "thumbnail":  "/images/lab/deepsea.png",
+        "credit":  [
+                       "Design & Development：Ruprous"
+                   ],
+        "links":  [
+                      {
+                          "label":  "GitHub",
+                          "url":  "https://github.com/Ruprous/deepsea"
+                      },
+                      {
+                          "label":  "ruprous.me",
+                          "url":  "https://ruprous.me"
+                      }
+                  ],
+        "types":  [
+                      "WebSite"
+                  ],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "React + Vite + TypeScript で構築した現行のポートフォリオサイト。Three.js（React Three Fiber）によるインタラクティブな3D球体をヒーローに据え、作品・ラボの一覧・詳細ページ、ライトボックス、フィルタリング機能などを実装しています。カスタムドメイン ruprous.me にて公開中。"
+                         },
+                         {
+                             "heading":  "技術スタック",
+                             "body":  "React 18 / Vite / TypeScript / React Router v6 / Three.js + React Three Fiber / Tailwind CSS v4\nデプロイ：GitHub Pages + GitHub Actions（main push で自動デプロイ）\nドメイン：Namecheap + CNAME"
+                         },
+                         {
+                             "heading":  "設計方針",
+                             "body":  "コンテンツは works.json / lab.json で一元管理し、JSONを更新してpushするだけで本番に反映される運用設計を採用。\n\nスタイリングはすべてインラインスタイルで記述し、デザイントークン（CSS変数）と useMobile カスタムフックを組み合わせることで、CSSファイルを増やさずに精密なレスポンシブ対応を実現しています。\n\nGitHub Pages のSPAルーティング問題は 404.html + sessionStorage リダイレクトパターンで解決し、存在しないURLには React Router のキャッチオールルートが独自404ページを返します。"
+                         }
+                     ]
+    },
+    {
         "id":  "summer-clouds-portfolio",
         "title":  "Portfolio Site \"Summer Clouds\"",
         "date":  "2025-06-03",
-        "thumbnail":  "/images/works/noimage.jpg",
+        "thumbnail":  "/images/lab/summer-clouds.png",
         "credit":  [
                        "Design \u0026 Development：Ruprous"
                    ],
         "links":  [
                       {
-                          "label":  "Webサイト(本サイト)",
-                          "url":  "https://ruprous.github.io/summer-clouds/"
+                          "label":  "以前のポートフォリオサイト",
+                          "url":  "https://github.com/Ruprous/summer-clouds"
                       }
                   ],
         "types":  [

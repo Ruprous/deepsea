@@ -2,6 +2,7 @@
     {
         "id":  "key-shokupanda",
         "title":  "食パンダ キービジュアルデザイン",
+        "client":  ["食パンダ"],
         "date":  "2026-02-17",
         "thumbnail":  "/images/works/key-shokupanda.jpg",
         "contain":  true,
@@ -25,6 +26,7 @@
     {
         "id":  "key-kuzumiato",
         "title":  "久澄あと キービジュアルデザイン",
+        "client":  ["久澄あと"],
         "date":  "2026-04-02",
         "thumbnail":  "/images/works/key-kuzumiato.jpg",
         "contain":  true,
@@ -48,6 +50,7 @@
     {
         "id":  "hhime-pnzwelcome",
         "title":  "姫神ひめ PNZ 加入画像",
+        "client":  ["PNZ"],
         "date":  "2025-09-20",
         "thumbnail":  "/images/works/hhime-pnzwelcome.jpg",
         "credit":  [
@@ -69,6 +72,7 @@
     {
         "id":  "kingslayer-sirius-mv",
         "title":  "キングスレイヤー / Sirius＊【歌ってみた】",
+        "client":  ["Sirius＊"],
         "date":  "2026-03-07",
         "youtubeId":  "yu579fbUuP8",
         "thumbnail":  "",
@@ -119,6 +123,7 @@
     {
         "id":  "logo-natukishiro",
         "title":  "夏月しろ ロゴ",
+        "client":  ["夏月しろ"],
         "date":  "2021-10",
         "thumbnail":  "/images/works/logo-natukishiro.jpg",
         "credit":  [
@@ -132,7 +137,7 @@
                   ],
         "sections":  [
                          {
-                             "body":  "Vtuber:夏月しろさんのロゴを制作しました。",
+                             "body":  "Vtuber:夏月しろ様のロゴを制作しました。",
                              "heading":  "概要"
                          }
                      ]
@@ -165,6 +170,7 @@
     {
         "id":  "naturalclipcup",
         "title":  "NCC キービジュアル",
+        "client":  ["ニキ"],
         "date":  "2022-05",
         "thumbnail":  "/images/works/NaturalClipCup.jpg",
         "credit":  [
@@ -186,6 +192,7 @@
     {
         "id":  "kazama-stream",
         "title":  "鉄拳かざま ライブ配信 サムネイル",
+        "client":  ["鉄拳かざま"],
         "date":  "2022-05",
         "thumbnail":  "/images/works/kazama-stream.jpg",
         "credit":  [
@@ -199,7 +206,7 @@
                   ],
         "sections":  [
                          {
-                             "body":  "鉄拳かざまさんのライブ配信用サムネイルを制作しました。",
+                             "body":  "鉄拳かざま様のライブ配信用サムネイルを制作しました。",
                              "heading":  "概要"
                          }
                      ]
@@ -232,6 +239,7 @@
     {
         "id":  "u-mv",
         "title":  "U (COVER) / MV",
+        "client":  ["Zu2"],
         "date":  "2022-07",
         "youtubeId":  "skjmtZZy3rQ",
         "thumbnail":  "",
@@ -249,7 +257,7 @@
                   ],
         "sections":  [
                          {
-                             "body":  "Zu2によるカバー楽曲『U』のミュージックビデオ・サムネイル画像を制作。",
+                             "body":  "Zu2様によるカバー楽曲『U』のミュージックビデオ・サムネイル画像を制作。",
                              "heading":  "概要"
                          }
                      ]
@@ -257,6 +265,7 @@
     {
         "id":  "logo-aotakeshizuna",
         "title":  "青竹静那 ロゴ",
+        "client":  ["青竹静那"],
         "date":  "2022-10",
         "thumbnail":  "/images/works/logo-aotakeshizuna.jpg",
         "credit":  [
@@ -270,13 +279,14 @@
                   ],
         "sections":  [
                          {
-                             "body":  "Vtuber:青竹雫那さんのロゴを制作しました。",
+                             "body":  "Vtuber:青竹雫那様のロゴを制作しました。",
                              "heading":  "概要"
                          }
                      ]
     },
     {
         "id":  "pnz-valo-primus-kv",
+        "client":  ["PNZ"],
         "title":  "PNZ Valorant Custom PRIMUS\n キービジュアル",
         "date":  "2022-12-03",
         "thumbnail":  "/images/works/pnz-valo-primus-kv.jpg",
@@ -299,6 +309,7 @@
     {
         "id":  "wasurena-mv",
         "title":  "勿忘 (COVER) / MV",
+        "client":  ["Zu2", "宮城玲"],
         "date":  "2023-01-01",
         "youtubeId":  "C-MiqbZsumI",
         "thumbnail":  "",
@@ -315,13 +326,14 @@
                   ],
         "sections":  [
                          {
-                             "body":  "Zu2と宮城玲によるカバー楽曲『勿忘』のミュージックビデオを制作。",
+                             "body":  "Zu2様と宮城玲様によるカバー楽曲『勿忘』のミュージックビデオを制作。",
                              "heading":  "概要"
                          }
                      ]
     },
     {
         "id":  "pnz-custom-v6",
+        "client":  ["PNZ"],
         "title":  "PNZ CUSTOM V6. CAME BACK",
         "thumbnail":  "https://imgx.foriio.com/images/store/29934e0ac6c5f327e9a1febacdafe5e9.png?auto=compress\u0026w=2184",
         "date":  "2023-04",
@@ -344,6 +356,7 @@
     {
         "id":  "yagurahai",
         "title":  "櫓杯 キービジュアル",
+        "client":  ["PNZ"],
         "date":  "2023-08",
         "thumbnail":  "/images/works/yagurahai.jpg",
         "credit":  [
@@ -364,6 +377,7 @@
     },
     {
         "id":  "pnz-mc-nakama",
+        "client":  ["PNZ"],
         "title":  "PNZ 仲間鯖 ロゴ",
         "date":  "2023-09",
         "thumbnail":  "/images/works/pnz-mc-nakama.jpg",
@@ -386,6 +400,7 @@
     {
         "id":  "logo-miyagirei",
         "title":  "宮城玲 ロゴ",
+        "client":  ["宮城玲"],
         "date":  "2023-10",
         "thumbnail":  "/images/works/logo-miyagirei.jpg",
         "credit":  [
@@ -399,13 +414,14 @@
                   ],
         "sections":  [
                          {
-                             "body":  "Vtuber:宮城玲さんのロゴを新調しました。",
+                             "body":  "Vtuber:宮城玲様のロゴを新調しました。",
                              "heading":  "概要"
                          }
                      ]
     },
     {
         "id":  "logo-valokitunekan",
+        "client":  ["菰狐きさらぎ"],
         "title":  "ゔぁろ狐館 ロゴ",
         "date":  "2023-10",
         "thumbnail":  "/images/works/logo-valokitunekan.jpg",
@@ -420,13 +436,14 @@
                   ],
         "sections":  [
                          {
-                             "body":  "菰狐きさらぎさん運営のValorantDiscord鯖「ゔぁろ狐館」のロゴを制作しました。",
+                             "body":  "菰狐きさらぎ様運営のValorantDiscord鯖「ゔぁろ狐館」のロゴを制作しました。",
                              "heading":  "概要"
                          }
                      ]
     },
     {
         "id":  "logo-bunta",
+        "client":  ["ぶんた"],
         "title":  "ぶんた ロゴ",
         "date":  "2023-10",
         "thumbnail":  "/images/works/logo-bunta.jpg",
@@ -441,13 +458,14 @@
                   ],
         "sections":  [
                          {
-                             "body":  "ぶんたさんのロゴを制作しました。",
+                             "body":  "ぶんた様のロゴを制作しました。",
                              "heading":  "概要"
                          }
                      ]
     },
     {
         "id":  "logo-yozakuraeru",
+        "client":  ["夜桜愛瑠"],
         "title":  "夜桜愛瑠 ロゴ",
         "date":  "2023-10",
         "thumbnail":  "/images/works/logo-yozakuraeru.jpg",
@@ -462,13 +480,14 @@
                   ],
         "sections":  [
                          {
-                             "body":  "Vtuber:夜桜愛瑠さんのロゴを制作しました。",
+                             "body":  "Vtuber:夜桜愛瑠様のロゴを制作しました。",
                              "heading":  "概要"
                          }
                      ]
     },
     {
         "id":  "pnz-apex-sankagata",
+        "client":  ["PNZ"],
         "title":  "PNZ 参加型カスタム サムネイル",
         "date":  "2023-10",
         "thumbnail":  "/images/works/pnz-apex-sankagata.jpg",
@@ -490,6 +509,7 @@
     },
     {
         "id":  "miyagi-shinishou",
+        "client":  ["宮城玲"],
         "title":  "宮城玲 新衣装お披露目会 サムネイル",
         "date":  "2023-10",
         "thumbnail":  "/images/works/miyagi-shinishou.jpg",
@@ -504,13 +524,14 @@
                   ],
         "sections":  [
                          {
-                             "body":  "宮城玲さんの新衣装お披露目配信のサムネイルを制作しました。",
+                             "body":  "宮城玲様の新衣装お披露目配信のサムネイルを制作しました。",
                              "heading":  "概要"
                          }
                      ]
     },
     {
         "id":  "hitomaniac-miyagirei-short",
+        "client":  ["宮城玲"],
         "title":  "人マニア (COVER) ShortVideo",
         "date":  "2023-11-02",
         "youtubeId":  "oxg_dZ-XwB0",
@@ -531,13 +552,14 @@
                   ],
         "sections":  [
                          {
-                             "body":  "宮城玲によるYouTubeShort用の人マニア(cover)の映像を制作しました。",
+                             "body":  "宮城玲様によるYouTubeShort用の人マニア(cover)の映像を制作しました。",
                              "heading":  "概要"
                          }
                      ]
     },
     {
         "id":  "pnz-valo-gou",
+        "client":  ["PNZ"],
         "title":  "PNZ Valorant Custom -豪-",
         "date":  "2023-12-16",
         "youtubeId":  "a2OVlgTEBf8",
@@ -586,6 +608,7 @@
     },
     {
         "id":  "works-miyagi-revius-01",
+        "client":  ["宮城玲"],
         "title":  "宮城玲 × RE:vius コラボTシャツ・ロンT告知画像",
         "date":  "2024-02-16",
         "thumbnail":  "/images/works/works-miyagi-revius-01.jpg",
@@ -631,13 +654,14 @@
                   ],
         "sections":  [
                          {
-                             "body":  "inkyaさんの『aimerz+』の加入記念ファンアート画像を制作しました。メンバーの雰囲気やチームカラーを意識してデザインしています。",
+                             "body":  "inkya様の『aimerz+』の加入記念ファンアート画像を制作しました。メンバーの雰囲気やチームカラーを意識してデザインしています。",
                              "heading":  "概要"
                          }
                      ]
     },
     {
         "id":  "oudon-offline",
+        "client":  ["おうどん"],
         "title":  "おうどん 配信オフライン画像",
         "date":  "2024-04",
         "thumbnail":  "/images/works/oudon-offline.jpg",
@@ -652,13 +676,14 @@
                   ],
         "sections":  [
                          {
-                             "body":  "Valorantを配信されているおうどんさんの配信用オフライン画像を制作。",
+                             "body":  "Valorantを配信されているおうどん様の配信用オフライン画像を制作。",
                              "heading":  "概要"
                          }
                      ]
     },
     {
         "id":  "riskydice-algs-cc",
+        "client":  ["RISKYDICE"],
         "title":  "RISKYDICE ALGS CC 出場画像",
         "date":  "2024-06",
         "thumbnail":  "/images/works/riskydice-algs-cc.jpg",
@@ -680,6 +705,7 @@
     },
     {
         "id":  "logo-kazama",
+        "client":  ["鉄拳かざま"],
         "title":  "鉄拳かざま ロゴ",
         "date":  "2024-07",
         "thumbnail":  "/images/works/logo-kazama.jpg",
@@ -694,13 +720,14 @@
                   ],
         "sections":  [
                          {
-                             "body":  "鉄拳かざまさんのロゴを制作しました。",
+                             "body":  "鉄拳かざま様のロゴを制作しました。",
                              "heading":  "概要"
                          }
                      ]
     },
     {
         "id":  "nshiro-thumb-01",
+        "client":  ["夏月しろ"],
         "title":  "夏月しろ EFT サムネイル 01",
         "date":  "2024-08",
         "thumbnail":  "/images/works/nshiro-thumb-01.jpg",
@@ -715,13 +742,14 @@
                   ],
         "sections":  [
                          {
-                             "body":  "夏月しろさんのESCAPE FROM TARKOV配信サムネイルを制作しました。",
+                             "body":  "夏月しろ様のESCAPE FROM TARKOV配信サムネイルを制作しました。",
                              "heading":  "概要"
                          }
                      ]
     },
     {
         "id":  "nshiro-thumb-02",
+        "client":  ["夏月しろ"],
         "title":  "夏月しろ EFT サムネイル 02",
         "date":  "2024-08",
         "thumbnail":  "/images/works/nshiro-thumb-02.jpg",
@@ -736,7 +764,7 @@
                   ],
         "sections":  [
                          {
-                             "body":  "夏月しろさんのESCAPE FROM TARKOV配信サムネイルを制作しました。",
+                             "body":  "夏月しろ様のESCAPE FROM TARKOV配信サムネイルを制作しました。",
                              "heading":  "概要"
                          }
                      ]
@@ -764,6 +792,7 @@
     },
     {
         "id":  "soraroku-flier-no-brandboys",
+        "client":  ["宙を走る六等星"],
         "title":  "宙を走る六等星 No Brand Boys\nフライヤー",
         "date":  "2024-09-07",
         "thumbnail":  "/images/works/soraroku-flier-no-brandboys.jpg",
@@ -778,13 +807,14 @@
                   ],
         "sections":  [
                          {
-                             "body":  "宙を走る六等星の主催ライブ\"No Brand Boys\"フライヤーを制作しました。",
+                             "body":  "宙を走る六等星様の主催ライブ\"No Brand Boys\"フライヤーを制作しました。",
                              "heading":  "概要"
                          }
                      ]
     },
     {
         "id":  "chanai-300subs",
+        "client":  ["ちゃんあい"],
         "title":  "ちゃんあい フォロワー300人記念配信\nサムネイル",
         "date":  "2024-10",
         "thumbnail":  "/images/works/chanai-300subs.jpg",
@@ -799,13 +829,14 @@
                   ],
         "sections":  [
                          {
-                             "body":  "ちゃんあいさんのTwitchフォロワー300人記念耐久配信のサムネイルを制作しました。",
+                             "body":  "ちゃんあい様のTwitchフォロワー300人記念耐久配信のサムネイルを制作しました。",
                              "heading":  "概要"
                          }
                      ]
     },
     {
         "id":  "logo-gamejirou",
+        "client":  ["ガメ次郎"],
         "title":  "ガメ次郎 ロゴ",
         "date":  "2024-12",
         "thumbnail":  "/images/works/logo-gamejirou.png",
@@ -820,13 +851,14 @@
                   ],
         "sections":  [
                          {
-                             "body":  "Vtuber:ガメ次郎さんのロゴを制作しました。",
+                             "body":  "Vtuber:ガメ次郎様のロゴを制作しました。",
                              "heading":  "概要"
                          }
                      ]
     },
     {
         "id":  "soraroku-flier-tanoshiku",
+        "client":  ["宙を走る六等星"],
         "title":  "宙を走る六等星 熱くなったり楽しくなったり\n VOL4 フライヤー",
         "date":  "2024-12-21",
         "thumbnail":  "/images/works/soraroku-flier-tanoshiku.jpg",
@@ -841,13 +873,14 @@
                   ],
         "sections":  [
                          {
-                             "body":  "宙を走る六等星のライブ\"熱くなったり楽しくなったり VOL4\"のフライヤーを制作しました。",
+                             "body":  "宙を走る六等星様のライブ\"熱くなったり楽しくなったり VOL4\"のフライヤーを制作しました。",
                              "heading":  "概要"
                          }
                      ]
     },
     {
         "id":  "charichan-first-stream",
+        "client":  ["ちゃりちゃん"],
         "title":  "ちゃりちゃん 初配信 サムネイル",
         "date":  "2025-01",
         "thumbnail":  "/images/works/charichan-first-stream.jpg",
@@ -862,13 +895,14 @@
                   ],
         "sections":  [
                          {
-                             "body":  "新たにVtuberとしてデビューされたちゃりちゃんさんの初配信サムネイルを制作しました。周りの装飾にはヘアピンやリボンを用い、世界観を重視したサムネイルになりました。配信開始までVtuber部分は黒塗りの画像が差し替えられており、それまではサムネイルの小物からどんな姿かを想像しようとファンの方々が議論していました。",
+                             "body":  "新たにVtuberとしてデビューされたちゃりちゃん様の初配信サムネイルを制作しました。周りの装飾にはヘアピンやリボンを用い、世界観を重視したサムネイルになりました。配信開始までVtuber部分は黒塗りの画像が差し替えられており、それまではサムネイルの小物からどんな姿かを想像しようとファンの方々が議論していました。",
                              "heading":  "概要"
                          }
                      ]
     },
     {
         "id":  "popin2-mv",
+        "client":  ["ねぎりん"],
         "title":  "POP IN 2 (COVER) / MV",
         "date":  "2025-02-14",
         "youtubeId":  "IHWtiTSIPPI",
@@ -888,7 +922,7 @@
                   ],
         "sections":  [
                          {
-                             "body":  "ねぎりん・ちゃんあい・minの3名によるカバー楽曲『POP IN 2』の\nミュージックビデオ・サムネイル画像を制作。",
+                             "body":  "ねぎりん様・ちゃんあい様・min様の3名によるカバー楽曲『POP IN 2』の\nミュージックビデオ・サムネイル画像を制作。",
                              "heading":  "概要"
                          }
                      ]
@@ -946,6 +980,7 @@
     },
     {
         "id":  "chai-premiere-memory",
+        "client":  ["ちゃんあい"],
         "title":  "ちゃんあい 初Premiere思い出",
         "date":  "2025-05-26",
         "youtubeId":  "ru1iWyT7Vi0",
@@ -963,13 +998,14 @@
                   ],
         "sections":  [
                          {
-                             "body":  "ちゃんあいさんのValorantPremiere思い出動画を制作しました。",
+                             "body":  "ちゃんあい様のValorantPremiere思い出動画を制作しました。",
                              "heading":  "概要"
                          }
                      ]
     },
     {
         "id":  "onta-hiitemita-bymyside",
+        "client":  ["おんた"],
         "title":  "【ベース弾いてみた】By My Side/夜の本気ダンス",
         "date":  "2025-06-19",
         "youtubeId":  "biKAGwriQy0",
@@ -986,7 +1022,7 @@
                   ],
         "sections":  [
                          {
-                             "body":  "おんたさんがベースカバーをした夜の本気ダンスの「By My Side」のMVを制作しました。",
+                             "body":  "おんた様がベースカバーをした夜の本気ダンスの「By My Side」のMVを制作しました。",
                              "heading":  "概要"
                          }
                      ]
@@ -1010,6 +1046,7 @@
     },
     {
         "id":  "onta-hiitemita-donutshole",
+        "client":  ["おんた"],
         "title":  "【ベース弾いてみた】ドーナツホール/ハチ",
         "date":  "2025-07-24",
         "youtubeId":  "bLaPPMFOG0U",
@@ -1031,6 +1068,7 @@
     },
     {
         "id":  "onta-hiitemita-shojolei",
+        "client":  ["おんた"],
         "title":  "【ベース弾いてみた】少女レイ/みきとP",
         "date":  "2025-09-05",
         "youtubeId":  "tpFrw5n3zKc",
@@ -1054,6 +1092,7 @@
     },
     {
         "id":  "bogcup-visual",
+        "client":  ["BlueOceanGaming"],
         "title":  "BOGCUP キービジュアル",
         "date":  "2025-06-25",
         "thumbnail":  "/images/works/BOGCUP.jpg",

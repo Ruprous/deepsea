@@ -21,6 +21,7 @@ interface WorkLink {
 interface Work {
   id: string
   title: string
+  client?: string[]
   types: string[]
   date: string
   thumbnail?: string
@@ -284,6 +285,33 @@ export default function WorkDetailPage() {
 
               {/* ── 右：サイドバー ── */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+
+                {/* クライアント */}
+                {work.client && work.client.length > 0 && (
+                  <div>
+                    <p style={{
+                      fontFamily: 'var(--font-smart)',
+                      fontSize: '9px',
+                      letterSpacing: '0.3em',
+                      color: 'var(--color-accent)',
+                      marginBottom: '12px',
+                    }}>
+                      CLIENT
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                      {work.client.map((c, i) => (
+                        <p key={i} style={{
+                          fontFamily: 'var(--font-noto-sans)',
+                          fontSize: '13px',
+                          letterSpacing: '0.04em',
+                          color: 'rgba(255,255,255,0.75)',
+                        }}>
+                          {c}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 {/* クレジット */}
                 {work.credit && work.credit.length > 0 && (
