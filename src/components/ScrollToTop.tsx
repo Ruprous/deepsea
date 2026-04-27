@@ -1,12 +1,16 @@
 import { useState, useEffect } from 'react'
 
-const THRESHOLD = 300
+const THRESHOLD    = 300  // 出現するスクロール量
+const BOTTOM_MARGIN = 300  // 下端からこの距離以内で消える
 
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > THRESHOLD)
+    const onScroll = () => {
+      const nearBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - BOTTOM_MARGIN
+      setVisible(window.scrollY > THRESHOLD && !nearBottom)
+    }
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
