@@ -30,6 +30,12 @@
   --color-dim:     rgba(255, 255, 255, 0.4);
 }
 
+/* ─── テキスト選択色 ───────────────────────── */
+::selection {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
 /* ─── ベーススタイル ────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;

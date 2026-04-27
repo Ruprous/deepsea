@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import Header     from '../components/layout/Header'
 import Footer     from '../components/layout/Footer'
 import HeroSphere from '../components/Hero/HeroSphere'
+import Lightbox   from '../components/Lightbox'
 import labData    from '../data/lab.json'
 import { useMobile } from '../hooks/useMobile'
 
@@ -51,7 +52,8 @@ const allItems = labData as LabItem[]
 // ─────────────────────────────────────────────────────────
 export default function LabDetailPage() {
   const { id } = useParams<{ id: string }>()
-  const [visible, setVisible] = useState(false)
+  const [visible,     setVisible]     = useState(false)
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
   const isMobile = useMobile()
 
   useEffect(() => {
@@ -160,13 +162,21 @@ export default function LabDetailPage() {
                     <img
                       src={getThumb(item)}
                       alt={item.title}
-                      style={{ width: '100%', height: 'auto', display: 'block' }}
+                      onClick={() => getThumb(item) !== NOIMAGE && setLightboxSrc(getThumb(item))}
+                      style={{
+                        width: '100%', height: 'auto', display: 'block',
+                        cursor: getThumb(item) !== NOIMAGE ? 'zoom-in' : 'default',
+                      }}
                     />
                   ) : (
                     <img
                       src={getThumb(item)}
                       alt={item.title}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                      onClick={() => getThumb(item) !== NOIMAGE && setLightboxSrc(getThumb(item))}
+                      style={{
+                        width: '100%', height: '100%', objectFit: 'cover', display: 'block',
+                        cursor: getThumb(item) !== NOIMAGE ? 'zoom-in' : 'default',
+                      }}
                     />
                   )}
                   {/* 下部ボーダー */}
@@ -232,12 +242,17 @@ export default function LabDetailPage() {
                     marginBottom: '48px',
                   }}>
                     {item.images.map((src, i) => (
-                      <div key={i} style={{
-                        aspectRatio: '16/9',
-                        overflow: 'hidden',
-                        position: 'relative',
-                        background: 'rgba(0,119,255,0.05)',
-                      }}>
+                      <div
+                        key={i}
+                        onClick={() => setLightboxSrc(src)}
+                        style={{
+                          aspectRatio: '16/9',
+                          overflow: 'hidden',
+                          position: 'relative',
+                          background: 'rgba(0,119,255,0.05)',
+                          cursor: 'zoom-in',
+                        }}
+                      >
                         <img
                           src={src}
                           alt={`${item.title} - ${i + 1}`}
@@ -394,6 +409,11 @@ export default function LabDetailPage() {
       <div style={{ position: 'relative', zIndex: 1 }}>
         <Footer />
       </div>
+
+      {/* ライトボックス */}
+      {lightboxSrc && (
+        <Lightbox src={lightboxSrc} onClose={() => setLightboxSrc(null)} />
+      )}
     </div>
   )
 }

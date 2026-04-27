@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import Header     from '../components/layout/Header'
 import Footer     from '../components/layout/Footer'
 import HeroSphere from '../components/Hero/HeroSphere'
+import Lightbox   from '../components/Lightbox'
 import worksData  from '../data/works.json'
 import { useMobile } from '../hooks/useMobile'
 
@@ -48,8 +49,22 @@ const NOIMAGE = '/images/works/noimage.jpg'
 
 function getThumb(work: Work): string {
   if (work.thumbnail) return work.thumbnail
-  if (work.youtubeId)  return `https://img.youtube.com/vi/${work.youtubeId}/hqdefault.jpg`
+  if (work.youtubeId)  return `https://img.youtube.com/vi/${work.youtubeId}/maxresdefault.jpg`
   return NOIMAGE
+}
+
+function handleThumbLoad(e: React.SyntheticEvent<HTMLImageElement>) {
+  const img = e.currentTarget
+  if (img.src.includes('maxresdefault') && img.naturalWidth === 120 && img.naturalHeight === 90) {
+    img.src = img.src.replace('maxresdefault', 'mqdefault')
+  }
+}
+
+function handleThumbError(e: React.SyntheticEvent<HTMLImageElement>) {
+  const img = e.currentTarget
+  if (img.src.includes('maxresdefault')) {
+    img.src = img.src.replace('maxresdefault', 'mqdefault')
+  }
 }
 
 const allWorks = worksData as Work[]
@@ -57,7 +72,8 @@ const allWorks = worksData as Work[]
 // ─────────────────────────────────────────────────────────
 export default function WorkDetailPage() {
   const { id } = useParams<{ id: string }>()
-  const [visible, setVisible] = useState(false)
+  const [visible,      setVisible]      = useState(false)
+  const [lightboxSrc,  setLightboxSrc]  = useState<string | null>(null)
   const isMobile = useMobile()
 
   useEffect(() => {
@@ -171,17 +187,24 @@ export default function WorkDetailPage() {
                       style={{ width: '100%', height: '100%', border: 'none', display: 'block' }}
                     />
                   ) : work.contain ? (
-                    /* 元比率のまま表示 */
                     <img
                       src={getThumb(work)}
                       alt={work.title}
-                      style={{ width: '100%', height: 'auto', display: 'block' }}
+                      onClick={() => getThumb(work) !== NOIMAGE && setLightboxSrc(getThumb(work))}
+                      style={{
+                        width: '100%', height: 'auto', display: 'block',
+                        cursor: getThumb(work) !== NOIMAGE ? 'zoom-in' : 'default',
+                      }}
                     />
                   ) : (
                     <img
                       src={getThumb(work)}
                       alt={work.title}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                      onClick={() => getThumb(work) !== NOIMAGE && setLightboxSrc(getThumb(work))}
+                      style={{
+                        width: '100%', height: '100%', objectFit: 'cover', display: 'block',
+                        cursor: getThumb(work) !== NOIMAGE ? 'zoom-in' : 'default',
+                      }}
                     />
                   )}
                   {/* 下部ボーダー */}
@@ -247,12 +270,17 @@ export default function WorkDetailPage() {
                     marginBottom: '48px',
                   }}>
                     {work.images.map((src, i) => (
-                      <div key={i} style={{
-                        aspectRatio: '16/9',
-                        overflow: 'hidden',
-                        position: 'relative',
-                        background: 'rgba(0,119,255,0.05)',
-                      }}>
+                      <div
+                        key={i}
+                        onClick={() => setLightboxSrc(src)}
+                        style={{
+                          aspectRatio: '16/9',
+                          overflow: 'hidden',
+                          position: 'relative',
+                          background: 'rgba(0,119,255,0.05)',
+                          cursor: 'zoom-in',
+                        }}
+                      >
                         <img
                           src={src}
                           alt={`${work.title} - ${i + 1}`}
@@ -445,6 +473,11 @@ export default function WorkDetailPage() {
       <div style={{ position: 'relative', zIndex: 1 }}>
         <Footer />
       </div>
+
+      {/* ライトボックス */}
+      {lightboxSrc && (
+        <Lightbox src={lightboxSrc} onClose={() => setLightboxSrc(null)} />
+      )}
     </div>
   )
 }

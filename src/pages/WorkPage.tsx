@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Header     from '../components/layout/Header'
 import Footer     from '../components/layout/Footer'
-import HeroSphere from '../components/Hero/HeroSphere'
-import worksData  from '../data/works.json'
+import HeroSphere   from '../components/Hero/HeroSphere'
+import ScrollToTop  from '../components/ScrollToTop'
+import worksData    from '../data/works.json'
 import { useMobile } from '../hooks/useMobile'
 
 // ── 型定義 ────────────────────────────────────────────────
@@ -34,8 +35,25 @@ const NOIMAGE = '/images/works/noimage.jpg'
 
 function getThumb(work: Work): string {
   if (work.thumbnail) return work.thumbnail
-  if (work.youtubeId)  return `https://img.youtube.com/vi/${work.youtubeId}/hqdefault.jpg`
+  if (work.youtubeId)  return `https://img.youtube.com/vi/${work.youtubeId}/maxresdefault.jpg`
   return NOIMAGE
+}
+
+// maxresdefault が存在しない場合、YouTubeは404ではなく
+// 120×90のプレースホルダーを200 OKで返すため onError では検知できない。
+// onLoad で実寸を確認し、プレースホルダーなら mqdefault に差し替える。
+function handleThumbLoad(e: React.SyntheticEvent<HTMLImageElement>) {
+  const img = e.currentTarget
+  if (img.src.includes('maxresdefault') && img.naturalWidth === 120 && img.naturalHeight === 90) {
+    img.src = img.src.replace('maxresdefault', 'mqdefault')
+  }
+}
+
+function handleThumbError(e: React.SyntheticEvent<HTMLImageElement>) {
+  const img = e.currentTarget
+  if (img.src.includes('maxresdefault')) {
+    img.src = img.src.replace('maxresdefault', 'mqdefault')
+  }
 }
 
 // ── ソート（新しい順） ────────────────────────────────────
@@ -212,6 +230,8 @@ export default function WorkPage() {
                         src={getThumb(work)}
                         alt=""
                         aria-hidden="true"
+                        onLoad={handleThumbLoad}
+                        onError={handleThumbError}
                         style={{
                           position: 'absolute', inset: 0,
                           width: '100%', height: '100%',
@@ -226,6 +246,8 @@ export default function WorkPage() {
                         className="work-thumb"
                         src={getThumb(work)}
                         alt={work.title}
+                        onLoad={handleThumbLoad}
+                        onError={handleThumbError}
                         style={{
                           position: 'absolute', inset: 0,
                           width: '100%', height: '100%',
@@ -240,6 +262,8 @@ export default function WorkPage() {
                       className="work-thumb"
                       src={getThumb(work)}
                       alt={work.title}
+                      onLoad={handleThumbLoad}
+                      onError={handleThumbError}
                       style={{
                         width: '100%',
                         height: '100%',
@@ -338,6 +362,8 @@ export default function WorkPage() {
       <div style={{ position: 'relative', zIndex: 1 }}>
         <Footer />
       </div>
+
+      <ScrollToTop />
     </div>
   )
 }

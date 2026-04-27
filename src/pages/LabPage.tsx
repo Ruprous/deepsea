@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Header     from '../components/layout/Header'
 import Footer     from '../components/layout/Footer'
-import HeroSphere from '../components/Hero/HeroSphere'
-import labData    from '../data/lab.json'
+import HeroSphere  from '../components/Hero/HeroSphere'
+import ScrollToTop from '../components/ScrollToTop'
+import labData     from '../data/lab.json'
 import { useMobile } from '../hooks/useMobile'
 
 // ── 型定義 ────────────────────────────────────────────────
@@ -357,6 +358,8 @@ export default function LabPage() {
       <div style={{ position: 'relative', zIndex: 1 }}>
         <Footer />
       </div>
+
+      <ScrollToTop />
     </div>
   )
 }
