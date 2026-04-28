@@ -10,6 +10,10 @@ import { useMouseVelocity } from '../../hooks/useMouseVelocity'
 // モジュールレベルで持つことで Canvas 内の全コンポーネントが同じ値を参照できる
 const sharedVel = { x: 0, y: 0, mag: 0 }
 
+// ─── コナミコード カオスモード ──────────────────────────
+// Canvas 外から操作するためモジュールレベルで管理
+export const chaosRef = { current: false }
+
 // ─── velocity 更新コンポーネント（Canvas 内に1つだけ置く）──
 function VelocityManager() {
   const velocity = useMouseVelocity()
@@ -103,18 +107,31 @@ function DeepSeaSphere() {
 
   useFrame(({ clock }) => {
     if (!meshRef.current) return
-    // マウス追従回転
-    rot.current.x += (mouse.current.y * Math.PI * 0.8 - rot.current.x) * 0.04
-    rot.current.y += (mouse.current.x * Math.PI * 0.8 - rot.current.y) * 0.04
-    meshRef.current.rotation.x = rot.current.x
-    meshRef.current.rotation.y = rot.current.y
 
-    // shader uniforms を更新
-    if (shaderRef.current) {
-      shaderRef.current.uniforms.uTime.value   = clock.getElapsedTime()
-      shaderRef.current.uniforms.uVelX.value   = sharedVel.x
-      shaderRef.current.uniforms.uVelY.value   = sharedVel.y
-      shaderRef.current.uniforms.uVelMag.value = sharedVel.mag
+    if (chaosRef.current) {
+      // カオスモード：爆速回転 + 最大変形
+      rot.current.x += 0.06
+      rot.current.y += 0.09
+      meshRef.current.rotation.x = rot.current.x
+      meshRef.current.rotation.y = rot.current.y
+      if (shaderRef.current) {
+        shaderRef.current.uniforms.uTime.value   = clock.getElapsedTime() * 6
+        shaderRef.current.uniforms.uVelX.value   = 1.0
+        shaderRef.current.uniforms.uVelY.value   = 1.0
+        shaderRef.current.uniforms.uVelMag.value = 1.0
+      }
+    } else {
+      // 通常モード
+      rot.current.x += (mouse.current.y * Math.PI * 0.8 - rot.current.x) * 0.04
+      rot.current.y += (mouse.current.x * Math.PI * 0.8 - rot.current.y) * 0.04
+      meshRef.current.rotation.x = rot.current.x
+      meshRef.current.rotation.y = rot.current.y
+      if (shaderRef.current) {
+        shaderRef.current.uniforms.uTime.value   = clock.getElapsedTime()
+        shaderRef.current.uniforms.uVelX.value   = sharedVel.x
+        shaderRef.current.uniforms.uVelY.value   = sharedVel.y
+        shaderRef.current.uniforms.uVelMag.value = sharedVel.mag
+      }
     }
   })
 
@@ -180,10 +197,17 @@ function WavyRing() {
     const t = clock.getElapsedTime()
     for (const mat of [mat1.current, mat2.current]) {
       if (!mat) continue
-      mat.uniforms.uTime.value   = t
-      mat.uniforms.uVelX.value   = sharedVel.x
-      mat.uniforms.uVelY.value   = sharedVel.y
-      mat.uniforms.uVelMag.value = sharedVel.mag
+      if (chaosRef.current) {
+        mat.uniforms.uTime.value   = t * 6
+        mat.uniforms.uVelX.value   = 1.0
+        mat.uniforms.uVelY.value   = 1.0
+        mat.uniforms.uVelMag.value = 1.0
+      } else {
+        mat.uniforms.uTime.value   = t
+        mat.uniforms.uVelX.value   = sharedVel.x
+        mat.uniforms.uVelY.value   = sharedVel.y
+        mat.uniforms.uVelMag.value = sharedVel.mag
+      }
     }
   })
 
@@ -241,8 +265,9 @@ function Particles({ count = 250 }: { count?: number }) {
 
   useFrame((_, delta) => {
     if (pointsRef.current) {
-      pointsRef.current.rotation.y += delta * 0.04
-      pointsRef.current.rotation.x += delta * 0.01
+      const speed = chaosRef.current ? 8 : 1
+      pointsRef.current.rotation.y += delta * 0.04 * speed
+      pointsRef.current.rotation.x += delta * 0.01 * speed
     }
   })
 

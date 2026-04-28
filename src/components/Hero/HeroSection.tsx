@@ -1,18 +1,36 @@
-import { useState, useEffect } from 'react'
-import HeroSphere from './HeroSphere'
+import { useState, useEffect, useCallback } from 'react'
+import HeroSphere, { chaosRef } from './HeroSphere'
 import HeroLeft   from './HeroLeft'
 import HeroRight  from './HeroRight'
 import WaveLines  from './WaveLines'
-import { useMobile } from '../../hooks/useMobile'
+import { useMobile }     from '../../hooks/useMobile'
+import { useKonamiCode } from '../../hooks/useKonamiCode'
+
+const CHAOS_DURATION = 5000 // ms
 
 export default function HeroSection() {
   const [visible, setVisible] = useState(false)
+  const [chaos,   setChaos]   = useState(false)
   const isMobile = useMobile()
 
   useEffect(() => {
     const t = setTimeout(() => setVisible(true), 300)
     return () => clearTimeout(t)
   }, [])
+
+  const activateChaos = useCallback(() => {
+    if (chaos) return
+    chaosRef.current = true
+    setChaos(true)
+    document.body.classList.add('chaos-hue')
+    setTimeout(() => {
+      chaosRef.current = false
+      setChaos(false)
+      document.body.classList.remove('chaos-hue')
+    }, CHAOS_DURATION)
+  }, [chaos])
+
+  useKonamiCode(activateChaos)
 
   return (
     <section
@@ -29,6 +47,24 @@ export default function HeroSection() {
       <div style={{ position: 'absolute', inset: 0 }}>
         <HeroSphere />
       </div>
+
+      {/* コナミコード グリッチオーバーレイ */}
+      {chaos && (
+        <div style={{
+          position: 'absolute', inset: 0, zIndex: 40,
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          flexDirection: 'column', pointerEvents: 'none',
+        }}>
+          {/* スキャンライン */}
+          <div
+            className="glitch-scanlines"
+            style={{
+              position: 'absolute', inset: 0,
+              background: 'repeating-linear-gradient(0deg, rgba(255,0,0,0.04) 0px, rgba(255,0,0,0.04) 1px, transparent 1px, transparent 4px)',
+            }}
+          />
+        </div>
+      )}
 
       {/* 波形装飾 */}
       <WaveLines corner="top-right" />

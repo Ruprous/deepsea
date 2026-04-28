@@ -103,3 +103,49 @@ body {
 .menu-item:nth-child(3) { animation-delay: 0.19s; }
 .menu-item:nth-child(4) { animation-delay: 0.26s; }
 
+/* ─── コナミコード グリッチ ─────────────────── */
+@keyframes glitch-flicker {
+  0%, 100% { opacity: 1; }
+  25%       { opacity: 0.6; }
+  50%       { opacity: 0.9; }
+  75%       { opacity: 0.4; }
+}
+
+@keyframes glitch-text {
+  0%, 100% { transform: translate(0);          clip-path: none; }
+  10%       { transform: translate(-4px,  2px); clip-path: inset(10% 0 70% 0); }
+  20%       { transform: translate( 4px, -2px); clip-path: inset(50% 0 20% 0); }
+  30%       { transform: translate(-2px,  4px); clip-path: inset(80% 0  5% 0); }
+  40%       { transform: translate( 2px, -4px); clip-path: inset(30% 0 50% 0); }
+  50%       { transform: translate(0);          clip-path: none; }
+  60%       { transform: translate(-6px,  0);   clip-path: inset(20% 0 60% 0); }
+  70%       { transform: translate( 6px,  0);   clip-path: inset(70% 0 10% 0); }
+  80%       { transform: translate(0);          clip-path: none; }
+}
+
+@keyframes glitch-shadow {
+  0%, 100% { text-shadow:  3px 0 #ff0033, -3px 0 #00ffff; }
+  20%       { text-shadow: -5px 0 #00ffff,  5px 0 #ff0033; }
+  40%       { text-shadow:  5px 0 #ff0033, -5px 0 #00ffff; }
+  60%       { text-shadow: -3px 0 #ff00ff,  3px 0 #ffff00; }
+  80%       { text-shadow:  4px 0 #00ffff, -4px 0 #ff0033; }
+}
+
+.glitch-text {
+  animation: glitch-text 0.2s steps(1) infinite, glitch-shadow 0.3s steps(1) infinite;
+  color: #ff0033;
+}
+
+.glitch-scanlines {
+  animation: glitch-flicker 0.1s infinite;
+}
+
+@keyframes hue-spin {
+  from { filter: hue-rotate(0deg); }
+  to   { filter: hue-rotate(360deg); }
+}
+
+.chaos-hue {
+  animation: hue-spin 1s linear infinite;
+}
+
