@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams, Link, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import Header     from '../components/layout/Header'
 import Footer     from '../components/layout/Footer'
 import HeroSphere from '../components/Hero/HeroSphere'
