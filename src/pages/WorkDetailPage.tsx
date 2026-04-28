@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import Header     from '../components/layout/Header'
 import Footer     from '../components/layout/Footer'
 import HeroSphere from '../components/Hero/HeroSphere'
@@ -60,6 +60,7 @@ const allWorks = worksData as Work[]
 // ─────────────────────────────────────────────────────────
 export default function WorkDetailPage() {
   const { id } = useParams<{ id: string }>()
+  const navigate = useNavigate()
   const [visible,      setVisible]      = useState(false)
   const [lightboxSrc,  setLightboxSrc]  = useState<string | null>(null)
   const isMobile = useMobile()
@@ -93,8 +94,8 @@ export default function WorkDetailPage() {
       <main style={{ flex: 1, position: 'relative', zIndex: 1, padding: isMobile ? '100px 24px 60px' : '120px 160px 80px' }}>
 
         {/* ── 戻るリンク ── */}
-        <Link
-          to="/work"
+        <button
+          onClick={() => navigate(-1)}
           style={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -103,7 +104,10 @@ export default function WorkDetailPage() {
             fontSize: '10px',
             letterSpacing: '0.25em',
             color: 'rgba(255,255,255,0.45)',
-            textDecoration: 'none',
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            padding: 0,
             marginBottom: '48px',
             transition: 'color 0.2s',
           }}
@@ -111,7 +115,7 @@ export default function WorkDetailPage() {
           onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.45)')}
         >
           ← BACK TO WORKS
-        </Link>
+        </button>
 
         {/* ── 作品が見つからない場合 ── */}
         {!work ? (

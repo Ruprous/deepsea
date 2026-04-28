@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import Header     from '../components/layout/Header'
 import Footer     from '../components/layout/Footer'
 import HeroSphere   from '../components/Hero/HeroSphere'
@@ -73,14 +73,24 @@ const allTypes = [
 
 // ─────────────────────────────────────────────────────────
 export default function WorkPage() {
+  const location  = useLocation()
+  const navigate  = useNavigate()
   const [visible,      setVisible]      = useState(false)
-  const [selectedType, setSelectedType] = useState('ALL')
+  const [selectedType, setSelectedType] = useState<string>(
+    (location.state as { filter?: string } | null)?.filter ?? 'ALL'
+  )
   const isMobile = useMobile()
 
   useEffect(() => {
     const t = setTimeout(() => setVisible(true), 300)
     return () => clearTimeout(t)
   }, [])
+
+  // フィルター変更時に現在のhistoryエントリへ状態を保存
+  function handleFilterChange(type: string) {
+    setSelectedType(type)
+    navigate('.', { replace: true, state: { filter: type } })
+  }
 
   const filtered = selectedType === 'ALL'
     ? allWorks
@@ -136,7 +146,7 @@ export default function WorkPage() {
           {isMobile ? (
             <select
               value={selectedType}
-              onChange={e => setSelectedType(e.target.value)}
+              onChange={e => handleFilterChange(e.target.value)}
               style={{
                 fontFamily: 'var(--font-noto-sans)',
                 fontSize: '11px',
@@ -168,7 +178,7 @@ export default function WorkPage() {
                 return (
                   <button
                     key={type}
-                    onClick={() => setSelectedType(type)}
+                    onClick={() => handleFilterChange(type)}
                     style={{
                       fontFamily: 'var(--font-noto-sans)',
                       fontSize: '10px',
