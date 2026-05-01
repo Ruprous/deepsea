@@ -248,7 +248,8 @@
 
                   ],
         "types":  [
-                      "Graphic"
+                      "Graphic",
+                      "Thumbnail"
                   ],
         "sections":  [
                          {
@@ -615,7 +616,8 @@
 
                   ],
         "types":  [
-                      "Graphic"
+                      "Graphic",
+                      "Thumbnail"
                   ],
         "sections":  [
                          {
@@ -637,7 +639,8 @@
 
                   ],
         "types":  [
-                      "Graphic"
+                      "Graphic",
+                      "Thumbnail"
                   ],
         "sections":  [
                          {
@@ -856,7 +859,8 @@
 
                   ],
         "types":  [
-                      "Graphic"
+                      "Graphic",
+                      "Thumbnail"
                   ],
         "sections":  [
                          {
@@ -878,7 +882,8 @@
 
                   ],
         "types":  [
-                      "Graphic"
+                      "Graphic",
+                      "Thumbnail"
                   ],
         "sections":  [
                          {
@@ -944,7 +949,8 @@
 
                   ],
         "types":  [
-                      "Graphic"
+                      "Graphic",
+                      "Thumbnail"
                   ],
         "sections":  [
                          {
@@ -1011,7 +1017,8 @@
 
                   ],
         "types":  [
-                      "Graphic"
+                      "Graphic",
+                      "Thumbnail"
                   ],
         "sections":  [
                          {
@@ -1461,6 +1468,21 @@
                          {
                              "heading":  "概要",
                              "body":  "PNZから配布されたデスクトップ用壁紙を制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "kinou-tako-kieta",
+        "title":  "昨日、世界からタコが消えたらしい ロゴ",
+        "date":  "2026-01-27",
+        "thumbnail":  "/images/works/kinou-tako-kieta.jpg",
+        "credit":  [],
+        "links":  [],
+        "types":  ["Logo"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "クトゥルフ神話TRPGオリジナルシナリオ、『昨日、世界からタコが消えたらしい』のロゴを制作しました。"
                          }
                      ]
     }

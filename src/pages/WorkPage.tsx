@@ -24,6 +24,7 @@ const TYPE_LABELS: Record<string, string> = {
   Logo:          'LOGO',
   Font:          'FONT',
   Graphic:       'GRAPHIC',
+  Thumbnail:     'THUMBNAIL',
   MusicVideo:    'MUSIC VIDEO',
   Advertisement: 'AD',
   GameplayEdit:  'GAMEPLAY',
@@ -212,6 +213,7 @@ export default function WorkPage() {
             <Link
               key={work.id}
               to={`/work/${work.id}`}
+              state={{ fromWork: true }}
               style={{ textDecoration: 'none' }}
             >
               <div

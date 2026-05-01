@@ -10,7 +10,7 @@ import worksData from '../data/works.json'
 const NOIMAGE = '/images/works/noimage.jpg'
 const TYPE_LABELS: Record<string, string> = {
   Cover: 'COVER', Logo: 'LOGO', Font: 'FONT', Graphic: 'GRAPHIC',
-  MusicVideo: 'MUSIC VIDEO', Advertisement: 'AD',
+  Thumbnail: 'THUMBNAIL', MusicVideo: 'MUSIC VIDEO', Advertisement: 'AD',
   GameplayEdit: 'GAMEPLAY', Video: 'VIDEO', Direction: 'DIRECTION',
 }
 function getThumb(work: { thumbnail?: string; youtubeId?: string }) {

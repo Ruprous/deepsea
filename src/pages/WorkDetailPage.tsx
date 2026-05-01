@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import Header     from '../components/layout/Header'
 import Footer     from '../components/layout/Footer'
 import HeroSphere from '../components/Hero/HeroSphere'
@@ -41,6 +41,7 @@ const TYPE_LABELS: Record<string, string> = {
   Logo:          'LOGO',
   Font:          'FONT',
   Graphic:       'GRAPHIC',
+  Thumbnail:     'THUMBNAIL',
   MusicVideo:    'MUSIC VIDEO',
   Advertisement: 'AD',
   GameplayEdit:  'GAMEPLAY',
@@ -62,6 +63,8 @@ const allWorks = worksData as Work[]
 export default function WorkDetailPage() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
+  const location = useLocation()
+  const fromWork = (location.state as { fromWork?: boolean } | null)?.fromWork ?? false
   const [visible,      setVisible]      = useState(false)
   const [lightbox, setLightbox] = useState<{ images: string[], index: number } | null>(null)
   const isMobile = useMobile()
@@ -106,7 +109,7 @@ export default function WorkDetailPage() {
 
         {/* ── 戻るリンク ── */}
         <button
-          onClick={() => navigate(-1)}
+          onClick={() => fromWork ? navigate(-1) : navigate('/work')}
           style={{
             display: 'inline-flex',
             alignItems: 'center',
