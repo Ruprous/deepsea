@@ -14,7 +14,8 @@
 
                   ],
         "types":  [
-                      "Graphic"
+                      "Graphic",
+                      "Advertisement"
                   ],
         "sections":  [
                          {
@@ -38,7 +39,8 @@
 
                   ],
         "types":  [
-                      "Graphic"
+                      "Graphic",
+                      "Advertisement"
                   ],
         "sections":  [
                          {
