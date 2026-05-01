@@ -145,6 +145,28 @@
                      ]
     },
     {
+        "id":  "stampede",
+        "title":  "STAMPEDE (SELF-PRODUCED)",
+        "client":  [],
+        "date":  "2022",
+        "thumbnail":  "/images/works/stampede-thumb.jpg",
+        "images":  [
+                       "/images/works/stampede-blue.jpg",
+                       "/images/works/stampede-cyan.jpg",
+                       "/images/works/stampede-red.jpg",
+                       "/images/works/stampede-purple.jpg"
+                   ],
+        "credit":  [],
+        "links":  [],
+        "types":  ["Logo"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "自主制作のロゴ「STAMPEDE (SELF-PRODUCED)」を制作しました。"
+                         }
+                     ]
+    },
+    {
         "id":  "deltacamp",
         "title":  "DELTA CAMP",
         "date":  "2022-02",
@@ -166,6 +188,28 @@
                          {
                              "body":  "オリジナルフォント「DELTA CAMP」を制作しました。",
                              "heading":  "概要"
+                         }
+                     ]
+    },
+    {
+        "id":  "duocup-series-kv",
+        "title":  "-duo cup- シリーズ キービジュアル",
+        "client":  ["宮城玲"],
+        "date":  "2022-04-22",
+        "thumbnail":  "/images/works/DuoCup8th.jpg",
+        "images":  [
+                       "/images/works/DuoCup4th.jpg",
+                       "/images/works/DuoCup5th.jpg",
+                       "/images/works/DuoCup6th.jpg",
+                       "/images/works/DuoCup7th.jpg"
+                   ],
+        "credit":  [],
+        "links":  [],
+        "types":  ["Graphic"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "宮城玲様主催、デュオ(2人)で1チームのAPEXカスタムである-duo cup-シリーズのキービジュアルを制作しました。"
                          }
                      ]
     },
@@ -240,7 +284,7 @@
     },
     {
         "id":  "u-mv",
-        "title":  "U (COVER) / MV",
+        "title":  "「U」をうたいました。millennium parade × Belle (中村佳穂)",
         "client":  ["Zu2"],
         "date":  "2022-07",
         "youtubeId":  "skjmtZZy3rQ",
@@ -310,7 +354,7 @@
     },
     {
         "id":  "wasurena-mv",
-        "title":  "勿忘 (COVER) / MV",
+        "title":  "勿忘 - Awesome City Club / 歌ってみた【 宮城玲 × Zu2 cover 】",
         "client":  ["Zu2", "宮城玲"],
         "date":  "2023-01-01",
         "youtubeId":  "C-MiqbZsumI",
@@ -330,6 +374,29 @@
                          {
                              "body":  "Zu2様と宮城玲様によるカバー楽曲『勿忘』のミュージックビデオを制作。",
                              "heading":  "概要"
+                         }
+                     ]
+    },
+    {
+        "id":  "pnz-val-premier",
+        "title":  "VALORANT PREMIER PNZ ENTRY IMAGE",
+        "client":  ["PNZ"],
+        "date":  "2023-05-01",
+        "thumbnail":  "/images/works/PNZ-val-premier-01.jpg",
+        "images":  [
+                       "/images/works/PNZ-val-premier-02.jpg",
+                       "/images/works/PNZ-val-premier-03.jpg",
+                       "/images/works/PNZ-val-premier-04.jpg",
+                       "/images/works/PNZ-val-premier-member.jpg",
+                       "/images/works/PNZ-val-premier-list.jpg"
+                   ],
+        "credit":  [],
+        "links":  [],
+        "types":  ["Graphic"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "PNZ様のVALORANT PREMIERエントリー用画像を制作しました。"
                          }
                      ]
     },
@@ -396,6 +463,54 @@
                          {
                              "body":  "PNZ内部企画のマインクラフトサーバー：PNZ仲間鯖のロゴを制作しました。",
                              "heading":  "概要"
+                         }
+                     ]
+    },
+    {
+        "id":  "kisaragi-week",
+        "title":  "菰狐きさらぎ 週間スケジュール表",
+        "client":  ["菰狐きさらぎ"],
+        "date":  "2023-10-23",
+        "thumbnail":  "/images/works/kisaragi-week.jpg",
+        "credit":  [],
+        "links":  [],
+        "types":  ["Graphic"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "菰狐きさらぎ様の週間スケジュール表を制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "kink-cup-logo",
+        "title":  "KINK CUP ロゴ",
+        "client":  ["きんころ", "嗚呼紅"],
+        "date":  "2023-10-21",
+        "thumbnail":  "/images/works/kink-cup.jpg",
+        "credit":  [],
+        "links":  [],
+        "types":  ["Logo"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "きんころ様・嗚呼紅様主催の『KINK CUP』のロゴを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "sato-logo",
+        "title":  "佐藤 - Satooooo ロゴ",
+        "client":  ["Satooooo"],
+        "date":  "2023-10-23",
+        "thumbnail":  "/images/works/sato-logo.jpg",
+        "credit":  [],
+        "links":  [],
+        "types":  ["Logo"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "佐藤様のロゴを制作しました。"
                          }
                      ]
     },

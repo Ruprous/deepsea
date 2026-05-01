@@ -5,8 +5,9 @@ import Footer     from '../components/layout/Footer'
 import HeroSphere from '../components/Hero/HeroSphere'
 import Lightbox   from '../components/Lightbox'
 import labData    from '../data/lab.json'
-import { useMobile } from '../hooks/useMobile'
+import { useMobile }  from '../hooks/useMobile'
 import { formatDate } from '../utils/formatDate'
+import { useFitText } from '../hooks/useFitText'
 
 // ── 型定義 ────────────────────────────────────────────────
 interface Section {
@@ -54,16 +55,26 @@ const allItems = labData as LabItem[]
 export default function LabDetailPage() {
   const { id } = useParams<{ id: string }>()
   const [visible,     setVisible]     = useState(false)
-  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
+  const [lightbox, setLightbox] = useState<{ images: string[], index: number } | null>(null)
   const isMobile = useMobile()
+  const item = allItems.find(w => w.id === id)
+  const allLightboxImages = [
+    ...(item && getThumb(item) !== NOIMAGE ? [getThumb(item)] : []),
+    ...(item?.images ?? []),
+  ]
+  const thumbOffset = item && getThumb(item) !== NOIMAGE ? 1 : 0
+  const { containerRef: titleContainerRef, fontSize: titleSize } = useFitText(
+    item?.title ?? '',
+    'AvenirNext, sans-serif',
+    700,
+    '-0.02em',
+  )
 
   useEffect(() => {
     window.scrollTo({ top: 0 })
     const t = setTimeout(() => setVisible(true), 300)
     return () => clearTimeout(t)
   }, [id])
-
-  const item = allItems.find(w => w.id === id)
 
   return (
     <div style={{
@@ -124,17 +135,22 @@ export default function LabDetailPage() {
               }}>
                 // {item.types.map(t => TYPE_LABELS[t] ?? t).join(' / ')}
               </p>
-              <h1 style={{
-                fontFamily: 'var(--font-avenir)',
-                fontSize: 'clamp(32px, 4vw, 60px)',
-                fontWeight: 700,
-                letterSpacing: '-0.02em',
-                lineHeight: 1.1,
-                color: '#fff',
-                marginBottom: '16px',
-              }}>
-                {item.title}
-              </h1>
+              <div
+                ref={isMobile ? undefined : titleContainerRef}
+                style={{ overflow: 'hidden', marginBottom: '16px' }}
+              >
+                <h1 style={{
+                  fontFamily: 'var(--font-avenir)',
+                  fontSize: isMobile ? 'clamp(32px, 4vw, 60px)' : `${titleSize}px`,
+                  fontWeight: 700,
+                  letterSpacing: '-0.02em',
+                  lineHeight: 1.1,
+                  color: '#fff',
+                  whiteSpace: isMobile ? 'normal' : 'nowrap',
+                }}>
+                  {item.title}
+                </h1>
+              </div>
             </div>
 
             {/* 区切り線 */}
@@ -163,7 +179,7 @@ export default function LabDetailPage() {
                     <img
                       src={getThumb(item)}
                       alt={item.title}
-                      onClick={() => getThumb(item) !== NOIMAGE && setLightboxSrc(getThumb(item))}
+                      onClick={() => getThumb(item) !== NOIMAGE && setLightbox({ images: allLightboxImages, index: 0 })}
                       style={{
                         width: '100%', height: 'auto', display: 'block',
                         cursor: getThumb(item) !== NOIMAGE ? 'zoom-in' : 'default',
@@ -173,7 +189,7 @@ export default function LabDetailPage() {
                     <img
                       src={getThumb(item)}
                       alt={item.title}
-                      onClick={() => getThumb(item) !== NOIMAGE && setLightboxSrc(getThumb(item))}
+                      onClick={() => getThumb(item) !== NOIMAGE && setLightbox({ images: allLightboxImages, index: 0 })}
                       style={{
                         width: '100%', height: '100%', objectFit: 'cover', display: 'block',
                         cursor: getThumb(item) !== NOIMAGE ? 'zoom-in' : 'default',
@@ -245,7 +261,7 @@ export default function LabDetailPage() {
                     {item.images.map((src, i) => (
                       <div
                         key={i}
-                        onClick={() => setLightboxSrc(src)}
+                        onClick={() => setLightbox({ images: allLightboxImages, index: thumbOffset + i })}
                         style={{
                           aspectRatio: '16/9',
                           overflow: 'hidden',
@@ -432,8 +448,12 @@ export default function LabDetailPage() {
       </div>
 
       {/* ライトボックス */}
-      {lightboxSrc && (
-        <Lightbox src={lightboxSrc} onClose={() => setLightboxSrc(null)} />
+      {lightbox && (
+        <Lightbox
+          images={lightbox.images}
+          initialIndex={lightbox.index}
+          onClose={() => setLightbox(null)}
+        />
       )}
     </div>
   )
