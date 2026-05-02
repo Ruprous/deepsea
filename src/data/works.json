@@ -1158,7 +1158,7 @@
         "id":  "katsubou",
         "title":  "渇望 (SELF-PRODUCED)",
         "date":  "2022-06-19",
-        "thumbnail":  "/images/works/katubou.jpg",
+        "thumbnail":  "/images/works/katsubou.jpg",
         "credit":  [],
         "links":  [],
         "types":  [
@@ -1456,6 +1456,22 @@
                      ]
     },
     {
+        "id":  "pnz-wallpaper-old",
+        "title":  "PNZ DESKTOP WALLPAPER SIMPLE",
+        "client":  ["PNZ"],
+        "date":  "2022-05",
+        "thumbnail":  "/images/works/pnz-wallpaper-old.jpg",
+        "credit":  [],
+        "links":  [],
+        "types":  ["Graphic"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "PNZから配布されたシンプルデザインのデスクトップ用壁紙を制作しました。"
+                         }
+                     ]
+    },
+    {
         "id":  "pnz-desktopwallpaper",
         "title":  "PNZ DESKTOP WALLPAPER",
         "client":  ["PNZ"],
@@ -1468,6 +1484,69 @@
                          {
                              "heading":  "概要",
                              "body":  "PNZから配布されたデスクトップ用壁紙を制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "rise-logo",
+        "title":  "RISE ロゴ",
+        "client":  ["RISE"],
+        "date":  "2021-08-28",
+        "thumbnail":  "/images/works/RISE-logo.jpg",
+        "credit":  [],
+        "links":  [],
+        "types":  ["Logo"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "荒野行動で活動されている RISE様のクランロゴを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "pnz-custom-logo",
+        "title":  "PNZ CUSTOM ロゴ",
+        "client":  ["PNZ"],
+        "date":  "2022-10-05",
+        "thumbnail":  "/images/works/PNZ-custom-logo.jpg",
+        "credit":  [],
+        "links":  [],
+        "types":  ["Logo"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "PNZ CUSTOMで用いられる、バッジ風ロゴを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "pnz-mc-nakama-thumb",
+        "title":  "PNZ 仲間鯖 サムネイル",
+        "client":  ["PNZ"],
+        "date":  "2023-09",
+        "thumbnail":  "/images/works/pnz-mc-nakama-thumb.jpg",
+        "credit":  [],
+        "links":  [],
+        "types":  ["Graphic", "Thumbnail"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "PNZ内部企画のマインクラフトサーバー：PNZ仲間鯖の告知サムネイルを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "subetega-sugisatta",
+        "title":  "全てが過ぎ去った世界の生活録 ロゴ",
+        "date":  "2021-10-29",
+        "thumbnail":  "/images/works/subetega-sugisatta.jpg",
+        "credit":  [],
+        "links":  [],
+        "types":  ["Logo"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "小説『全てが過ぎ去った世界の生活録』のロゴを制作しました。"
                          }
                      ]
     },
