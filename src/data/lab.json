@@ -1,5 +1,118 @@
 [
     {
+        "id":  "lineup-images",
+        "title":  "LineUp-Images",
+        "thumbnail":  "",
+        "date":  "2025-05-06",
+        "links":  [
+                      {
+                          "label":  "GitHub",
+                          "url":  "https://github.com/Ruprous/LineUp-Images"
+                      }
+                  ],
+        "types":  [
+                      "Tool"
+                  ],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "指定したディレクトリ内の画像を横幅3000px固定でグリッド状に並べるツールです（Python / Windows EXE）。\n\n列数・マージン・リサイズ方法を柔軟に指定でき、背景色は透明または黒から選択可能。入出力先の指定はGUIで行え、出力はPNG形式で保存されます。"
+                         }
+                     ]
+    },
+    {
+        "id":  "ytcomments2morse",
+        "title":  "YTComments2Morse",
+        "thumbnail":  "",
+        "date":  "2025-04-30",
+        "links":  [
+                      {
+                          "label":  "GitHub",
+                          "url":  "https://github.com/Ruprous/YTComments2Morse"
+                      }
+                  ],
+        "types":  [
+                      "StreamTool"
+                  ],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "YouTubeライブ配信のチャット欄に送られた `/morse` コマンド付きコメントを、リアルタイムにモールス信号として音声再生するPythonスクリプトです。\n\n600Hzの固定トーンとホワイトノイズを合成することで、レトロな通信機感あふれるモールス体験を実現しています。日本語・記号混じりのコメントは自動スキップし、Q キーで安全に停止できます。"
+                         }
+                     ]
+    },
+    {
+        "id":  "pokepoke-auto-ocr",
+        "title":  "PokePoke-AutoOCR",
+        "thumbnail":  "",
+        "date":  "2025-05-14",
+        "links":  [
+                      {
+                          "label":  "GitHub",
+                          "url":  "https://github.com/Ruprous/PokePoke-AutoOCR"
+                      }
+                  ],
+        "types":  [
+                      "StreamTool"
+                  ],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "ポケポケ（Pokemon TCG Pocket）の配信向け支援ツールセットです。\n\nプレイヤーネームや経過時間をOCRで自動取得し、対戦状況の表示をサポートするPythonスクリプトを含んでいます。"
+                         }
+                     ]
+    },
+    {
+        "id":  "pnz-valorant-custom-go",
+        "title":  "PNZ Valorant Custom -豪- 配信構成",
+        "thumbnail":  "/images/lab/gou-maintheme.jpg",
+        "date":  "2023-12-16",
+        "credit":  [
+                       "実況：鉄拳かざま",
+                       "解説：宮城玲",
+                       "YouTube配信：宮城玲, Ruprous",
+                       "スイッチャー：Ruprous",
+                       "VALORANT視点カメラ：NANAMY, Tuna",
+                       "配信システム構築：Ruprous, NANAMY, 宮城玲, 鉄拳かざま"
+                   ],
+        "links":  [
+                      {
+                          "label":  "GitHub",
+                          "url":  "https://github.com/Ruprous/PNZ-VALORANT-CUSTOM-GO"
+                      }
+                  ],
+        "types":  [
+                      "StreamTool"
+                  ],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "2023年12月16日に開催されたTEAM PNZ主催のVALORANTカスタム大会「PNZ Valorant Custom -豪-」の配信技術構成・演出手法を記録・共有するリポジトリです。\n\nNDIやOBSをはじめとする複数のソフト・プラグインを活用し、遠隔地からの映像集約、VTuber映像の合成、ラウンド後の自動リプレイ再生などを実現しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "mk-world-lounge-score-tracker",
+        "title":  "MK World Lounge Score Tracker",
+        "thumbnail":  "/images/lab/MK-World-LoungeScoreTracker.png",
+        "date":  "2026-02-21",
+        "links":  [
+                      {
+                          "label":  "GitHub",
+                          "url":  "https://github.com/Ruprous/MK-World-Lounge-Score-Tracker"
+                      }
+                  ],
+        "types":  [
+                      "WebApp"
+                  ],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "マリオカートワールドのラウンジ（1模擬12レース）で、順位・ポイントを記録・集計するブラウザアプリです。\n\nレース結果を入力するだけで配点ルールに基づくポイントを自動計算し、模擬平均順位や累計ポイントをリアルタイムで表示します。12人・24人それぞれの統計表示、模擬履歴の保存・削除、データのエクスポート/インポートにも対応しています。"
+                         }
+                     ]
+    },
+    {
         "id":  "pokemonchampions-obs-overlay",
         "title":  "PokemonChampions-obs-overlay",
         "thumbnail":  "/images/lab/PokemonChampions-obs-overlay.png",

@@ -35,11 +35,13 @@ interface LabItem {
 
 // ── タイプ表示名マッピング ────────────────────────────────
 const TYPE_LABELS: Record<string, string> = {
-  WebSite:      'WEBSITE',
-  MinecraftMOD: 'MINECRAFT MOD',
-  AdobePlugin:  'ADOBE PLUGIN',
-  BlenderAddon: 'BLENDER ADDON',
-  StreamTool:   'STREAM TOOL',
+  WebSite:      'Website',
+  MinecraftMOD: 'Minecraft Mod',
+  AdobePlugin:  'Adobe Plugin',
+  BlenderAddon: 'Blender Addon',
+  StreamTool:   'Stream Tool',
+  WebApp:       'Web App',
+  Tool:         'Tool',
 }
 
 const NOIMAGE = '/images/works/noimage.jpg'
