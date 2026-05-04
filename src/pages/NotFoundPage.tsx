@@ -180,7 +180,7 @@ export default function NotFoundPage() {
                     <>
                       <img src={getThumb(randomWork)} alt="" aria-hidden="true" style={{
                         position: 'absolute', inset: 0, width: '100%', height: '100%',
-                        objectFit: 'cover', filter: 'blur(16px) brightness(0.35)',
+                        objectFit: 'cover', filter: 'blur(16px) brightness(0.45)',
                         transform: 'scale(1.12)', pointerEvents: 'none',
                       }} />
                       <img className="r-thumb" src={getThumb(randomWork)} alt={randomWork.title} style={{

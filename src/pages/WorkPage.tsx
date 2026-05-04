@@ -248,7 +248,7 @@ export default function WorkPage() {
                           position: 'absolute', inset: 0,
                           width: '100%', height: '100%',
                           objectFit: 'cover',
-                          filter: 'blur(16px) brightness(0.35)',
+                          filter: 'blur(16px) brightness(0.45)',
                           transform: 'scale(1.12)',
                           pointerEvents: 'none',
                         }}

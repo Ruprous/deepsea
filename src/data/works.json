@@ -1472,6 +1472,43 @@
                      ]
     },
     {
+        "id":  "soraroku-flier-saiyuuki",
+        "title":  "宙を走る六等星 そらろく西遊記 2025 フライヤー",
+        "client":  ["宙を走る六等星"],
+        "date":  "2025-02-20",
+        "thumbnail":  "/images/works/soraroku-flier-saiyuuki.jpg",
+        "contain":  true,
+        "credit":  [],
+        "links":  [],
+        "types":  ["Advertisement"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "宙を走る六等星様のツアー\"そらろく西遊記 2025\"のフライヤーを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "key-chanai",
+        "title":  "ちゃんあい キービジュアルデザイン",
+        "client":  ["ちゃんあい"],
+        "date":  "2026-05-04",
+        "thumbnail":  "/images/works/key-chanai.jpg",
+        "contain":  true,
+        "credit":  [
+                       "illustration：なつきなの",
+                       "illustration：オルカ92"
+                   ],
+        "links":  [],
+        "types":  ["Graphic", "Advertisement"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "ちゃんあい様のキービジュアルデザインを担当しました。"
+                         }
+                     ]
+    },
+    {
         "id":  "pnz-desktopwallpaper",
         "title":  "PNZ DESKTOP WALLPAPER",
         "client":  ["PNZ"],
