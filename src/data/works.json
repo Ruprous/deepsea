@@ -1,5 +1,35 @@
 [
     {
+        "id":  "siozawa-silhouette",
+        "title":  "【歌ってみた】シルエット / シオザワ トシヒロ",
+        "client":  ["シオザワトシヒロ"],
+        "date":  "2026-05-22",
+        "youtubeId":  "ptLecx_1rD0",
+        "thumbnail":  "",
+        "credit":  [
+                       "Vocal：シオザワ トシヒロ (PNZ)",
+                       "Illustration：pani",
+                       "Calligraphy：おんた",
+                       "Movie：Ruprous",
+                       "Music：八宮隼弥",
+                       "Vocal Recording Studio：Studio KPP",
+                       "Vocal Recording / Mix / Mastering：小菅こんにゃく"
+                   ],
+        "links":  [
+                      {
+                          "label":  "YouTube",
+                          "url":  "https://www.youtube.com/watch?v=ptLecx_1rD0"
+                      }
+                  ],
+        "types":  ["MusicVideo"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "シオザワ トシヒロ様の歌ってみた動画『シルエット』の映像制作を担当しました。"
+                         }
+                     ]
+    },
+    {
         "id":  "key-shokupanda",
         "title":  "食パンダ キービジュアルデザイン",
         "client":  ["食パンダ"],
