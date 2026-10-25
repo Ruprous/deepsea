@@ -33,7 +33,7 @@ export default function ListPage({ kind }: { kind: Kind }) {
   const isLab = kind === 'lab'
 
   return (
-    <SiteLayout topButton>
+    <SiteLayout topButton showRights={kind === 'work'}>
       <Burst
         to={`/${kind}`}
         value={filtered.length}

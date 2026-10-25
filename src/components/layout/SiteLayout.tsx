@@ -33,6 +33,8 @@ interface SiteLayoutProps {
    * はみ出す装飾だけを別の箱（.panel-bg）の中でクリップする。
    */
   videoSafe?: boolean
+  /** 作品の著作権についての注意書きを、一番下に出す（Work のページだけ） */
+  showRights?: boolean
 }
 
 /** 縦書きレールの長さをパネル高さに収める（長すぎたら文字を縮める） */
@@ -133,7 +135,7 @@ function BottomBar({ topButton, mid }: { topButton?: boolean; mid?: ReactNode })
 }
 
 export default function SiteLayout({
-  children, panelClass, genericDeco = true, ringSpin, rails, topButton, bottomMid, extraDeco, videoSafe,
+  children, panelClass, genericDeco = true, ringSpin, rails, topButton, bottomMid, extraDeco, videoSafe, showRights,
 }: SiteLayoutProps) {
   useRailFit(!!rails)
 
@@ -168,6 +170,11 @@ export default function SiteLayout({
           {children}
         </main>
         <BottomBar topButton={topButton} mid={bottomMid} />
+        {showRights && (
+          <p className="rights">
+            <span>サイトに掲載している作品の画像・ロゴ・イラスト・映像などの著作権は、制作者および各クライアントに帰属します。無断での転載・転用はご遠慮ください。</span>
+          </p>
+        )}
       </div>
     </>
   )

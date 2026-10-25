@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import SiteLayout from '../components/layout/SiteLayout'
 import PageHead from '../components/layout/PageHead'
 import QMark from '../components/ui/QMark'
@@ -19,6 +20,15 @@ const DISTRIBUTION = [
 const SOFTWARE = [
   'Adobe Illustrator', 'Adobe Photoshop', 'Adobe Premiere Pro', 'Adobe After Effects',
   'Blender', 'AviUtl', 'AviUtl2',
+]
+
+const SERVICES = [
+  '名刺・ショップカードのデザイン',
+  'ロゴ制作（企業・イベント・個人用途）',
+  'ジャケットデザイン',
+  'チラシ／フライヤー制作',
+  'YouTube動画編集',
+  'ミュージックビデオ編集',
 ]
 
 function LinkGrid({ items }: { items: { label: string; href: string }[] }) {
@@ -57,17 +67,23 @@ export default function AboutPage() {
 
         <div className="stack">
           <div className="card intro-text">
-            <p>
-              グラフィックデザイナー・デジタルクリエイター。2018年10月より独学でグラフィックデザインを開始。<br />
-              現在に至るまで多くのクリエイティブ制作に携わる。<br />
-              「色んなことを楽しくやる。」をスローガンに掲げる組織、<span className="mark">TEAM PNZ</span>に所属。
-            </p>
+            <p className="greet">こんにちは、ラプラス（Ruprous）です！</p>
             <p className="dim">ラプラス [ləplάːs] です。読めない？いや、読むんですよ。</p>
             <p>
-              お客様の「こうしたい！」というお気持ちを丁寧にヒアリングし、目的に合った形で表現することを大切にしています。
-              デザインと映像を通じて、"伝わる・惹きつける"クリエイティブをお届けします。<br />
-              お気軽にご相談ください！
+              2018年10月より独学でグラフィックデザインを始め、幅広いクリエイティブ制作を行っています。名刺やロゴといった印刷物から、YouTube動画・ミュージックビデオなどの映像制作まで、多様な案件に対応できます。<br />
+              現在は広告代理店・制作会社で働きながら、フリーランスとしても活動を続けています。<br />
+              「色んなことを楽しくやる。」をスローガンに掲げる組織、<span className="mark">TEAM PNZ</span>に所属。
             </p>
+            <h3>【対応可能ジャンル】</h3>
+            <ul>
+              {SERVICES.map(t => <li key={t}>{t}</li>)}
+            </ul>
+            <p>
+              お客様の「こうしたい！」という想いを丁寧にヒアリングし、目的に合った形で表現することを大切にしています。<br />
+              デザインと映像を通じて、“伝わる・惹きつける”クリエイティブをお届けします。
+            </p>
+            <p className="greet">お気軽にご相談ください！</p>
+            <Link to="/contact" className="pill lime">CONTACT ↗</Link>
           </div>
 
           <div className="card"><span className="k">{'// SNS'}</span><LinkGrid items={SNS} /></div>

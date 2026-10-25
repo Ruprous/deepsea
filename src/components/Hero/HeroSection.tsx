@@ -75,14 +75,17 @@ export default function HeroSection() {
           <p className="kana">ラプラス</p>
         </div>
 
-        <p className="intro">
-          I prioritize listening closely to my clients' visions—their "I want to achieve this!"—to ensure their ideas are expressed in a way that perfectly aligns with their goals. Through design and video, I deliver creative solutions that are both communicative and captivating.
-        </p>
+        <div className="intro">
+          <p>
+            お客様の「こうしたい！」という想いを丁寧にヒアリングし、目的に合った形で表現することを大切にしています。<br />
+            デザインと映像を通じて、“伝わる・惹きつける”クリエイティブをお届けします。
+          </p>
+          <Link to="/about" className="pill sm">ABOUT ME ↗</Link>
+        </div>
 
         <div>
           <div className="cta">
             <Link to="/work" className="pill lime sm">VIEW WORKS ↗</Link>
-            <Link to="/about" className="pill sm">ABOUT ↗</Link>
             <Link to="/contact" className="pill outline sm">CONTACT ↗</Link>
           </div>
           <div className="badge">

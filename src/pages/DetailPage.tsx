@@ -69,7 +69,7 @@ export default function DetailPage({ kind, id }: { kind: Kind; id?: string }) {
   const thumbOffset = hasImage ? 1 : 0
 
   return (
-    <SiteLayout videoSafe>
+    <SiteLayout videoSafe showRights={kind === 'work'}>
       {back}
 
       <span className="kicker">{`// ${types.join(' / ').toUpperCase()}`}</span>
