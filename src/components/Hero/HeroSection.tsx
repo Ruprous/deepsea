@@ -1,145 +1,117 @@
-import { useState, useEffect, useCallback } from 'react'
-import HeroSphere, { chaosRef } from './HeroSphere'
-import HeroLeft   from './HeroLeft'
-import HeroRight  from './HeroRight'
-import WaveLines  from './WaveLines'
-import { useMobile }     from '../../hooks/useMobile'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
+import SiteLayout from '../layout/SiteLayout'
+import { Deco } from '../ui/Deco'
+import StickerStage from './StickerStage'
 import { useKonamiCode } from '../../hooks/useKonamiCode'
 
 const CHAOS_DURATION = 5000 // ms
+const GENRES = ['ADVERTISEMENT', 'COVER', 'FONT', 'GRAPHIC', 'LOGO', 'MUSIC VIDEO']
+
+function Ticker() {
+  return (
+    <p className="ticker">
+      <i>//</i>
+      {GENRES.map(g => <span key={g}>{g}<i>//</i></span>)}
+    </p>
+  )
+}
+
+/** 左右の縦書き・ステッカー以外の、デスクトップ幅だけで見せる飾り */
+function HeroDeco() {
+  return (
+    <div className="deco-desktop">
+      <Deco name="spark" style={{ left: '40.5%', top: '15%', width: '4.2vw' }} />
+      <Deco name="sparkSm" color="var(--ink)" style={{ left: '44.5%', top: '24%', width: '2vw' }} />
+      <Deco name="barcode" color="var(--ink)" style={{ left: '40.5%', bottom: '5.5%', width: '8.5vw', opacity: 0.8 }} />
+      <Deco name="hazard" style={{ left: 0, bottom: 0, width: '13%' }} />
+      <Deco name="bracket" color="var(--ink)" style={{ left: '40.5%', top: '6.5%', width: '2.2vw' }} />
+      <Deco name="bracket" color="var(--ink)" style={{ left: '79%', bottom: '7%', width: '2.2vw', rotate: '180deg' }} />
+      <Deco name="chevrons" style={{ left: '31.5%', bottom: '11.8%', width: '3.6vw' }} />
+      <Deco name="xxx" style={{ left: '17.5%', top: '41%', width: '4.6vw', opacity: 0.9 }} />
+      <Deco name="cross" color="var(--ink)" style={{ left: '95.6%', top: '92%', width: '1.6vw' }} />
+    </div>
+  )
+}
 
 export default function HeroSection() {
-  const [visible, setVisible] = useState(false)
-  const [chaos,   setChaos]   = useState(false)
-  const isMobile = useMobile()
+  const [chaos, setChaos] = useState(false)
+  const timer = useRef<number>(0)
 
-  useEffect(() => {
-    const t = setTimeout(() => setVisible(true), 300)
-    return () => clearTimeout(t)
-  }, [])
-
+  // コナミコード：5秒間、色相回転 + スキャンライン + ステッカー高速入れ替え + リング高速回転
   const activateChaos = useCallback(() => {
-    if (chaos) return
-    chaosRef.current = true
+    if (timer.current) return
+    document.body.classList.add('chaos', 'chaos-hue')
     setChaos(true)
-    document.body.classList.add('chaos-hue')
-    setTimeout(() => {
-      chaosRef.current = false
+    timer.current = window.setTimeout(() => {
+      document.body.classList.remove('chaos', 'chaos-hue')
       setChaos(false)
-      document.body.classList.remove('chaos-hue')
+      timer.current = 0
     }, CHAOS_DURATION)
-  }, [chaos])
-
+  }, [])
   useKonamiCode(activateChaos)
 
+  useEffect(() => () => {
+    window.clearTimeout(timer.current)
+    document.body.classList.remove('chaos', 'chaos-hue')
+  }, [])
+
   return (
-    <section
-      className="relative w-full"
-      style={{
-        minHeight: '100svh',
-        background: 'var(--color-bg)',
-        overflow: 'hidden',
-        opacity: visible ? 1 : 0,
-        transition: 'opacity 1.4s ease-out',
-      }}
-    >
-      {/* 球体 Canvas */}
-      <div style={{ position: 'absolute', inset: 0 }}>
-        <HeroSphere />
+    <SiteLayout panelClass="hero" genericDeco={false} rails bottomMid={<Ticker />} extraDeco={<HeroDeco />}>
+      {chaos && <div className="glitch-scanlines" aria-hidden="true" />}
+      <StickerStage chaos={chaos} />
+
+      <div className="col-l">
+        <div>
+          <div className="tag-row">
+            <span className="t"><i>+</i>Digital Creator</span>
+            <span className="lines" aria-hidden="true">
+              <span>// CREATE WITH INSIGHT</span>
+              <span>// DESIGN WITH TECHNOLOGY</span>
+              <span>// MOVE THE CULTURE</span>
+            </span>
+          </div>
+          <h1 className="title">Ruprous</h1>
+          <p className="kana">ラプラス</p>
+        </div>
+
+        <p className="intro">
+          I prioritize listening closely to my clients' visions—their "I want to achieve this!"—to ensure their ideas are expressed in a way that perfectly aligns with their goals. Through design and video, I deliver creative solutions that are both communicative and captivating.
+        </p>
+
+        <div>
+          <div className="cta">
+            <Link to="/work" className="pill lime sm">VIEW WORKS ↗</Link>
+            <Link to="/about" className="pill sm">ABOUT ↗</Link>
+            <Link to="/contact" className="pill outline sm">CONTACT ↗</Link>
+          </div>
+          <div className="badge">
+            <img src="/images/ui/icon-96.webp" alt="Ruprous" width={40} height={40} />
+            <div>
+              <p className="a">Freelance — Ruprous Studio</p>
+              <p className="b">KANAGAWA, JAPAN</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* コナミコード グリッチオーバーレイ */}
-      {chaos && (
-        <div style={{
-          position: 'absolute', inset: 0, zIndex: 40,
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          flexDirection: 'column', pointerEvents: 'none',
-        }}>
-          {/* スキャンライン */}
-          <div
-            className="glitch-scanlines"
-            style={{
-              position: 'absolute', inset: 0,
-              background: 'repeating-linear-gradient(0deg, rgba(255,0,0,0.04) 0px, rgba(255,0,0,0.04) 1px, transparent 1px, transparent 4px)',
-            }}
-          />
+      <div className="col-r">
+        <div className="card">
+          <div><span className="k">ACTIVE SINCE</span><span className="v mark">2018</span></div>
+          <hr />
+          <div><span className="k">TIMEZONE</span><span className="v">JST UTC+9</span></div>
         </div>
-      )}
-
-      {/* 波形装飾 */}
-      <WaveLines corner="top-right" />
-      <WaveLines corner="bottom-left" />
-
-      {/* 左端 縦書きテキスト（PCのみ） */}
-      {!isMobile && (
-        <div
-          className="z-10"
-          style={{
-            position: 'absolute',
-            left: 0, top: 0, bottom: 0,
-            width: '48px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            overflow: 'visible',
-            pointerEvents: 'none',
-          }}
-        >
-          <span style={{
-            transform: 'rotate(-90deg)',
-            whiteSpace: 'nowrap',
-            fontFamily: 'var(--font-smart)',
-            fontSize: '12px',
-            letterSpacing: '0.25em',
-            color: 'var(--color-accent)',
-          }}>
-            CREATE WITH INSIGHT // DESIGN WITH TECHNOLOGY // MOVE THE CULTURE
-          </span>
+        <div className="card">
+          <p>I began my journey as a self-taught graphic designer in October 2018. Since then, I have been involved in a wide range of creative productions.</p>
+          <p>I am [ləplάːs]. Can't read it? Well, you're going to.</p>
         </div>
-      )}
-
-      {/* 右端 縦書きテキスト（PCのみ） */}
-      {!isMobile && (
-        <div
-          className="z-10"
-          style={{
-            position: 'absolute',
-            right: 0, top: 0, bottom: 0,
-            width: '48px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            overflow: 'visible',
-            pointerEvents: 'none',
-          }}
-        >
-          <span style={{
-            transform: 'rotate(90deg)',
-            whiteSpace: 'nowrap',
-            fontFamily: 'var(--font-smart)',
-            fontSize: '12px',
-            letterSpacing: '0.25em',
-            color: 'var(--color-accent)',
-          }}>
-            CREATE WITH INSIGHT // DESIGN WITH TECHNOLOGY // MOVE THE CULTURE
-          </span>
+        <div className="card">
+          <div><span className="v">48°52′5″S</span><br /><span className="v">123°23′6″W</span></div>
+          <hr />
+          <div><span className="k">DEPTH</span><span className="v">&gt; 10,000m</span></div>
+          <div><span className="k">PRESSURE</span><span className="v">&gt; 1,000atm</span></div>
         </div>
-      )}
-
-      {/* レイアウト */}
-      <div
-        className="relative z-10"
-        style={{
-          minHeight: '100svh',
-          display: 'grid',
-          gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr 1fr',
-          padding: isMobile ? '0 24px' : '0 48px',
-        }}
-      >
-        <HeroLeft />
-        {!isMobile && <div />}
-        {!isMobile && <HeroRight />}
       </div>
-    </section>
+    </SiteLayout>
   )
 }
