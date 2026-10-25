@@ -3,7 +3,8 @@
 /* ─── フォント ─────────────────────────────── */
 @font-face {
   font-family: '03smartfont';
-  src: url('/fonts/03SmartFontUI.woff') format('woff'),
+  src: url('/fonts/03SmartFontUI.subset.woff2') format('woff2'),
+       url('/fonts/03SmartFontUI.woff') format('woff'),
        url('/fonts/03SmartFontUI.ttf')  format('truetype');
   font-weight: normal;
   font-style: normal;

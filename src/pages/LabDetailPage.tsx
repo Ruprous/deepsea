@@ -7,6 +7,7 @@ import Lightbox   from '../components/Lightbox'
 import labData    from '../data/lab.json'
 import { useMobile }  from '../hooks/useMobile'
 import { formatDate } from '../utils/formatDate'
+import { thumbSrc, fullSrc } from '../utils/img'
 import { useFitText } from '../hooks/useFitText'
 
 // ── 型定義 ────────────────────────────────────────────────
@@ -67,8 +68,8 @@ export default function LabDetailPage() {
   const isMobile = useMobile()
   const item = allItems.find(w => w.id === id)
   const allLightboxImages = [
-    ...(item && getThumb(item) !== NOIMAGE ? [getThumb(item)] : []),
-    ...(item?.images ?? []),
+    ...(item && getThumb(item) !== NOIMAGE ? [fullSrc(getThumb(item))] : []),
+    ...(item?.images ?? []).map(fullSrc),
   ]
   const thumbOffset = item && getThumb(item) !== NOIMAGE ? 1 : 0
   const { containerRef: titleContainerRef, fontSize: titleSize } = useFitText(
@@ -185,7 +186,7 @@ export default function LabDetailPage() {
                 }}>
                   {item.contain ? (
                     <img
-                      src={getThumb(item)}
+                      src={fullSrc(getThumb(item))}
                       alt={item.title}
                       onClick={() => getThumb(item) !== NOIMAGE && setLightbox({ images: allLightboxImages, index: 0 })}
                       style={{
@@ -195,7 +196,7 @@ export default function LabDetailPage() {
                     />
                   ) : (
                     <img
-                      src={getThumb(item)}
+                      src={fullSrc(getThumb(item))}
                       alt={item.title}
                       onClick={() => getThumb(item) !== NOIMAGE && setLightbox({ images: allLightboxImages, index: 0 })}
                       style={{
@@ -280,7 +281,7 @@ export default function LabDetailPage() {
                       >
                         {/* ブラー背景 */}
                         <img
-                          src={src}
+                          src={thumbSrc(src)}
                           alt=""
                           aria-hidden="true"
                           style={{
@@ -294,7 +295,7 @@ export default function LabDetailPage() {
                         />
                         {/* メイン画像：contain で収める */}
                         <img
-                          src={src}
+                          src={thumbSrc(src)}
                           alt={`${item.title} - ${i + 1}`}
                           style={{
                             position: 'absolute', inset: 0,

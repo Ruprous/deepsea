@@ -6,6 +6,7 @@ import HeroSphere  from '../components/Hero/HeroSphere'
 import ScrollToTop from '../components/ScrollToTop'
 import labData     from '../data/lab.json'
 import { useMobile } from '../hooks/useMobile'
+import { thumbSrc } from '../utils/img'
 
 // ── 型定義 ────────────────────────────────────────────────
 interface LabItem {
@@ -232,7 +233,7 @@ export default function LabPage() {
                   {item.contain ? (
                     <>
                       <img
-                        src={getThumb(item)}
+                        src={thumbSrc(getThumb(item))}
                         alt=""
                         aria-hidden="true"
                         style={{
@@ -246,7 +247,7 @@ export default function LabPage() {
                       />
                       <img
                         className="lab-thumb"
-                        src={getThumb(item)}
+                        src={thumbSrc(getThumb(item))}
                         alt={item.title}
                         style={{
                           position: 'absolute', inset: 0,
@@ -260,7 +261,7 @@ export default function LabPage() {
                   ) : (
                     <img
                       className="lab-thumb"
-                      src={getThumb(item)}
+                      src={thumbSrc(getThumb(item))}
                       alt={item.title}
                       style={{
                         width: '100%',

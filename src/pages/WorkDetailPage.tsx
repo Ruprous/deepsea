@@ -7,6 +7,7 @@ import Lightbox   from '../components/Lightbox'
 import worksData  from '../data/works.json'
 import { useMobile }  from '../hooks/useMobile'
 import { formatDate } from '../utils/formatDate'
+import { thumbSrc, fullSrc } from '../utils/img'
 import { useFitText } from '../hooks/useFitText'
 
 // ── 型定義 ────────────────────────────────────────────────
@@ -76,8 +77,8 @@ export default function WorkDetailPage() {
   const isMobile = useMobile()
   const work = allWorks.find(w => w.id === id)
   const allLightboxImages = [
-    ...(work && getThumb(work) !== NOIMAGE ? [getThumb(work)] : []),
-    ...(work?.images ?? []),
+    ...(work && getThumb(work) !== NOIMAGE ? [fullSrc(getThumb(work))] : []),
+    ...(work?.images ?? []).map(fullSrc),
   ]
   const thumbOffset = work && getThumb(work) !== NOIMAGE ? 1 : 0
   const { containerRef: titleContainerRef, fontSize: titleSize } = useFitText(
@@ -205,7 +206,7 @@ export default function WorkDetailPage() {
                     />
                   ) : work.contain ? (
                     <img
-                      src={getThumb(work)}
+                      src={fullSrc(getThumb(work))}
                       alt={work.title}
                       onClick={() => getThumb(work) !== NOIMAGE && setLightbox({ images: allLightboxImages, index: 0 })}
                       style={{
@@ -215,7 +216,7 @@ export default function WorkDetailPage() {
                     />
                   ) : (
                     <img
-                      src={getThumb(work)}
+                      src={fullSrc(getThumb(work))}
                       alt={work.title}
                       onClick={() => getThumb(work) !== NOIMAGE && setLightbox({ images: allLightboxImages, index: 0 })}
                       style={{
@@ -300,7 +301,7 @@ export default function WorkDetailPage() {
                       >
                         {/* ブラー背景 */}
                         <img
-                          src={src}
+                          src={thumbSrc(src)}
                           alt=""
                           aria-hidden="true"
                           style={{
@@ -314,7 +315,7 @@ export default function WorkDetailPage() {
                         />
                         {/* メイン画像：contain で収める */}
                         <img
-                          src={src}
+                          src={thumbSrc(src)}
                           alt={`${work.title} - ${i + 1}`}
                           style={{
                             position: 'absolute', inset: 0,

@@ -4,6 +4,7 @@ import Header    from '../components/layout/Header'
 import Footer    from '../components/layout/Footer'
 import HeroSphere from '../components/Hero/HeroSphere'
 import { useMobile } from '../hooks/useMobile'
+import { thumbSrc } from '../utils/img'
 // ── ランダム作品用 ──────────────────────────────────────
 import worksData from '../data/works.json'
 
@@ -178,18 +179,18 @@ export default function NotFoundPage() {
                 }}>
                   {randomWork.contain ? (
                     <>
-                      <img src={getThumb(randomWork)} alt="" aria-hidden="true" style={{
+                      <img src={thumbSrc(getThumb(randomWork))} alt="" aria-hidden="true" style={{
                         position: 'absolute', inset: 0, width: '100%', height: '100%',
                         objectFit: 'cover', filter: 'blur(16px) brightness(0.45)',
                         transform: 'scale(1.12)', pointerEvents: 'none',
                       }} />
-                      <img className="r-thumb" src={getThumb(randomWork)} alt={randomWork.title} style={{
+                      <img className="r-thumb" src={thumbSrc(getThumb(randomWork))} alt={randomWork.title} style={{
                         position: 'absolute', inset: 0, width: '100%', height: '100%',
                         objectFit: 'contain', display: 'block', transition: 'transform 0.4s ease',
                       }} />
                     </>
                   ) : (
-                    <img className="r-thumb" src={getThumb(randomWork)} alt={randomWork.title} style={{
+                    <img className="r-thumb" src={thumbSrc(getThumb(randomWork))} alt={randomWork.title} style={{
                       width: '100%', height: '100%', objectFit: 'cover',
                       display: 'block', transition: 'transform 0.4s ease',
                     }} />

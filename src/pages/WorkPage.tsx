@@ -6,6 +6,7 @@ import HeroSphere   from '../components/Hero/HeroSphere'
 import ScrollToTop  from '../components/ScrollToTop'
 import worksData    from '../data/works.json'
 import { useMobile } from '../hooks/useMobile'
+import { thumbSrc } from '../utils/img'
 
 // ── 型定義 ────────────────────────────────────────────────
 interface Work {
@@ -239,7 +240,7 @@ export default function WorkPage() {
                     <>
                       {/* 背景：ブラー＋暗め */}
                       <img
-                        src={getThumb(work)}
+                        src={thumbSrc(getThumb(work))}
                         alt=""
                         aria-hidden="true"
                         onLoad={handleThumbLoad}
@@ -256,7 +257,7 @@ export default function WorkPage() {
                       {/* 手前：元画像をcontainで表示 */}
                       <img
                         className="work-thumb"
-                        src={getThumb(work)}
+                        src={thumbSrc(getThumb(work))}
                         alt={work.title}
                         onLoad={handleThumbLoad}
                         onError={handleThumbError}
@@ -272,7 +273,7 @@ export default function WorkPage() {
                   ) : (
                     <img
                       className="work-thumb"
-                      src={getThumb(work)}
+                      src={thumbSrc(getThumb(work))}
                       alt={work.title}
                       onLoad={handleThumbLoad}
                       onError={handleThumbError}
