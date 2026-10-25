@@ -20,13 +20,19 @@ interface LabLink {
   url: string
 }
 
+interface CreditItem {
+  role: string
+  name: string
+  url?: string
+}
+
 interface LabItem {
   id: string
   title: string
   types: string[]
   date: string
   thumbnail?: string
-  credit?: string[]
+  credit?: (string | CreditItem)[]
   links?: LabLink[]
   sections?: Section[]
   images?: string[]
@@ -324,10 +330,11 @@ export default function LabDetailPage() {
                     </p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                       {item.credit.map((c, i) => {
-                        const sep   = c.indexOf('：')
-                        const role  = sep !== -1 ? c.slice(0, sep).trim() : c
-                        const raw   = sep !== -1 ? c.slice(sep + 1) : ''
-                        const names = raw.split(',').map(n => n.trim()).filter(Boolean)
+                        const isObj = typeof c !== 'string'
+                        const role  = isObj ? c.role : (c.indexOf('：') !== -1 ? c.slice(0, c.indexOf('：')).trim() : c)
+                        const names = isObj
+                          ? [{ name: c.name, url: c.url ?? '' }]
+                          : (c.indexOf('：') !== -1 ? c.slice(c.indexOf('：') + 1) : '').split(',').map(n => ({ name: n.trim(), url: '' })).filter(n => n.name)
                         return (
                           <div key={i} style={{ display: 'flex', flexDirection: 'column' }}>
                             <span style={{
@@ -340,14 +347,37 @@ export default function LabDetailPage() {
                               {role.toUpperCase()}
                             </span>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
-                              {names.map((name, j) => (
+                              {names.map((n, j) => n.url ? (
+                                <a
+                                  key={j}
+                                  href={n.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  style={{
+                                    fontFamily: 'var(--font-noto-sans)',
+                                    fontSize: '13px',
+                                    letterSpacing: '0.04em',
+                                    color: 'rgba(255,255,255,0.75)',
+                                    textDecoration: 'none',
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '3px',
+                                    transition: 'color 0.2s',
+                                  }}
+                                  onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
+                                  onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.75)')}
+                                >
+                                  {n.name}
+                                  <span style={{ fontSize: '10px', opacity: 0.6 }}>↗</span>
+                                </a>
+                              ) : (
                                 <span key={j} style={{
                                   fontFamily: 'var(--font-noto-sans)',
                                   fontSize: '13px',
                                   letterSpacing: '0.04em',
                                   color: 'rgba(255,255,255,0.75)',
                                 }}>
-                                  {name}
+                                  {n.name}
                                 </span>
                               ))}
                             </div>
