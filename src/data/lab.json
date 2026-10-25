@@ -1,5 +1,40 @@
 [
     {
+        "id":  "pfum-portfolio",
+        "title":  "Portfolio Site \"Ultra Marine\"",
+        "date":  "2026-10-25",
+        "thumbnail":  "/images/lab/pfum.png",
+        "contain":  true,
+        "credit":  [
+                       "Design & Development：Ruprous"
+                   ],
+        "links":  [
+                      {
+                          "label":  "GitHub",
+                          "url":  "https://github.com/Ruprous/deepsea"
+                      },
+                      {
+                          "label":  "ruprous.me",
+                          "url":  "https://ruprous.me"
+                      }
+                  ],
+        "types":  ["WebSite"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "群青（ウルトラマリン）と紙色を基調に、ピル型のUI、ピクセル書体の見出し、ゼロックス風のノイズと網点で構成した現行のポートフォリオサイト。前版「DeepSea」のWebGL（Three.js）をやめ、静的なCSS中心の作りにして、JavaScriptを約1.4MBから約300KBに軽量化しました。トップでは全作品からランダムに選んだ作品がステッカーとして重なり、作品・Labの一覧と詳細、画像の拡大表示などを備えています。カスタムドメイン ruprous.me にて公開中。"
+                         },
+                         {
+                             "heading":  "技術スタック",
+                             "body":  "React 19 / Vite / TypeScript / React Router\n画像の変換：sharp（ビルド時にWebPの縮小版を自動生成）\nデプロイ：GitHub Pages + GitHub Actions（main push で自動デプロイ）\nドメイン：Namecheap + CNAME"
+                         },
+                         {
+                             "heading":  "設計方針",
+                             "body":  "コンテンツは works.json / lab.json で一元管理し、JSONを更新してpushするだけで本番に反映される運用を引き継いでいます。\n\nスタイルは1つのCSSファイルに集約し、色やフォントはデザイントークン（CSS変数）で管理。装飾は単色PNGをCSSのmaskで色替えして使い、画像を増やさずに配色を変えられます。\n\n画像は原画像からビルド時に一覧用・詳細用のWebPを生成し、作品一覧の転送量を約45MBから約2.5MBに削減。動画のあるページでは角丸のクリップ処理を避けて再生のコマ落ちを抑えるなど、体感の軽さを重視しています。"
+                         }
+                     ]
+    },
+    {
         "id":  "lineup-images",
         "title":  "LineUp-Images",
         "thumbnail":  "",
@@ -165,12 +200,8 @@
                    ],
         "links":  [
                       {
-                          "label":  "GitHub",
+                          "label":  "GitHub（現行版と同じリポジトリ）",
                           "url":  "https://github.com/Ruprous/deepsea"
-                      },
-                      {
-                          "label":  "ruprous.me",
-                          "url":  "https://ruprous.me"
                       }
                   ],
         "types":  [
@@ -179,7 +210,7 @@
         "sections":  [
                          {
                              "heading":  "概要",
-                             "body":  "React + Vite + TypeScript で構築した現行のポートフォリオサイト。Three.js（React Three Fiber）によるインタラクティブな3D球体をヒーローに据え、作品・ラボの一覧・詳細ページ、ライトボックス、フィルタリング機能などを実装しています。カスタムドメイン ruprous.me にて公開中。"
+                             "body":  "React + Vite + TypeScript で構築した、深海をテーマにした前のポートフォリオサイト。Three.js（React Three Fiber）によるインタラクティブな3D球体をヒーローに据え、作品・ラボの一覧・詳細ページ、ライトボックス、フィルタリング機能などを実装していました。カスタムドメイン ruprous.me で、2026年10月に「Ultra Marine」へ移行するまで公開していました。"
                          },
                          {
                              "heading":  "技術スタック",
@@ -187,7 +218,7 @@
                          },
                          {
                              "heading":  "設計方針",
-                             "body":  "コンテンツは works.json / lab.json で一元管理し、JSONを更新してpushするだけで本番に反映される運用設計を採用。\n\nスタイリングはすべてインラインスタイルで記述し、デザイントークン（CSS変数）と useMobile カスタムフックを組み合わせることで、CSSファイルを増やさずに精密なレスポンシブ対応を実現しています。\n\nGitHub Pages のSPAルーティング問題は 404.html + sessionStorage リダイレクトパターンで解決し、存在しないURLには React Router のキャッチオールルートが独自404ページを返します。"
+                             "body":  "コンテンツは works.json / lab.json で一元管理し、JSONを更新してpushするだけで本番に反映される運用設計を採用していました。\n\nスタイリングはすべてインラインスタイルで記述し、デザイントークン（CSS変数）と useMobile カスタムフックを組み合わせることで、CSSファイルを増やさずに精密なレスポンシブ対応を実現していました。\n\nGitHub Pages のSPAルーティング問題は 404.html + sessionStorage リダイレクトパターンで解決し、存在しないURLには React Router のキャッチオールルートが独自404ページを返していました。"
                          }
                      ]
     },

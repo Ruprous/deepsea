@@ -42,8 +42,10 @@
         "title":  "宙を走る六等星 ブルートレイン ジャケット",
         "client":  ["宙を走る六等星"],
         "date":  "2026-09-20",
-        "thumbnail":  "/images/works/soraroku-bluetrain.jpg",
-        "contain":  true,
+        "thumbnail":  "/images/works/soraroku-bluetrain-mock.jpg",
+        "images":  [
+                       "/images/works/soraroku-bluetrain.jpg"
+                   ],
         "credit":  [],
         "links":  [
                       {
