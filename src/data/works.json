@@ -1,14 +1,164 @@
 [
     {
+        "id":  "siozawa-ray",
+        "title":  "ray / シオザワトシヒロ 【歌ってみた】",
+        "client":  ["シオザワトシヒロ"],
+        "date":  "2026-10-23",
+        "youtubeId":  "1iQWnKTxZRo",
+        "thumbnail":  "",
+        "credit":  [
+                       "Vocal：シオザワトシヒロ, 久澄あと",
+                       "Mix：七誌",
+                       "Illustration：パニ",
+                       "Movie：Ruprous"
+                   ],
+        "links":  [],
+        "types":  ["MusicVideo"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "シオザワトシヒロ様、久澄あと様の歌ってみた動画『ray』の映像制作を担当しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "logo-sei-suno-church",
+        "title":  "聖SUNO教会 ロゴ",
+        "client":  ["SUNO"],
+        "date":  "2026-10-18",
+        "thumbnail":  "/images/works/logo-sei-suno-church.jpg",
+        "credit":  [],
+        "links":  [],
+        "types":  ["Logo"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "SUNO様のコミュニティ「聖SUNO教会」のロゴを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "soraroku-bluetrain",
+        "title":  "宙を走る六等星 ブルートレイン ジャケット",
+        "client":  ["宙を走る六等星"],
+        "date":  "2026-09-20",
+        "thumbnail":  "/images/works/soraroku-bluetrain.jpg",
+        "contain":  true,
+        "credit":  [],
+        "links":  [
+                      {
+                          "label":  "linkco.re",
+                          "url":  "https://linkco.re/rxP2GQz8?lang=ja"
+                      }
+                  ],
+        "types":  ["Cover"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "宙を走る六等星様のシングル『ブルートレイン』のジャケットを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "soraroku-flier-1st-album-tour",
+        "title":  "宙を走る六等星 1st ALBUMリリースツアー フライヤー",
+        "client":  ["宙を走る六等星"],
+        "date":  "2026-09-20",
+        "thumbnail":  "/images/works/soraroku-flier-1st-album-tour.jpg",
+        "contain":  true,
+        "images":  [
+                       "/images/works/soraroku-flier-1st-album-tour-list.jpg"
+                   ],
+        "credit":  [],
+        "links":  [],
+        "types":  ["Advertisement"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "宙を走る六等星様の1st ALBUMリリースツアー「ここから」、「Final ワンマンライブ! ～僕達弱気になってる場合じゃない～」のフライヤーを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "kosenka-sirius-mv",
+        "title":  "光線歌 / Sirius＊【歌ってみた】",
+        "client":  ["Sirius＊"],
+        "date":  "2026-09-07",
+        "youtubeId":  "1t5IXgqTGRI",
+        "thumbnail":  "",
+        "credit":  [
+                       "Vocal：Sirius＊",
+                       "Mix：阿黒れぃ",
+                       "Mix Studio：阿黒コーポレーション",
+                       "Illustration：てむ",
+                       "Movie：Ruprous"
+                   ],
+        "links":  [],
+        "types":  ["MusicVideo"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "Sirius＊様『光線歌 / Sirius＊【歌ってみた】』の映像制作を担当しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "shoshinsha-de-valorant",
+        "title":  "初心者deVALORANT",
+        "client":  ["こっとんでるた"],
+        "date":  "2026-08-08",
+        "thumbnail":  "/images/works/shoshinsha-valo-main.jpg",
+        "images":  [
+                       "/images/works/shoshinsha-valo-coach.jpg",
+                       "/images/works/shoshinsha-valo-maps.jpg",
+                       "/images/works/shoshinsha-valo-team1.jpg",
+                       "/images/works/shoshinsha-valo-team2.jpg",
+                       "/images/works/shoshinsha-valo-winner.jpg"
+                   ],
+        "credit":  [],
+        "links":  [],
+        "types":  [
+                      "Direction",
+                      "Graphic"
+                  ],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "こっとんでるた様の初心者を集めたVALORANTカスタム「初心者deVALORANT」の大会キービジュアル、スライド、リザルト画面を制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "mayonaka-relay-announce",
+        "title":  "まよなかまよなか 歌ってみたリレー 告知画像",
+        "client":  ["まよなかまよなか"],
+        "date":  "2026-08-07",
+        "thumbnail":  "/images/works/mayonaka-relay-announce.jpg",
+        "credit":  [],
+        "links":  [
+                      {
+                          "label":  "X（投稿元）",
+                          "url":  "https://x.com/mayomayo2626/status/2085698019295723810"
+                      }
+                  ],
+        "types":  ["Advertisement"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "まよなかまよなか様の歌ってみたリレーの告知画像を制作しました。"
+                         }
+                     ]
+    },
+    {
         "id":  "siozawa-silhouette",
-        "title":  "【歌ってみた】シルエット / シオザワ トシヒロ",
+        "title":  "【歌ってみた】シルエット / シオザワトシヒロ",
         "client":  ["シオザワトシヒロ"],
         "date":  "2026-05-22",
         "youtubeId":  "ptLecx_1rD0",
         "thumbnail":  "",
         "credit":  [
-                       "Vocal：シオザワ トシヒロ (PNZ)",
-                       "Illustration：pani",
+                       "Vocal：シオザワトシヒロ",
+                       "Illustration：パニ",
                        "Calligraphy：おんた",
                        "Movie：Ruprous",
                        "Music：八宮隼弥",
@@ -25,7 +175,7 @@
         "sections":  [
                          {
                              "heading":  "概要",
-                             "body":  "シオザワ トシヒロ様の歌ってみた動画『シルエット』の映像制作を担当しました。"
+                             "body":  "シオザワトシヒロ様の歌ってみた動画『シルエット』の映像制作を担当しました。"
                          }
                      ]
     },
@@ -109,7 +259,7 @@
         "youtubeId":  "yu579fbUuP8",
         "thumbnail":  "",
         "credit":  [
-                       "Vocal：Sirius*",
+                       "Vocal：Sirius＊",
                        "Mix：阿黒れぃ",
                        "Illustration：パニ",
                        "Movie：Ruprous"
