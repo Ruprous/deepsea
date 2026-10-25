@@ -27,6 +27,12 @@ interface SiteLayoutProps {
   bottomMid?: ReactNode
   /** パネル直下に差し込むページ固有の装飾 */
   extraDeco?: ReactNode
+  /**
+   * 動画（iframe）を載せるページ用。再生中の動画が角丸の overflow:hidden に囲まれると
+   * 毎フレームのクリップ処理でコマ落ちしやすいので、シート/パネルのクリップをやめ、
+   * はみ出す装飾だけを別の箱（.panel-bg）の中でクリップする。
+   */
+  videoSafe?: boolean
 }
 
 /** 縦書きレールの長さをパネル高さに収める（長すぎたら文字を縮める） */
@@ -127,32 +133,38 @@ function BottomBar({ topButton, mid }: { topButton?: boolean; mid?: ReactNode })
 }
 
 export default function SiteLayout({
-  children, panelClass, genericDeco = true, ringSpin, rails, topButton, bottomMid, extraDeco,
+  children, panelClass, genericDeco = true, ringSpin, rails, topButton, bottomMid, extraDeco, videoSafe,
 }: SiteLayoutProps) {
   useRailFit(!!rails)
+
+  const decor = (
+    <>
+      <div className="tone-bg" aria-hidden="true" />
+      {rails && (
+        <>
+          <div className="rail l" aria-hidden="true">{RAIL_TEXT}</div>
+          <div className="rail r" aria-hidden="true">{RAIL_TEXT}</div>
+        </>
+      )}
+      {genericDeco && (
+        <>
+          <Ring spin={ringSpin} style={{ right: '-14%', top: '2%', left: 'auto', width: '36vw', transform: 'none' }} />
+          <Deco name="hazard" style={{ right: 0, bottom: 0, width: '14%' }} />
+          <Deco name="bracket" color="var(--ink)" style={{ right: 20, top: 20, width: 26, rotate: '90deg' }} />
+          <Deco name="bracket" color="var(--ink)" style={{ left: 20, bottom: 20, width: 26, rotate: '270deg' }} />
+        </>
+      )}
+      {extraDeco}
+    </>
+  )
 
   return (
     <>
       <div className="edge" aria-hidden="true" />
-      <div className="sheet">
+      <div className={`sheet${videoSafe ? ' open' : ''}`}>
         <TopBar />
-        <main className={`panel${panelClass ? ` ${panelClass}` : ''}`}>
-          <div className="tone-bg" aria-hidden="true" />
-          {rails && (
-            <>
-              <div className="rail l" aria-hidden="true">{RAIL_TEXT}</div>
-              <div className="rail r" aria-hidden="true">{RAIL_TEXT}</div>
-            </>
-          )}
-          {genericDeco && (
-            <>
-              <Ring spin={ringSpin} style={{ right: '-14%', top: '2%', left: 'auto', width: '36vw', transform: 'none' }} />
-              <Deco name="hazard" style={{ right: 0, bottom: 0, width: '14%' }} />
-              <Deco name="bracket" color="var(--ink)" style={{ right: 20, top: 20, width: 26, rotate: '90deg' }} />
-              <Deco name="bracket" color="var(--ink)" style={{ left: 20, bottom: 20, width: 26, rotate: '270deg' }} />
-            </>
-          )}
-          {extraDeco}
+        <main className={`panel${panelClass ? ` ${panelClass}` : ''}${videoSafe ? ' open' : ''}`}>
+          {videoSafe ? <div className="panel-bg" aria-hidden="true">{decor}</div> : decor}
           {children}
         </main>
         <BottomBar topButton={topButton} mid={bottomMid} />

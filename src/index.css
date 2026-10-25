@@ -80,7 +80,8 @@ ul, ol { list-style: none; }
   padding: 40px 64px 56px;
 }
 .panel > * { position: relative; z-index: 2; }
-.panel > .tone-bg {
+.panel > .tone-bg,
+.panel-bg > .tone-bg {
   position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background-image: linear-gradient(80deg, var(--paper) 20%, rgba(222,223,232,0) 100%), radial-gradient(circle, rgba(7,54,254,.14) 1.2px, transparent 1.7px);
   background-size: auto, 9px 9px;
@@ -92,6 +93,12 @@ ul, ol { list-style: none; }
 }
 .rail.l { left: 22px; transform: rotate(180deg); }
 .rail.r { right: 22px; }
+
+/* 動画ページ：クリップはこの箱の中の「動かない装飾」だけに限定する */
+.sheet.open { overflow: visible; }
+.panel.open { overflow: visible; }
+.panel > .panel-bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; border-radius: inherit; pointer-events: none; }
+.panel-bg > .tone-bg { border-radius: inherit; }
 
 /* ─── 見出し ─────────────────────────────────────────── */
 .kicker { font-family: var(--f-mono); font-size: 11px; letter-spacing: .3em; color: var(--blue); margin-bottom: 10px; display: block; }
@@ -143,6 +150,7 @@ ul, ol { list-style: none; }
 .back { margin-bottom: 34px; }
 .detail { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 40px; align-items: start; }
 .media { position: relative; background: #fff; border: 6px solid #fff; outline: 2px solid var(--ink); border-radius: 18px; box-shadow: 10px 10px 0 rgba(10,10,16,.13); overflow: hidden; margin-bottom: 36px; }
+.media.video { border-radius: 6px; overflow: visible; }   /* 外周6px = 枠の太さ。内側の角が直角になるのでクリップ不要 */
 .media img { display: block; width: 100%; }
 .media.zoom img { cursor: zoom-in; }
 .media iframe { display: block; width: 100%; aspect-ratio: 16/9; border: 0; }

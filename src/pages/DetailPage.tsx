@@ -45,7 +45,7 @@ export default function DetailPage({ kind, id }: { kind: Kind; id?: string }) {
 
   if (!entry) {
     return (
-      <SiteLayout>
+      <SiteLayout videoSafe>
         {back}
         <p className="v">Not found.</p>
       </SiteLayout>
@@ -69,7 +69,7 @@ export default function DetailPage({ kind, id }: { kind: Kind; id?: string }) {
   const thumbOffset = hasImage ? 1 : 0
 
   return (
-    <SiteLayout>
+    <SiteLayout videoSafe>
       {back}
 
       <span className="kicker">{`// ${types.join(' / ').toUpperCase()}`}</span>
@@ -81,7 +81,7 @@ export default function DetailPage({ kind, id }: { kind: Kind; id?: string }) {
       <div className="detail">
         <div>
           {entry.youtubeId ? (
-            <div className="media">
+            <div className="media video">
               <iframe
                 src={`https://www.youtube.com/embed/${entry.youtubeId}`}
                 title={entry.title}
