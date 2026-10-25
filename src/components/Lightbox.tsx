@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 
 interface LightboxProps {
   images: string[]
@@ -6,7 +7,11 @@ interface LightboxProps {
   onClose: () => void
 }
 
-/** 画像の拡大表示。← → キー・スワイプ・Esc に対応 */
+/**
+ * 画像の拡大表示。← → キー・スワイプ・Esc に対応。
+ * ページ本体（.panel は独自の重なり順を持つ）の外に出さないと、上バーが前面に重なってしまうので、
+ * document.body 直下に描画する。
+ */
 export default function Lightbox({ images, initialIndex = 0, onClose }: LightboxProps) {
   const [index, setIndex] = useState(initialIndex)
   const touchStartX = useRef<number | null>(null)
@@ -30,7 +35,7 @@ export default function Lightbox({ images, initialIndex = 0, onClose }: Lightbox
 
   const go = (d: number) => setIndex(i => (i + d + images.length) % images.length)
 
-  return (
+  return createPortal(
     <div
       className="lightbox"
       role="dialog"
@@ -55,6 +60,7 @@ export default function Lightbox({ images, initialIndex = 0, onClose }: Lightbox
       {multi && (
         <button type="button" className="pill icon lb-nav r" aria-label="次の画像" onClick={e => { e.stopPropagation(); go(1) }}>→</button>
       )}
-    </div>
+    </div>,
+    document.body,
   )
 }
