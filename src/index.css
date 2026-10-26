@@ -353,13 +353,65 @@ a.row:hover { transform: translateX(6px); }
   background: repeating-linear-gradient(0deg, rgba(255,0,0,.05) 0, rgba(255,0,0,.05) 1px, transparent 1px, transparent 4px);
 }
 
+/* ─── Origin（活動の原点）────────────────────────────── */
+.origin-lead { max-width: 900px; margin: 4px 0 40px; }
+.origin-lead h2 { font-family: var(--f-jp); font-weight: 900; font-size: clamp(28px, 4.4vw, 58px); line-height: 1.55; letter-spacing: -.01em; color: var(--ink); }
+.origin-lead h2 .mark { padding: 2px 12px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.origin-lead p { margin-top: 18px; font-family: var(--f-jp); font-weight: 700; font-size: 15px; letter-spacing: .06em; color: rgba(10,10,16,.65); }
+.avi-def { max-width: 780px; margin-bottom: 30px; }
+.avi-def .v { font-size: 13.5px; line-height: 2; }
+.chaps { max-width: 1040px; }
+.chap { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 36px; padding: 34px 0 38px; border-top: 2px dotted rgba(7,54,254,.45); }
+.chap-head { display: flex; flex-direction: column; gap: 10px; }
+.chap-no { font-family: var(--f-pixel); font-weight: 700; font-size: 76px; line-height: .85; color: var(--blue); letter-spacing: -.02em; }
+.chap-head h3 { font-family: var(--f-jp); font-weight: 900; font-size: 20px; letter-spacing: .04em; color: var(--ink); }
+.chap-body p { font-family: var(--f-jp); font-size: 15px; line-height: 2.2; letter-spacing: .03em; color: rgba(10,10,16,.82); max-width: 640px; }
+.chap-body p + p { margin-top: 1.1em; }
+.origin-quote { max-width: 1040px; margin: 14px 0 64px; padding: 44px 48px; border-radius: 28px; background: var(--blue); color: #fff; position: relative; overflow: hidden; }
+.origin-quote::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle, rgba(255,255,255,.16) 1.2px, transparent 1.7px) 0 0 / 9px 9px; }
+.origin-quote p { position: relative; font-family: var(--f-jp); font-weight: 900; font-size: clamp(20px, 2.8vw, 34px); line-height: 1.7; letter-spacing: .02em; }
+.origin-quote .sub { margin-top: 18px; font-size: 14px; font-weight: 700; letter-spacing: .1em; color: var(--lime); }
+.avi-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 14px; }
+.avi-head .k { margin-bottom: 0; font-size: 11px; }
+.avi-count { font-family: var(--f-mono); font-size: 10px; letter-spacing: .18em; background: var(--ink); color: #fff; padding: 4px 12px; border-radius: 999px; }
+
+/* Avi ステッカー壁：全部を傾けて重ねて貼る。ドラッグで動かせる（components/AviWall.tsx） */
+.avi-wall-wrap { margin: 0 -64px; container-type: inline-size; }
+.avi-head { padding: 0 64px; }
+.avi-ctrl { display: inline-flex; align-items: center; gap: 8px; }
+.avi-ctrl .pill.icon { width: 40px; height: 40px; }
+.avi-ctrl .pill.icon svg { transition: transform .5s cubic-bezier(.2,1,.3,1); }
+.avi-ctrl .pill.icon:hover svg { transform: rotate(180deg); }
+.avi-ctrl .avi-count { margin-right: 6px; }
+.avi-hint { padding: 0 64px; margin: 6px 0 0; font-family: var(--f-mono); font-size: 10px; letter-spacing: .18em; color: rgba(10,10,16,.45); }
+.avi-wall { --cell: clamp(84px, 11.5cqw, 150px); display: grid; grid-template-columns: repeat(auto-fill, minmax(var(--cell), 1fr)); padding: 26px 18px 40px; }
+.stk {
+  position: relative; display: block; aspect-ratio: 1; margin: -9%; padding: 0; overflow: hidden; z-index: var(--z, auto);
+  background: #fff; border: 5px solid #fff; outline: 2px solid var(--ink); border-radius: 12px; box-shadow: 6px 6px 0 rgba(10,10,16,.14);
+  transform: translate(calc(var(--dx) * 100% + var(--mx, 0px)), calc(var(--dy) * 100% + var(--my, 0px))) rotate(var(--r, var(--rot))) scale(calc(var(--sc) * var(--k, 1)));
+  transition: transform .35s cubic-bezier(.2,1.2,.4,1), box-shadow .25s ease;
+  cursor: grab; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent;
+}
+.stk:hover, .stk:focus-visible, .stk.drag { --r: 0deg; --k: 1.14; z-index: 9000; box-shadow: 12px 12px 0 rgba(10,10,16,.2); }
+.stk.drag { transition: box-shadow .25s ease; cursor: grabbing; }
+.stk img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+.stk[data-rv='1'] { animation: stk-in .5s cubic-bezier(.2,1.4,.4,1) var(--rv-d, 0ms) backwards; }
+@keyframes stk-in { from { opacity: 0; scale: 1.7; } }
+@media (hover: none) { .avi-hint { display: none; } .stk { cursor: pointer; } }
+@media (prefers-reduced-motion: reduce) { .stk { transition: none; } .stk[data-rv='1'] { animation: none; } }
+
+/* About の「活動の原点」カード */
+.card.origin-card { background: var(--blue); color: #fff; }
+.origin-card .k { color: var(--lime); }
+.origin-card .v { color: #fff; font-weight: 700; margin-bottom: 14px; }
+
 /* ─── 動き（出現・文字化け・カウントアップ・ページ遷移ワイプ）──
    どれも「入ってきた時・触った時に1回だけ」。動かすのは transform / opacity だけ。
    視差効果を減らす設定の時は、JS 側で何も始めず、ここでも隠さない。 */
 
-/* 作品カードの順番出現（data-rv は hooks/useReveal.ts が 0 → 1 にする） */
-.wcard[data-rv='0'] { opacity: 0; }
-.wcard[data-rv='1'] { animation: rv-in .6s cubic-bezier(.2,.8,.2,1) var(--rv-d, 0ms) backwards; }
+/* 順番出現（作品カード・ORIGINの章）（data-rv は hooks/useReveal.ts が 0 → 1 にする） */
+[data-rv='0'] { opacity: 0; }
+[data-rv='1'] { animation: rv-in .6s cubic-bezier(.2,.8,.2,1) var(--rv-d, 0ms) backwards; }
 @keyframes rv-in { from { opacity: 0; translate: 0 30px; scale: .97; } }
 
 /* 文字化け：本来の文字は置いたまま隠し、上に入れ替わり中の文字を重ねる（components/ui/Scramble.tsx） */
@@ -396,8 +448,8 @@ a.row:hover { transform: translateX(6px); }
 @keyframes wipe-out { from { transform: translateX(0); } to { transform: translateX(101%); } }
 
 @media (prefers-reduced-motion: reduce) {
-  .wcard[data-rv='0'] { opacity: 1; }
-  .wcard[data-rv='1'] { animation: none; }
+  [data-rv='0'] { opacity: 1; }
+  [data-rv='1'] { animation: none; }
   .wipe { display: none; }
 }
 
@@ -409,6 +461,8 @@ a.row:hover { transform: translateX(6px); }
   .panel { padding: 30px 22px 44px; border-radius: 22px; }
   .panel > .rail, .panel > .deco-desktop { display: none; }
   .panel > .panel-q { opacity: .14; width: 90vw; }
+  .avi-wall-wrap { margin: 0 -22px; }
+  .avi-head, .avi-hint { padding: 0 22px; }
   .pill { height: 46px; padding: 0 20px; font-size: 12px; }
   .pill.logo { font-size: 20px; padding: 0 22px; }
   .h1 { font-size: clamp(52px, 13vw, 96px); }
@@ -463,4 +517,7 @@ a.row:hover { transform: translateX(6px); }
   .fit h1 { white-space: normal; }
   .lead { font-size: 15px; }
   .tag-row .lines { display: none; }
+  .chap { grid-template-columns: 1fr; gap: 14px; padding: 26px 0 30px; }
+  .chap-no { font-size: 56px; }
+  .origin-quote { padding: 30px 26px; }
 }

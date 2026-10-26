@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import HomePage       from './pages/HomePage'
 import WorkPage       from './pages/WorkPage'
@@ -9,8 +10,12 @@ import ContactPage    from './pages/ContactPage'
 import NotFoundPage   from './pages/NotFoundPage'
 import TeapotPage     from './pages/TeapotPage'
 
+// Origin は Avi の画像を扱う重めのページなので、開いた時だけ読み込む
+const OriginPage = lazy(() => import('./pages/OriginPage'))
+
 export default function AppRoutes() {
   return (
+    <Suspense fallback={null}>
     <Routes>
       <Route path="/"          element={<HomePage />} />
       <Route path="/work"      element={<WorkPage />} />
@@ -18,9 +23,11 @@ export default function AppRoutes() {
       <Route path="/lab"       element={<LabPage />} />
       <Route path="/lab/:id"   element={<LabDetailPage />} />
       <Route path="/about"     element={<AboutPage />} />
+      <Route path="/origin"    element={<OriginPage />} />
       <Route path="/contact"   element={<ContactPage />} />
       <Route path="/teapot"    element={<TeapotPage />} />
       <Route path="*"          element={<NotFoundPage />} />
     </Routes>
+    </Suspense>
   )
 }

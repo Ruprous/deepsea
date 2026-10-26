@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Link from '../components/ui/Link'
 import SiteLayout from '../components/layout/SiteLayout'
 import PageHead from '../components/layout/PageHead'
@@ -42,6 +43,9 @@ function LinkGrid({ items }: { items: { label: string; href: string }[] }) {
 }
 
 export default function AboutPage() {
+  // ORIGIN への入口はここだけ。押される前に ORIGIN のコードを先に読んでおく
+  useEffect(() => { import('./OriginPage') }, [])
+
   return (
     <SiteLayout
       ringSpin
@@ -70,7 +74,7 @@ export default function AboutPage() {
             <p className="greet">こんにちは、ラプラス（Ruprous）です！</p>
             <p className="dim">ラプラス [ləplάːs] です。読めない？いや、読むんですよ。</p>
             <p>
-              2018年10月より独学でグラフィックデザインを始め、幅広いクリエイティブ制作を行っています。名刺やロゴといった印刷物から、YouTube動画・ミュージックビデオなどの映像制作まで、多様な案件に対応できます。<br />
+              2018年10月、ゲームで使うアイコン（Avatar Icon / Avi）づくりからデザインを始めました。名刺やロゴといった印刷物から、YouTube動画・ミュージックビデオなどの映像制作まで、幅広く対応しています。<br />
               現在は広告代理店・制作会社で働きながら、フリーランスとしても活動を続けています。<br />
               「色んなことを楽しくやる。」をスローガンに掲げる組織、<span className="mark">TEAM PNZ</span>に所属。
             </p>
@@ -86,6 +90,11 @@ export default function AboutPage() {
             <Link to="/contact" className="pill lime">CONTACT ↗</Link>
           </div>
 
+          <div className="card origin-card">
+            <span className="k">{'// ORIGIN'}</span>
+            <p className="v">好きなものを作って、人に喜んでもらう。<br />すべての始まりになったAviの話と、当時の作品はこちら。</p>
+            <Link to="/origin" className="pill lime sm">ORIGIN ↗</Link>
+          </div>
           <div className="card"><span className="k">{'// SNS'}</span><LinkGrid items={SNS} /></div>
           <div className="card"><span className="k">{'// DISTRIBUTION'}</span><LinkGrid items={DISTRIBUTION} /></div>
           <div className="card">

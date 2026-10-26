@@ -1,5 +1,5 @@
-// public/images/{works,lab} の原画像から、軽量版 WebP を public/images/_gen/ に生成する。
-//   thumb: 一覧・ステッカー用（長辺 800px）
+// public/images/{works,lab,avi} の原画像から、軽量版 WebP を public/images/_gen/ に生成する。
+//   thumb: 一覧・ステッカー用（長辺 800px。avi は小さなタイル用に 480px）
 //   full : 詳細ページ・Lightbox 用（長辺 1920px）
 // 原画像は消さない。出力が原画像より新しければスキップ（差分のみ生成）。
 import { readdir, stat, mkdir } from 'node:fs/promises'
@@ -11,7 +11,8 @@ import sharp from 'sharp'
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const imagesDir = path.join(root, 'public', 'images')
 const genDir = path.join(imagesDir, '_gen')
-const SOURCE_DIRS = ['works', 'lab']
+const SOURCE_DIRS = ['works', 'lab', 'avi']
+const THUMB_SIZE = { avi: 480 } // ここに無いフォルダは VARIANTS の既定値
 const VARIANTS = [
   { kind: 'thumb', size: 800,  quality: 78 },
   { kind: 'full',  size: 1920, quality: 82 },
@@ -34,7 +35,8 @@ for (const sub of SOURCE_DIRS) {
   for await (const src of walk(dir)) {
     const rel = path.relative(imagesDir, src).replace(/\.[^.]+$/, '.webp')
     const srcStat = await stat(src)
-    for (const v of VARIANTS) {
+    for (const base of VARIANTS) {
+      const v = base.kind === 'thumb' && THUMB_SIZE[sub] ? { ...base, size: THUMB_SIZE[sub] } : base
       const out = path.join(genDir, v.kind, rel)
       jobs.push({ src, out, v, srcMtime: srcStat.mtimeMs, srcSize: srcStat.size })
     }
