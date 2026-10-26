@@ -1,5 +1,7 @@
 import { useEffect, useLayoutEffect, useState, type ReactNode } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+import Link from '../ui/Link'
+import Scramble from '../ui/Scramble'
 import { Deco, Ring } from '../ui/Deco'
 
 const NAV = [
@@ -79,11 +81,11 @@ function TopBar() {
   return (
     <>
       <header className="bar">
-        <Link to="/" className="pill logo">Ruprous</Link>
+        <Link to="/" className="pill logo"><Scramble mode="hover" text="Ruprous" /></Link>
         <span className="runline" aria-hidden="true" />
         <nav className="nav" aria-label="メインナビゲーション">
           {NAV.map(n => (
-            <Link key={n.to} to={n.to} className={`pill${isActive(n.to) ? ' blue' : ''}`}>{n.label}</Link>
+            <Link key={n.to} to={n.to} className={`pill${isActive(n.to) ? ' blue' : ''}`}><Scramble mode="hover" text={n.label} /></Link>
           ))}
         </nav>
         <button type="button" className="pill icon menu-btn" onClick={() => setOpen(true)} aria-label="メニューを開く">

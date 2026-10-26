@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState, type CSSProperties } from 'react'
-import { Link } from 'react-router-dom'
+import Link from '../ui/Link'
 import QMark from '../ui/QMark'
 import { Ring, Burst } from '../ui/Deco'
 import { thumbSrc } from '../../utils/img'

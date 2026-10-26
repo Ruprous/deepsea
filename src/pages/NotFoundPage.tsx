@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import Link from '../components/ui/Link'
 import SiteLayout from '../components/layout/SiteLayout'
 import QMark from '../components/ui/QMark'
 import WorkCard from '../components/WorkCard'

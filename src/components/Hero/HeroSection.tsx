@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import Link from '../ui/Link'
 import SiteLayout from '../layout/SiteLayout'
 import { Deco } from '../ui/Deco'
 import StickerStage from './StickerStage'
+import Scramble from '../ui/Scramble'
 import { useKonamiCode } from '../../hooks/useKonamiCode'
 
 const CHAOS_DURATION = 5000 // ms
@@ -71,7 +72,7 @@ export default function HeroSection() {
               <span>// MOVE THE CULTURE</span>
             </span>
           </div>
-          <h1 className="title">Ruprous</h1>
+          <Scramble as="h1" className="title" text="Ruprous" />
           <p className="kana">ラプラス</p>
         </div>
 

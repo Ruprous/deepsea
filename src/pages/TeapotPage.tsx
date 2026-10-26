@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import Link from '../components/ui/Link'
 import SiteLayout from '../components/layout/SiteLayout'
 import QMark from '../components/ui/QMark'
 import { Deco } from '../components/ui/Deco'

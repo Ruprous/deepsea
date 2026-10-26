@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import Link from './ui/Link'
+import { useReveal } from '../hooks/useReveal'
 import { formatDate } from '../utils/formatDate'
 import { thumbSrc } from '../utils/img'
 import { getThumb, labelsOf, onThumbError, onThumbLoad, entryNo, fmtNo, type Entry, type Kind } from '../utils/works'
@@ -17,6 +18,8 @@ interface WorkCardProps {
 /** 作品カード。16:9 以外の画像（contain 扱い）は、元画像のグレースケール網点を背景に敷く */
 export default function WorkCard({ entry, kind, meta = true, lazy = true, fromList }: WorkCardProps) {
   const labels = labelsOf(kind)
+  // 画面に入ったら順番に出現する
+  const reveal = useReveal<HTMLAnchorElement>()
   const src = thumbSrc(getThumb(entry))
   const imgProps = {
     src,
@@ -27,7 +30,7 @@ export default function WorkCard({ entry, kind, meta = true, lazy = true, fromLi
   }
 
   return (
-    <Link to={`/${kind}/${entry.id}`} state={fromList ? { fromList: true } : undefined} className="wcard">
+    <Link to={`/${kind}/${entry.id}`} state={fromList ? { fromList: true } : undefined} className="wcard" data-rv="0" ref={reveal}>
       <div className={`img${entry.contain ? ' contain' : ''}`}>
         {entry.contain ? (
           <>

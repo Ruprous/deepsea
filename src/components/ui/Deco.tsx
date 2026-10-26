@@ -1,5 +1,9 @@
 import type { CSSProperties } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useRef } from 'react'
+import Link from './Link'
+import CountText from './CountText'
+import { countUp } from '../../utils/motion'
+import { whenVisible } from '../../utils/wipe'
 
 // 単色PNG（public/images/deco/）をマスクにして、好きな色で塗る装飾部品
 const DECO = {
@@ -66,10 +70,27 @@ interface BurstProps {
 
 /** 黄緑のスターバースト（数字バッジ）。クリックで一覧へ */
 export function Burst({ to, value, label, className, style }: BurstProps) {
+  // 数字は 0 から（絞り込みで変わった時は直前の数字から）数え上げる
+  const count = useRef<HTMLSpanElement>(null)
+  const shown = useRef(0)
+  useEffect(() => {
+    const el = count.current
+    if (!el || typeof value !== 'number') return
+    const from = shown.current
+    let stop = () => {}
+    let cancelled = false
+    whenVisible().then(() => {
+      if (cancelled) return
+      shown.current = value
+      stop = countUp(el, from, value, String, { duration: 550 })
+    })
+    return () => { cancelled = true; stop() }
+  }, [value])
+
   return (
     <Link to={to} className={`burst${className ? ` ${className}` : ''}`} style={style}>
       <Deco name="burst" color="var(--lime)" />
-      <span><b>{value}</b>{label}</span>
+      <span><b>{typeof value === 'number' ? <CountText value={value} ref={count} /> : value}</b>{label}</span>
     </Link>
   )
 }

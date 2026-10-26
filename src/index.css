@@ -227,7 +227,7 @@ a.row:hover { transform: translateX(6px); }
          transition: transform .25s cubic-bezier(.2,1.4,.4,1); }
 .burst:hover { transform: rotate(0deg) scale(1.1) !important; }
 .burst .d { position: absolute; inset: 0; width: 100%; z-index: 0; }
-.burst span { position: relative; z-index: 1; font-family: var(--f-mono); letter-spacing: .14em; font-size: 10px; line-height: 1.15; }
+.burst > span { position: relative; z-index: 1; font-family: var(--f-mono); letter-spacing: .14em; font-size: 10px; line-height: 1.15; }
 .burst b { display: block; font-family: var(--f-pixel); font-weight: 700; font-size: 34px; letter-spacing: 0; line-height: 1; }
 
 /* ─── トップ（ヒーロー）──────────────────────────────── */
@@ -244,7 +244,7 @@ a.row:hover { transform: translateX(6px); }
 .stage .ring { position: absolute; left: 50%; top: 50%; width: min(60vw, 98vh); transform: translate(-50%, -50%); z-index: -2; pointer-events: none; }
 .stage .burst { right: calc(var(--u) * -2); top: calc(var(--u) * -3); width: calc(var(--u) * 10.4); height: calc(var(--u) * 10.4); rotate: 14deg; }
 .stage .burst b { font-size: calc(var(--u) * 2.8); }
-.stage .burst span { font-size: calc(var(--u) * .82); }
+.stage .burst > span { font-size: calc(var(--u) * .82); }
 .cross { position: absolute; font-family: var(--f-mono); font-size: 18px; color: var(--ink); z-index: 4; }
 
 .sticker {
@@ -351,6 +351,54 @@ a.row:hover { transform: translateX(6px); }
 .glitch-scanlines {
   position: fixed; inset: 0; z-index: 150; pointer-events: none; animation: glitch-flicker .1s infinite;
   background: repeating-linear-gradient(0deg, rgba(255,0,0,.05) 0, rgba(255,0,0,.05) 1px, transparent 1px, transparent 4px);
+}
+
+/* ─── 動き（出現・文字化け・カウントアップ・ページ遷移ワイプ）──
+   どれも「入ってきた時・触った時に1回だけ」。動かすのは transform / opacity だけ。
+   視差効果を減らす設定の時は、JS 側で何も始めず、ここでも隠さない。 */
+
+/* 作品カードの順番出現（data-rv は hooks/useReveal.ts が 0 → 1 にする） */
+.wcard[data-rv='0'] { opacity: 0; }
+.wcard[data-rv='1'] { animation: rv-in .6s cubic-bezier(.2,.8,.2,1) var(--rv-d, 0ms) backwards; }
+@keyframes rv-in { from { opacity: 0; translate: 0 30px; scale: .97; } }
+
+/* 文字化け：本来の文字は置いたまま隠し、上に入れ替わり中の文字を重ねる（components/ui/Scramble.tsx） */
+.scr { position: relative; }
+.scr-live { display: none; position: absolute; left: 0; right: 0; top: 0; text-align: inherit; white-space: inherit; pointer-events: none; }
+.scr-live .sc { color: var(--blue); }
+.scr[data-s='run'] .scr-live { display: block; }
+.scr[data-s='run'] .scr-real { opacity: 0; }
+.pill .scr-live .sc { color: inherit; opacity: .6; }
+.pill.blue .scr-live .sc { opacity: .5; }
+@media (prefers-reduced-motion: no-preference) {
+  .scr[data-s='wait'] .scr-real { opacity: 0; }
+}
+
+/* カウントアップ：動かしている間だけ、本来の数字の上に別の数字を重ねる */
+.cnt { position: relative; display: inline-block; }
+.cnt-live { display: none; position: absolute; left: 0; top: 0; white-space: nowrap; }
+.cnt[data-s='run'] .cnt-live { display: block; }
+.cnt[data-s='run'] .cnt-real { opacity: 0; }
+
+/* ページ遷移ワイプ：青い帯が左から画面を覆い、新しいページが出来たら右へ抜ける */
+.wipe {
+  position: fixed; inset: 0; z-index: 300; visibility: hidden; pointer-events: none;
+  background: radial-gradient(circle, rgba(255,255,255,.16) 1.2px, transparent 1.7px) 0 0 / 9px 9px, var(--blue);
+  transform: translateX(-101%);
+}
+.wipe::before, .wipe::after { content: ''; position: absolute; top: 0; bottom: 0; width: 10px; background: var(--lime); }
+.wipe::before { left: 0; }
+.wipe::after { right: 0; }
+.wipe.covering { visibility: visible; pointer-events: auto; animation: wipe-in .32s cubic-bezier(.7,0,.25,1) forwards; }
+.wipe.covered { visibility: visible; pointer-events: auto; transform: none; }
+.wipe.revealing { visibility: visible; animation: wipe-out .42s cubic-bezier(.7,0,.25,1) forwards; }
+@keyframes wipe-in { from { transform: translateX(-101%); } to { transform: translateX(0); } }
+@keyframes wipe-out { from { transform: translateX(0); } to { transform: translateX(101%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .wcard[data-rv='0'] { opacity: 1; }
+  .wcard[data-rv='1'] { animation: none; }
+  .wipe { display: none; }
 }
 
 /* ═══════════════════════════════════════════════════════

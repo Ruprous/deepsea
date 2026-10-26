@@ -1,7 +1,9 @@
 import { useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import SiteLayout from '../components/layout/SiteLayout'
 import Lightbox from '../components/Lightbox'
+import Scramble from '../components/ui/Scramble'
+import { useWipeNavigate } from '../hooks/useWipeNavigate'
 import { useMobile } from '../hooks/useMobile'
 import { useFitText } from '../hooks/useFitText'
 import { formatDate } from '../utils/formatDate'
@@ -21,7 +23,7 @@ function parseCredit(c: string | CreditItem): { role: string; names: { name: str
 
 /** Work / Lab 共通の詳細ページ */
 export default function DetailPage({ kind, id }: { kind: Kind; id?: string }) {
-  const navigate = useNavigate()
+  const navigate = useWipeNavigate()
   const location = useLocation()
   const isMobile = useMobile(700)
   const [lightbox, setLightbox] = useState<{ index: number } | null>(null)
@@ -72,7 +74,7 @@ export default function DetailPage({ kind, id }: { kind: Kind; id?: string }) {
     <SiteLayout videoSafe showRights={kind === 'work'}>
       {back}
 
-      <span className="kicker">{`// ${types.join(' / ').toUpperCase()}`}</span>
+      <Scramble className="kicker" text={`// ${types.join(' / ').toUpperCase()}`} />
       <div className="fit" ref={isMobile ? undefined : containerRef}>
         <h1 style={isMobile ? { fontSize: 'clamp(26px, 7.4vw, 40px)' } : { fontSize }}>{entry.title}</h1>
       </div>
