@@ -3,7 +3,6 @@ import Link from '../components/ui/Link'
 import SiteLayout from '../components/layout/SiteLayout'
 import PageHead from '../components/layout/PageHead'
 import QMark from '../components/ui/QMark'
-import FlaskSticker from '../components/ui/FlaskSticker'
 import { Deco } from '../components/ui/Deco'
 
 const SNS = [
@@ -25,19 +24,16 @@ const SOFTWARE = [
 ]
 
 const SERVICES = [
-  '名刺・ショップカードのデザイン',
-  'ロゴ制作（企業・イベント・個人用途）',
-  'ジャケットデザイン',
-  'チラシ／フライヤー制作',
-  'YouTube動画編集',
-  'ミュージックビデオ編集',
+  { label: 'GRAPHIC', items: ['名刺・ショップカード', 'ロゴ（企業・イベント・個人用途）', 'チラシ・フライヤー', 'ジャケット'] },
+  { label: 'WEB',     items: ['WEB広告・SNS広告・SNSアイコン・ヘッダー'] },
+  { label: 'VIDEO',   items: ['YouTube動画編集', 'ミュージックビデオ'] },
 ]
 
 function LinkGrid({ items }: { items: { label: string; href: string }[] }) {
   return (
     <div className="links">
       {items.map(s => (
-        <a key={s.href} href={s.href} target="_blank" rel="noreferrer"><i>//</i>{s.label}</a>
+        <a key={s.href} href={s.href} target="_blank" rel="noreferrer">{s.label}</a>
       ))}
     </div>
   )
@@ -75,14 +71,20 @@ export default function AboutPage() {
             <p className="greet">こんにちは、ラプラス（Ruprous）です！</p>
             <p className="dim">ラプラス [ləplάːs] です。読めない？いや、読むんですよ。</p>
             <p>
-              2018年10月、ゲームで使うアイコン（Avatar Icon / Avi）づくりからデザインを始めました。名刺やロゴといった印刷物から、YouTube動画・ミュージックビデオなどの映像制作まで、幅広く対応しています。<br />
-              現在は広告代理店・制作会社で働きながら、フリーランスとしても活動を続けています。<br />
+              2018年10月、<Link to="/origin" className="ilink">ゲーム仲間のために作って喜んでもらえたアイコン<i>↗</i></Link>が、デザインの原点です。<br />
+              そこから独学でデザインを学び、様々な分野のデザインを見て視野を広げ、制作の幅を広げてきました。<br />
+              現在は広告代理店・制作会社で働きながら、フリーランスとしても活動しています。<br />
               「色んなことを楽しくやる。」をスローガンに掲げる組織、<span className="mark">TEAM PNZ</span>に所属。
             </p>
             <h3>【対応可能ジャンル】</h3>
-            <ul>
-              {SERVICES.map(t => <li key={t}>{t}</li>)}
-            </ul>
+            <div className="svc">
+              {SERVICES.map(g => (
+                <div key={g.label} className="svc-g">
+                  <span className="k">{g.label}</span>
+                  <ul>{g.items.map(t => <li key={t}>{t}</li>)}</ul>
+                </div>
+              ))}
+            </div>
             <p>
               お客様の「こうしたい！」という想いを丁寧にヒアリングし、目的に合った形で表現することを大切にしています。<br />
               デザインと映像を通じて、“伝わる・惹きつける”クリエイティブをお届けします。
@@ -91,24 +93,13 @@ export default function AboutPage() {
             <Link to="/contact" className="pill lime">CONTACT ↗</Link>
           </div>
 
-          <div className="card origin-card">
-            <span className="k">{'// ORIGIN'}</span>
-            <p className="v">好きなものを作って、人に喜んでもらう。<br />すべての始まりになったAviの話と、当時の作品はこちら。</p>
-            <Link to="/origin" className="pill lime sm">ORIGIN ↗</Link>
-          </div>
-          <div className="card lab-card">
-            <FlaskSticker />
-            <span className="k">{'// LAB'}</span>
-            <p className="v">ツールや拡張機能、Webサイトなど。<br />制作の合間に作っているものの実験室はこちら。</p>
-            <Link to="/lab" className="pill lime sm">LAB ↗</Link>
-          </div>
-          <div className="card"><span className="k">{'// SNS'}</span><LinkGrid items={SNS} /></div>
-          <div className="card"><span className="k">{'// DISTRIBUTION'}</span><LinkGrid items={DISTRIBUTION} /></div>
+          <div className="card"><span className="k">SNS</span><LinkGrid items={SNS} /></div>
+          <div className="card"><span className="k">DISTRIBUTION</span><LinkGrid items={DISTRIBUTION} /></div>
           <div className="card">
-            <span className="k">{'// TOOLS'}</span>
+            <span className="k">TOOLS</span>
             <div className="chips">
               {SOFTWARE.map(s => <span key={s}>{s}</span>)}
-              <span className="hl">自作ツール（Python など）</span>
+              <Link to="/lab" className="hl">自作ツール<i>↗</i></Link>
             </div>
           </div>
         </div>
