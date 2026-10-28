@@ -4,6 +4,7 @@ import SiteLayout from '../components/layout/SiteLayout'
 import PageHead from '../components/layout/PageHead'
 import WorkCard from '../components/WorkCard'
 import Link from '../components/ui/Link'
+import FlaskSticker from '../components/ui/FlaskSticker'
 import { Burst } from '../components/ui/Deco'
 import { getList, labelsOf, type Kind } from '../utils/works'
 
@@ -49,6 +50,17 @@ export default function ListPage({ kind }: { kind: Kind }) {
           <a className="pill sm outline" href="https://github.com/Ruprous" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
         )}
       </PageHead>
+
+      {isLab && (
+        <div className="lab-intro">
+          <p className="lead">
+            ツールや拡張機能、Webサイトなど。<br />
+            制作の合間に作っているものの実験室です。<br />
+            自分の作業を楽にするために作ったものも、公開していたりしていなかったりします。
+          </p>
+          <FlaskSticker />
+        </div>
+      )}
 
       <hr className="rule" />
       <div className="filters" role="group" aria-label="ジャンルで絞り込む">
