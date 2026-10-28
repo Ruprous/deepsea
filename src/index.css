@@ -290,9 +290,6 @@ a.row:hover { transform: translateX(6px); }
 .intro { max-width: 470px; font-family: var(--f-mono); font-size: 13px; line-height: 1.9; letter-spacing: .1em; color: rgba(10,10,16,.68); background: rgba(255,255,255,.55); padding: 14px 16px; border-radius: 18px; }
 .intro .pill { margin-top: 14px; height: 34px; padding: 0 16px; font-size: 11px; }
 .cta { display: flex; gap: 10px; flex-wrap: wrap; }
-.lab-link { display: block; width: fit-content; margin-top: 14px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; color: rgba(10,10,16,.62); border-bottom: 1.5px solid transparent; transition: color .15s, border-color .15s; }
-.lab-link i { font-style: normal; color: var(--blue); }
-.lab-link:hover { color: var(--ink); border-bottom-color: var(--blue); }
 .badge { display: inline-flex; align-items: center; gap: 14px; width: fit-content; background: #fff; border-radius: 22px; padding: 10px 22px 10px 12px; margin-top: 16px; }
 .badge img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
 .badge p { font-family: var(--f-mono); letter-spacing: .14em; }

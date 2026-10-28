@@ -89,7 +89,6 @@ export default function HeroSection() {
             <Link to="/work" className="pill lime sm">VIEW WORKS ↗</Link>
             <Link to="/contact" className="pill outline sm">CONTACT ↗</Link>
           </div>
-          <Link to="/lab" className="lab-link"><i>//</i> LAB — ツール・実験はこちら ↗</Link>
           <div className="badge">
             <img src="/images/ui/icon-96.webp" alt="Ruprous" width={40} height={40} />
             <div>
