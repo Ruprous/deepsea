@@ -290,6 +290,9 @@ a.row:hover { transform: translateX(6px); }
 .intro { max-width: 470px; font-family: var(--f-mono); font-size: 13px; line-height: 1.9; letter-spacing: .1em; color: rgba(10,10,16,.68); background: rgba(255,255,255,.55); padding: 14px 16px; border-radius: 18px; }
 .intro .pill { margin-top: 14px; height: 34px; padding: 0 16px; font-size: 11px; }
 .cta { display: flex; gap: 10px; flex-wrap: wrap; }
+.lab-link { display: block; width: fit-content; margin-top: 14px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; color: rgba(10,10,16,.62); border-bottom: 1.5px solid transparent; transition: color .15s, border-color .15s; }
+.lab-link i { font-style: normal; color: var(--blue); }
+.lab-link:hover { color: var(--ink); border-bottom-color: var(--blue); }
 .badge { display: inline-flex; align-items: center; gap: 14px; width: fit-content; background: #fff; border-radius: 22px; padding: 10px 22px 10px 12px; margin-top: 16px; }
 .badge img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
 .badge p { font-family: var(--f-mono); letter-spacing: .14em; }
@@ -404,6 +407,22 @@ a.row:hover { transform: translateX(6px); }
 .card.origin-card { background: var(--blue); color: #fff; }
 .origin-card .k { color: var(--lime); }
 .origin-card .v { color: #fff; font-weight: 700; margin-bottom: 14px; }
+
+/* About の「LAB」カード：三角フラスコのステッカーが右上からはみ出して貼ってある */
+.card.lab-card { position: relative; background: var(--ink); color: #fff; padding-right: 150px; }
+.lab-card .k { color: var(--lime); }
+.lab-card .v { color: #fff; font-weight: 700; margin-bottom: 14px; }
+.flask { position: absolute; right: 22px; top: -26px; width: 112px; height: auto; overflow: visible; rotate: 9deg; transform-origin: 50% 90%; transition: rotate .45s cubic-bezier(.2,1.5,.4,1), translate .45s cubic-bezier(.2,1.5,.4,1); pointer-events: none; }
+.lab-card:hover .flask { rotate: -6deg; translate: 0 -6px; }
+.flask-bub { transform-box: fill-box; transform-origin: center; }
+.lab-card:hover .flask-bub { animation: flask-rise 1.1s ease-in infinite; }
+.flask-bub.b2 { animation-delay: .35s !important; }
+.flask-bub.b3 { animation-delay: .7s !important; }
+.flask-bub.b4 { animation-delay: .5s !important; }
+.flask-bub.b5 { animation-delay: .2s !important; }
+@keyframes flask-rise { 0% { translate: 0 0; opacity: 1; } 100% { translate: 0 -16px; opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .flask { transition: none; } .lab-card:hover .flask-bub { animation: none; } }
+@media (max-width: 720px) { .card.lab-card { padding-right: 22px; padding-top: 70px; margin-top: 40px; } .flask { right: 18px; top: -34px; width: 96px; } }
 
 /* ─── 動き（出現・文字化け・カウントアップ・ページ遷移ワイプ）──
    どれも「入ってきた時・触った時に1回だけ」。動かすのは transform / opacity だけ。

@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import SiteLayout from '../components/layout/SiteLayout'
 import PageHead from '../components/layout/PageHead'
 import WorkCard from '../components/WorkCard'
+import Link from '../components/ui/Link'
 import { Burst } from '../components/ui/Deco'
 import { getList, labelsOf, type Kind } from '../utils/works'
 
@@ -43,6 +44,7 @@ export default function ListPage({ kind }: { kind: Kind }) {
       />
 
       <PageHead kicker={isLab ? 'LAB' : 'WORK'} title={isLab ? 'Lab' : 'Work'}>
+        {isLab && <Link to="/about" className="pill sm outline">← ABOUT</Link>}
         {isLab && (
           <a className="pill sm outline" href="https://github.com/Ruprous" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
         )}

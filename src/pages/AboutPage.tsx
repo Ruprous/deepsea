@@ -3,6 +3,7 @@ import Link from '../components/ui/Link'
 import SiteLayout from '../components/layout/SiteLayout'
 import PageHead from '../components/layout/PageHead'
 import QMark from '../components/ui/QMark'
+import FlaskSticker from '../components/ui/FlaskSticker'
 import { Deco } from '../components/ui/Deco'
 
 const SNS = [
@@ -94,6 +95,12 @@ export default function AboutPage() {
             <span className="k">{'// ORIGIN'}</span>
             <p className="v">好きなものを作って、人に喜んでもらう。<br />すべての始まりになったAviの話と、当時の作品はこちら。</p>
             <Link to="/origin" className="pill lime sm">ORIGIN ↗</Link>
+          </div>
+          <div className="card lab-card">
+            <FlaskSticker />
+            <span className="k">{'// LAB'}</span>
+            <p className="v">ツールや拡張機能、Webサイトなど。<br />制作の合間に作っているものの実験室はこちら。</p>
+            <Link to="/lab" className="pill lime sm">LAB ↗</Link>
           </div>
           <div className="card"><span className="k">{'// SNS'}</span><LinkGrid items={SNS} /></div>
           <div className="card"><span className="k">{'// DISTRIBUTION'}</span><LinkGrid items={DISTRIBUTION} /></div>

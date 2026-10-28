@@ -7,7 +7,6 @@ import { Deco, Ring } from '../ui/Deco'
 const NAV = [
   { label: 'WORK',    to: '/work' },
   { label: 'ABOUT',   to: '/about' },
-  { label: 'LAB',     to: '/lab' },
   { label: 'CONTACT', to: '/contact' },
 ]
 
