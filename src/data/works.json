@@ -232,6 +232,22 @@
                      ]
     },
     {
+        "id":  "signal-logo",
+        "title":  "SIGNAL ロゴ",
+        "client":  ["PNZ"],
+        "date":  "2025-10-23",
+        "thumbnail":  "/images/works/signal-logo.jpg",
+        "credit":  [],
+        "links":  [],
+        "types":  ["Logo"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "PNZ内チーム「SIGNAL」のロゴを制作しました。"
+                         }
+                     ]
+    },
+    {
         "id":  "hhime-pnzwelcome",
         "title":  "姫神ひめ PNZ 加入画像",
         "client":  ["PNZ"],
