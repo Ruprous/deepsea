@@ -232,6 +232,55 @@
                      ]
     },
     {
+        "id":  "dayment-kodax-header",
+        "title":  "KODAX Xヘッダー",
+        "client":  ["Dayment"],
+        "date":  "2020-12-17",
+        "thumbnail":  "/images/works/dayment-kodax-header.jpg",
+        "contain":  true,
+        "credit":  [],
+        "links":  [],
+        "types":  ["Graphic"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "Dayment所属のKODAX様のX用ヘッダーを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "axia-logo",
+        "title":  "AXIA ロゴ",
+        "client":  ["AXIA"],
+        "date":  "2020-12-14",
+        "thumbnail":  "/images/works/axia-logo.jpg",
+        "credit":  [],
+        "links":  [],
+        "types":  ["Logo"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "AXIAのロゴを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "sakura-self-produced",
+        "title":  "桜 (SELF-PRODUCED)",
+        "client":  [],
+        "date":  "2020-11-30",
+        "thumbnail":  "/images/works/sakura-thumb.jpg",
+        "credit":  [],
+        "links":  [],
+        "types":  ["Logo"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "自主制作のロゴ「桜 (SELF-PRODUCED)」を制作しました。"
+                         }
+                     ]
+    },
+    {
         "id":  "signal-logo",
         "title":  "SIGNAL ロゴ",
         "client":  ["PNZ"],
