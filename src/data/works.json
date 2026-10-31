@@ -233,7 +233,7 @@
     },
     {
         "id":  "dayment-kodax-header",
-        "title":  "KODAX Xヘッダー",
+        "title":  "KODAX ヘッダー",
         "client":  ["Dayment"],
         "date":  "2020-12-17",
         "thumbnail":  "/images/works/dayment-kodax-header.jpg",
@@ -244,7 +244,73 @@
         "sections":  [
                          {
                              "heading":  "概要",
-                             "body":  "Dayment所属のKODAX様のX用ヘッダーを制作しました。"
+                             "body":  "Dayment所属のKODAX様のヘッダーを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "lv99-fran-header",
+        "title":  "FRAN ヘッダー",
+        "client":  ["Lv99"],
+        "date":  "2021-11-13",
+        "thumbnail":  "/images/works/lv99-fran-header.jpg",
+        "contain":  true,
+        "credit":  [],
+        "links":  [],
+        "types":  ["Graphic"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "Lv99所属のFRAN様のヘッダーを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "zenith-blue-header",
+        "title":  "blue ヘッダー (#ZNH1stDC)",
+        "client":  ["Zenith"],
+        "date":  "2023-12-13",
+        "thumbnail":  "/images/works/zenith-blue-header.jpg",
+        "contain":  true,
+        "credit":  [],
+        "links":  [],
+        "types":  ["Graphic"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "Zenithが開催したデザインコンペ「#ZNH1stDC」に参加して、blue様宛てのヘッダーを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "kiten-self-produced",
+        "title":  "起転転転転転承転結 (SELF-PRODUCED)",
+        "client":  [],
+        "date":  "2022-10-15",
+        "thumbnail":  "/images/works/kiten-thumb.jpg",
+        "credit":  [],
+        "links":  [],
+        "types":  ["Logo"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "自主制作のロゴ「起転転転転転承転結 (SELF-PRODUCED)」を制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "makafushigi-self-produced",
+        "title":  "摩訶不思議 (SELF-PRODUCED)",
+        "client":  [],
+        "date":  "2022-05-20",
+        "thumbnail":  "/images/works/makafushigi-thumb.jpg",
+        "credit":  [],
+        "links":  [],
+        "types":  ["Logo"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "自主制作のロゴ「摩訶不思議 (SELF-PRODUCED)」を制作しました。"
                          }
                      ]
     },
