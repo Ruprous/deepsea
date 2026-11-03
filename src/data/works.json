@@ -331,6 +331,38 @@
                      ]
     },
     {
+        "id":  "hyro-hyrule-logo",
+        "title":  "まったりハイラル寄り道旅 ロゴ",
+        "client":  ["ハイロ"],
+        "date":  "2023-12-04",
+        "thumbnail":  "/images/works/hyro-hyrule-logo.jpg",
+        "credit":  [],
+        "links":  [],
+        "types":  ["Logo"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "ハイロ様のYouTube企画、「まったりハイラル寄り道旅」のロゴを制作しました。"
+                         }
+                     ]
+    },
+    {
+        "id":  "ks-logo",
+        "title":  "K's ロゴ",
+        "client":  ["K's"],
+        "date":  "2025-02-20",
+        "thumbnail":  "/images/works/ks-logo.jpg",
+        "credit":  [],
+        "links":  [],
+        "types":  ["Logo"],
+        "sections":  [
+                         {
+                             "heading":  "概要",
+                             "body":  "K's様のロゴを制作しました。"
+                         }
+                     ]
+    },
+    {
         "id":  "sakura-self-produced",
         "title":  "桜 (SELF-PRODUCED)",
         "client":  [],
