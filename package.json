@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "optimize:images": "node scripts/optimize-images.mjs",
-    "predev": "npm run optimize:images",
+    "generate:feed": "node scripts/generate-feed.mjs",
+    "predev": "npm run optimize:images && npm run generate:feed",
     "dev": "vite",
-    "prebuild": "npm run optimize:images",
+    "prebuild": "npm run optimize:images && npm run generate:feed",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
